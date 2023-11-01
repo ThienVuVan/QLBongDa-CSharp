@@ -1,0 +1,15 @@
+# Exclude bin, obj, and .vs folders for all projects in the solution
+**/bin/
+**/obj/
+**/.vs/
+*.suo
+*.user
+*.public.xml
+Publish/
+*.publish.htm
+packages/
+appsetting.json
+*.log
+*.tmp
+*.mdf
+*.ldf
