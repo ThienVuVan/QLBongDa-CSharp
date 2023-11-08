@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class login : Form
+    public partial class dangKyDoiBong : Form
     {
-        public login()
+        public dangKyDoiBong()
         {
             InitializeComponent();
         }
-
-		private void btnDangNhap_Click(object sender, EventArgs e)
-		{
-            Loading loading = new Loading();
-            loading.Show();
-		}
-	}
+    }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class Login
+    partial class login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,119 +28,207 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPassWord = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(169, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Password";
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(245, 89);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(175, 20);
-            this.txtUserName.TabIndex = 1;
-            // 
-            // txtPassWord
-            // 
-            this.txtPassWord.Location = new System.Drawing.Point(245, 130);
-            this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.Size = new System.Drawing.Size(175, 20);
-            this.txtPassWord.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 47);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(137, 137);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 118);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(172, 180);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Location = new System.Drawing.Point(297, 180);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 3;
-            this.btnThoat.Text = "Exit";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            // 
-            // Login
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 317);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtPassWord);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "Login";
-            this.Text = "Login";
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+			this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+			this.btnHuy = new System.Windows.Forms.Button();
+			this.btnDangNhap = new System.Windows.Forms.Button();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.txtMatKhau = new System.Windows.Forms.TextBox();
+			this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+			this.cbGhiNho = new System.Windows.Forms.CheckBox();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.panel2.SuspendLayout();
+			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// panel2
+			// 
+			this.panel2.Controls.Add(this.cbGhiNho);
+			this.panel2.Controls.Add(this.guna2ControlBox2);
+			this.panel2.Controls.Add(this.guna2ControlBox1);
+			this.panel2.Controls.Add(this.btnHuy);
+			this.panel2.Controls.Add(this.btnDangNhap);
+			this.panel2.Controls.Add(this.label2);
+			this.panel2.Controls.Add(this.label1);
+			this.panel2.Controls.Add(this.txtMatKhau);
+			this.panel2.Controls.Add(this.txtTenDangNhap);
+			this.panel2.Controls.Add(this.pictureBox1);
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+			this.panel2.Location = new System.Drawing.Point(374, 0);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(361, 438);
+			this.panel2.TabIndex = 1;
+			// 
+			// guna2ControlBox2
+			// 
+			this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+			this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+			this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+			this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+			this.guna2ControlBox2.Location = new System.Drawing.Point(252, 0);
+			this.guna2ControlBox2.Name = "guna2ControlBox2";
+			this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+			this.guna2ControlBox2.Size = new System.Drawing.Size(51, 29);
+			this.guna2ControlBox2.TabIndex = 5;
+			// 
+			// guna2ControlBox1
+			// 
+			this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+			this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+			this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+			this.guna2ControlBox1.Location = new System.Drawing.Point(309, 0);
+			this.guna2ControlBox1.Name = "guna2ControlBox1";
+			this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+			this.guna2ControlBox1.Size = new System.Drawing.Size(52, 29);
+			this.guna2ControlBox1.TabIndex = 5;
+			// 
+			// btnHuy
+			// 
+			this.btnHuy.Font = new System.Drawing.Font("Bookman Old Style", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnHuy.Location = new System.Drawing.Point(190, 367);
+			this.btnHuy.Name = "btnHuy";
+			this.btnHuy.Size = new System.Drawing.Size(113, 34);
+			this.btnHuy.TabIndex = 3;
+			this.btnHuy.Text = "Hủy";
+			this.btnHuy.UseVisualStyleBackColor = true;
+			// 
+			// btnDangNhap
+			// 
+			this.btnDangNhap.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.btnDangNhap.Font = new System.Drawing.Font("Bookman Old Style", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDangNhap.Location = new System.Drawing.Point(41, 367);
+			this.btnDangNhap.Name = "btnDangNhap";
+			this.btnDangNhap.Size = new System.Drawing.Size(121, 34);
+			this.btnDangNhap.TabIndex = 3;
+			this.btnDangNhap.Text = "Đăng nhập";
+			this.btnDangNhap.UseVisualStyleBackColor = true;
+			this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(37, 249);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(103, 23);
+			this.label2.TabIndex = 2;
+			this.label2.Text = "Mật khẩu:";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(37, 158);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(158, 23);
+			this.label1.TabIndex = 2;
+			this.label1.Text = "Tên đăng nhập:";
+			// 
+			// txtMatKhau
+			// 
+			this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txtMatKhau.Location = new System.Drawing.Point(94, 285);
+			this.txtMatKhau.Name = "txtMatKhau";
+			this.txtMatKhau.Size = new System.Drawing.Size(178, 22);
+			this.txtMatKhau.TabIndex = 1;
+			// 
+			// txtTenDangNhap
+			// 
+			this.txtTenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txtTenDangNhap.Location = new System.Drawing.Point(94, 194);
+			this.txtTenDangNhap.Name = "txtTenDangNhap";
+			this.txtTenDangNhap.Size = new System.Drawing.Size(178, 22);
+			this.txtTenDangNhap.TabIndex = 1;
+			// 
+			// cbGhiNho
+			// 
+			this.cbGhiNho.AutoSize = true;
+			this.cbGhiNho.Font = new System.Drawing.Font("Bookman Old Style", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbGhiNho.Location = new System.Drawing.Point(119, 324);
+			this.cbGhiNho.Name = "cbGhiNho";
+			this.cbGhiNho.Size = new System.Drawing.Size(127, 22);
+			this.cbGhiNho.TabIndex = 7;
+			this.cbGhiNho.Text = "Remember me";
+			this.cbGhiNho.UseVisualStyleBackColor = true;
+			// 
+			// panel1
+			// 
+			this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel1.Controls.Add(this.pictureBox2);
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+			this.panel1.Location = new System.Drawing.Point(0, 0);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(377, 438);
+			this.panel1.TabIndex = 2;
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox2.Location = new System.Drawing.Point(115, 27);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(123, 79);
+			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.pictureBox2.TabIndex = 0;
+			this.pictureBox2.TabStop = false;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox1.Location = new System.Drawing.Point(108, 44);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(138, 79);
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
+			// 
+			// login
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.btnDangNhap;
+			this.ClientSize = new System.Drawing.Size(735, 438);
+			this.Controls.Add(this.panel1);
+			this.Controls.Add(this.panel2);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Name = "login";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Đăng nhập";
+			this.panel2.ResumeLayout(false);
+			this.panel2.PerformLayout();
+			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtPassWord;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnThoat;
-    }
+        private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+		private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+		private System.Windows.Forms.CheckBox cbGhiNho;
+	}
 }
