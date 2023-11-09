@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class dangKyDoiBong : Form
-    {
-        public dangKyDoiBong()
-        {
-            InitializeComponent();
-        }
-
-
+	public partial class dangKyTranDau : Form
+	{
+		public dangKyTranDau()
+		{
+			InitializeComponent();
+		}
 	}
 }
