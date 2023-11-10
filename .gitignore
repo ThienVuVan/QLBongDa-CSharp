@@ -11,5 +11,5 @@ packages/
 appsetting.json
 *.log
 *.tmp
-*.mdf
 *.ldf
+*.mdf

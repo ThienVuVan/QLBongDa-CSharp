@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO
+namespace BLL
 {
-    public class Role
+    public class TinhService
     {
-        int id {  get; set; }
-        public string name { get; set; }
     }
 }

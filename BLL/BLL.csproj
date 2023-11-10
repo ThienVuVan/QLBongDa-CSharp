@@ -41,8 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthService.cs" />
+    <Compile Include="CauThuService.cs" />
+    <Compile Include="DoiBongService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserBLL.cs" />
+    <Compile Include="SanBongService.cs" />
+    <Compile Include="TinhService.cs" />
+    <Compile Include="TranDauService.cs" />
+    <Compile Include="TranDau_BanThangService.cs" />
+    <Compile Include="TranDau_CauThuService.cs" />
+    <Compile Include="TranDau_TheService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
