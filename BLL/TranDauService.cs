@@ -12,7 +12,7 @@ namespace BLL
     {
         public static void LuuTranDau(TranDau tranDau)
         {
-            TranDauAccess.LuuTranDau(tranDau);
+            
         }
     }
 }
