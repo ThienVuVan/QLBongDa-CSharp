@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class User
-    {
-        public string username { get; set; }
-        public string password { get; set; }
+    public class Tinh
+    { 
+        string MaTinh { get; set; }
+        int TenSan { get; set; }
+
     }
 }

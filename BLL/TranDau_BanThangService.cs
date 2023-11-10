@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO
+namespace BLL
 {
-    public class User
+    public class TranDau_BanThangService
     {
-        public string username { get; set; }
-        public string password { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.PerformanceData;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +10,7 @@ using DTO;
 
 namespace DAL
 {
-
-    public class SqlConnectionData
+    public class DatabaseAccess
     {
         public static SqlConnection conn;
         public static string str = "Data Source=THIENVUVAN\\SQLEXPRESS;Initial Catalog=test;Integrated Security=True";
@@ -19,36 +19,28 @@ namespace DAL
             SqlConnection conn = new SqlConnection(str);
             return conn;
         }
-    }
 
-    public class DatabaseAccess
-    {
-        public DatabaseAccess() { }
-
-        public static string CheckLogin(User user)
+        public static DataTable ReadTable(string sql)
         {
-            string name = null;
-            // connect to database
-            SqlConnection conn = SqlConnectionData.Connect();
-            conn.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = ("select * from dbo.users u where u.username = '" + user.username + "' and u.password = '" + user.password + "' ");
-            cmd.Connection = conn;
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while(reader.Read())
-                {
-                    name = reader.GetString(0);
-                }
-                reader.Close();
-                conn.Close();
-                return name;
-            }
-            else
-            {
-                return "Tai khoan khong dung";
-            }
+            SqlConnection conn = Connect();
+            DataTable tb = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            da.Fill(tb);
+            conn.Close();
+            conn.Dispose();
+            return tb;
+        }
+
+        public static void Excute(string sql)
+        {
+            SqlCommand cm = new SqlCommand();
+            SqlConnection conn = Connect();
+            cm.CommandText = sql;
+            cm.Connection = conn;
+            cm.ExecuteNonQuery();
+            conn.Close();
+            conn.Dispose();
         }
     }
+
 }

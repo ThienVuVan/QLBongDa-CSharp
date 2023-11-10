@@ -56,24 +56,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthAccess.cs" />
+    <Compile Include="CauThuAccess.cs" />
     <Compile Include="DatabaseAccess.cs" />
+    <Compile Include="DoiBongAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserAccess.cs" />
+    <Compile Include="SanBongAccess.cs" />
+    <Compile Include="TinhAccess.cs" />
+    <Compile Include="TranDauAccess.cs" />
+    <Compile Include="TranDau_BanThangAccess.cs" />
+    <Compile Include="TranDau_CauThuAccess.cs" />
+    <Compile Include="TranDau_TheAccess.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{e6ae5986-132c-4c9b-a8cb-3618efe11f14}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="QuanLyBongDa.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="QuanLyBongDa_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>QuanLyBongDa.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
