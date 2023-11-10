@@ -30,7 +30,6 @@
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.cbGhiNho = new System.Windows.Forms.CheckBox();
 			this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.btnHuy = new System.Windows.Forms.Button();
@@ -50,7 +49,6 @@
 			// 
 			// panel2
 			// 
-			this.panel2.Controls.Add(this.cbGhiNho);
 			this.panel2.Controls.Add(this.guna2ControlBox2);
 			this.panel2.Controls.Add(this.guna2ControlBox1);
 			this.panel2.Controls.Add(this.btnHuy);
@@ -62,22 +60,10 @@
 			this.panel2.Controls.Add(this.pictureBox1);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
 			this.panel2.Location = new System.Drawing.Point(280, 0);
-			this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.panel2.Margin = new System.Windows.Forms.Padding(2);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(271, 356);
 			this.panel2.TabIndex = 1;
-			// 
-			// cbGhiNho
-			// 
-			this.cbGhiNho.AutoSize = true;
-			this.cbGhiNho.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.cbGhiNho.Location = new System.Drawing.Point(89, 263);
-			this.cbGhiNho.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.cbGhiNho.Name = "cbGhiNho";
-			this.cbGhiNho.Size = new System.Drawing.Size(98, 17);
-			this.cbGhiNho.TabIndex = 7;
-			this.cbGhiNho.Text = "Remember me";
-			this.cbGhiNho.UseVisualStyleBackColor = true;
 			// 
 			// guna2ControlBox2
 			// 
@@ -87,7 +73,7 @@
 			this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
 			this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
 			this.guna2ControlBox2.Location = new System.Drawing.Point(189, 0);
-			this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2);
 			this.guna2ControlBox2.Name = "guna2ControlBox2";
 			this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
 			this.guna2ControlBox2.Size = new System.Drawing.Size(38, 24);
@@ -100,7 +86,7 @@
 			this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
 			this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
 			this.guna2ControlBox1.Location = new System.Drawing.Point(232, 0);
-			this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.guna2ControlBox1.Name = "guna2ControlBox1";
 			this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
 			this.guna2ControlBox1.Size = new System.Drawing.Size(39, 24);
@@ -110,19 +96,20 @@
 			// 
 			this.btnHuy.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnHuy.Location = new System.Drawing.Point(142, 298);
-			this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
 			this.btnHuy.Name = "btnHuy";
 			this.btnHuy.Size = new System.Drawing.Size(85, 28);
 			this.btnHuy.TabIndex = 3;
 			this.btnHuy.Text = "Hủy";
 			this.btnHuy.UseVisualStyleBackColor = true;
+			this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
 			// 
 			// btnDangNhap
 			// 
 			this.btnDangNhap.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.btnDangNhap.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnDangNhap.Location = new System.Drawing.Point(31, 298);
-			this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
 			this.btnDangNhap.Name = "btnDangNhap";
 			this.btnDangNhap.Size = new System.Drawing.Size(91, 28);
 			this.btnDangNhap.TabIndex = 3;
@@ -156,7 +143,7 @@
 			// 
 			this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtMatKhau.Location = new System.Drawing.Point(70, 232);
-			this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2);
 			this.txtMatKhau.Name = "txtMatKhau";
 			this.txtMatKhau.Size = new System.Drawing.Size(134, 20);
 			this.txtMatKhau.TabIndex = 1;
@@ -165,10 +152,11 @@
 			// 
 			this.txtTenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtTenDangNhap.Location = new System.Drawing.Point(70, 158);
-			this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(2);
 			this.txtTenDangNhap.Name = "txtTenDangNhap";
 			this.txtTenDangNhap.Size = new System.Drawing.Size(134, 20);
 			this.txtTenDangNhap.TabIndex = 1;
+			this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
 			// 
 			// pictureBox1
 			// 
@@ -176,7 +164,7 @@
 			this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
 			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox1.Location = new System.Drawing.Point(81, 36);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(104, 64);
 			this.pictureBox1.TabIndex = 0;
@@ -189,7 +177,7 @@
 			this.panel1.Controls.Add(this.pictureBox2);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
-			this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.panel1.Margin = new System.Windows.Forms.Padding(2);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(283, 356);
 			this.panel1.TabIndex = 2;
@@ -200,7 +188,7 @@
 			this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
 			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox2.Location = new System.Drawing.Point(86, 22);
-			this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(123, 79);
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -216,7 +204,7 @@
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.panel2);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "login";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Đăng nhập";
@@ -243,6 +231,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
 		private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-		private System.Windows.Forms.CheckBox cbGhiNho;
 	}
 }

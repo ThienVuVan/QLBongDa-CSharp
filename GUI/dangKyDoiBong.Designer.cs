@@ -34,21 +34,21 @@
 			this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.txtSoCauThu = new System.Windows.Forms.TextBox();
+			this.txtHLV = new System.Windows.Forms.TextBox();
+			this.txtMaTinh = new System.Windows.Forms.TextBox();
+			this.txtTenDoi = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.btnFinish = new System.Windows.Forms.Button();
+			this.btnCancel = new System.Windows.Forms.Button();
+			this.btnReset = new System.Windows.Forms.Button();
 			this.btnAddImg = new System.Windows.Forms.Button();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.picBox = new System.Windows.Forms.PictureBox();
 			this.guna2GroupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// guna2ControlBox1
@@ -104,19 +104,19 @@
 			// 
 			// guna2GroupBox1
 			// 
-			this.guna2GroupBox1.Controls.Add(this.textBox4);
-			this.guna2GroupBox1.Controls.Add(this.textBox3);
-			this.guna2GroupBox1.Controls.Add(this.textBox2);
-			this.guna2GroupBox1.Controls.Add(this.textBox1);
+			this.guna2GroupBox1.Controls.Add(this.txtSoCauThu);
+			this.guna2GroupBox1.Controls.Add(this.txtHLV);
+			this.guna2GroupBox1.Controls.Add(this.txtMaTinh);
+			this.guna2GroupBox1.Controls.Add(this.txtTenDoi);
 			this.guna2GroupBox1.Controls.Add(this.label4);
 			this.guna2GroupBox1.Controls.Add(this.label5);
 			this.guna2GroupBox1.Controls.Add(this.label3);
 			this.guna2GroupBox1.Controls.Add(this.label2);
-			this.guna2GroupBox1.Controls.Add(this.button5);
-			this.guna2GroupBox1.Controls.Add(this.button4);
-			this.guna2GroupBox1.Controls.Add(this.button2);
+			this.guna2GroupBox1.Controls.Add(this.btnFinish);
+			this.guna2GroupBox1.Controls.Add(this.btnCancel);
+			this.guna2GroupBox1.Controls.Add(this.btnReset);
 			this.guna2GroupBox1.Controls.Add(this.btnAddImg);
-			this.guna2GroupBox1.Controls.Add(this.pictureBox1);
+			this.guna2GroupBox1.Controls.Add(this.picBox);
 			this.guna2GroupBox1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
 			this.guna2GroupBox1.Location = new System.Drawing.Point(23, 53);
@@ -126,33 +126,33 @@
 			this.guna2GroupBox1.TabIndex = 2;
 			this.guna2GroupBox1.Text = "Thông tin đội bóng";
 			// 
-			// textBox4
+			// txtSoCauThu
 			// 
-			this.textBox4.Location = new System.Drawing.Point(272, 142);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(174, 23);
-			this.textBox4.TabIndex = 3;
+			this.txtSoCauThu.Location = new System.Drawing.Point(272, 142);
+			this.txtSoCauThu.Name = "txtSoCauThu";
+			this.txtSoCauThu.Size = new System.Drawing.Size(174, 23);
+			this.txtSoCauThu.TabIndex = 3;
 			// 
-			// textBox3
+			// txtHLV
 			// 
-			this.textBox3.Location = new System.Drawing.Point(272, 113);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(174, 23);
-			this.textBox3.TabIndex = 3;
+			this.txtHLV.Location = new System.Drawing.Point(272, 113);
+			this.txtHLV.Name = "txtHLV";
+			this.txtHLV.Size = new System.Drawing.Size(174, 23);
+			this.txtHLV.TabIndex = 3;
 			// 
-			// textBox2
+			// txtMaTinh
 			// 
-			this.textBox2.Location = new System.Drawing.Point(272, 84);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(174, 23);
-			this.textBox2.TabIndex = 3;
+			this.txtMaTinh.Location = new System.Drawing.Point(272, 84);
+			this.txtMaTinh.Name = "txtMaTinh";
+			this.txtMaTinh.Size = new System.Drawing.Size(174, 23);
+			this.txtMaTinh.TabIndex = 3;
 			// 
-			// textBox1
+			// txtTenDoi
 			// 
-			this.textBox1.Location = new System.Drawing.Point(272, 55);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(174, 23);
-			this.textBox1.TabIndex = 3;
+			this.txtTenDoi.Location = new System.Drawing.Point(272, 55);
+			this.txtTenDoi.Name = "txtTenDoi";
+			this.txtTenDoi.Size = new System.Drawing.Size(174, 23);
+			this.txtTenDoi.TabIndex = 3;
 			// 
 			// label4
 			// 
@@ -194,32 +194,32 @@
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Tên đội bóng: ";
 			// 
-			// button5
+			// btnFinish
 			// 
-			this.button5.Location = new System.Drawing.Point(481, 173);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(85, 34);
-			this.button5.TabIndex = 1;
-			this.button5.Text = "Hoàn thành";
-			this.button5.UseVisualStyleBackColor = true;
+			this.btnFinish.Location = new System.Drawing.Point(481, 173);
+			this.btnFinish.Name = "btnFinish";
+			this.btnFinish.Size = new System.Drawing.Size(85, 34);
+			this.btnFinish.TabIndex = 1;
+			this.btnFinish.Text = "Hoàn thành";
+			this.btnFinish.UseVisualStyleBackColor = true;
 			// 
-			// button4
+			// btnCancel
 			// 
-			this.button4.Location = new System.Drawing.Point(589, 173);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(61, 34);
-			this.button4.TabIndex = 1;
-			this.button4.Text = "Hủy";
-			this.button4.UseVisualStyleBackColor = true;
+			this.btnCancel.Location = new System.Drawing.Point(589, 173);
+			this.btnCancel.Name = "btnCancel";
+			this.btnCancel.Size = new System.Drawing.Size(61, 34);
+			this.btnCancel.TabIndex = 1;
+			this.btnCancel.Text = "Hủy";
+			this.btnCancel.UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// btnReset
 			// 
-			this.button2.Location = new System.Drawing.Point(263, 184);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(85, 23);
-			this.button2.TabIndex = 1;
-			this.button2.Text = "Làm mới";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnReset.Location = new System.Drawing.Point(263, 184);
+			this.btnReset.Name = "btnReset";
+			this.btnReset.Size = new System.Drawing.Size(85, 23);
+			this.btnReset.TabIndex = 1;
+			this.btnReset.Text = "Làm mới";
+			this.btnReset.UseVisualStyleBackColor = true;
 			// 
 			// btnAddImg
 			// 
@@ -230,16 +230,16 @@
 			this.btnAddImg.Text = "Tải ảnh lên";
 			this.btnAddImg.UseVisualStyleBackColor = true;
 			// 
-			// pictureBox1
+			// picBox
 			// 
-			this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox1.Location = new System.Drawing.Point(21, 58);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(125, 125);
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
+			this.picBox.BackColor = System.Drawing.Color.Transparent;
+			this.picBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox.BackgroundImage")));
+			this.picBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.picBox.Location = new System.Drawing.Point(22, 55);
+			this.picBox.Name = "picBox";
+			this.picBox.Size = new System.Drawing.Size(125, 125);
+			this.picBox.TabIndex = 0;
+			this.picBox.TabStop = false;
 			// 
 			// dangKyDoiBong
 			// 
@@ -258,7 +258,7 @@
 			this.Text = "Đăng ký đội bóng";
 			this.guna2GroupBox1.ResumeLayout(false);
 			this.guna2GroupBox1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -272,17 +272,17 @@
 		public System.Windows.Forms.Label label1;
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
 		private System.Windows.Forms.Button btnAddImg;
-		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.PictureBox picBox;
+		private System.Windows.Forms.TextBox txtMaTinh;
+		private System.Windows.Forms.TextBox txtTenDoi;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox txtHLV;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox txtSoCauThu;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button5;
-		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.Button btnReset;
+		private System.Windows.Forms.Button btnFinish;
+		private System.Windows.Forms.Button btnCancel;
 	}
 }
