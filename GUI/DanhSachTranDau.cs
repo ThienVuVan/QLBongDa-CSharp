@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-	public partial class dangKyTranDau : Form
+	public partial class DanhSachTranDau : Form
 	{
-		public dangKyTranDau()
+		public DanhSachTranDau()
 		{
 			InitializeComponent();
-		}
-
-		private void dangKyTranDau_Load(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label3_Click(object sender, EventArgs e)
-		{
-
 		}
 	}
 }
