@@ -19,9 +19,7 @@ namespace DAL
         public static DataTable Filter(CauThu cauThu)
         {
             string sql = $"select * from dbo.CAUTHU c where " +
-                $"c.Ten is null or c.Ten = {cauThu.Ten} and " +
-                $"c.MaDoi is null or c.MaDoi = {cauThu.MaDoi} and " +
-                $"c.SoBanThang is null or c.SoBanThang = {cauThu.SoBanThang}";
+                $"c.Ten is null or c.Ten = N'{cauThu.Ten}'";
             return DatabaseAccess.ReadTable(sql);
         }
         public static void SaveCauThu(CauThu cauThu)

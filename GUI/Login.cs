@@ -70,6 +70,10 @@ namespace GUI
 			{
 				// Nếu đăng nhập thành công, hiển thị MessageBox
 				MessageBox.Show("Đăng nhập thành công");
+
+				MainForm mainForm = new MainForm();
+				this.Hide();
+				mainForm.Show();
 			}
 			else
 			{

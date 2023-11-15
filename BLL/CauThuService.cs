@@ -16,7 +16,7 @@ namespace BLL
             CauThuAccess.SaveCauThu(cauThu);
         }
 
-        public static DataTable RetrieveAllCauThu() 
+        public static DataTable RetrieveAllCauThu()
         {
             return CauThuAccess.RetrieveAllCauThu();
         }
@@ -30,4 +30,5 @@ namespace BLL
         {
             return CauThuAccess.FindThreeMaxGoal();
         }
+    }
 }

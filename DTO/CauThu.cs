@@ -8,7 +8,6 @@ namespace DTO
 {
     public class CauThu
     {
-
         public string MaCauThu { get; set; }
         public string MaDoi { get; set; }
         public string MaQuocTinh { get; set; }
