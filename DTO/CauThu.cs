@@ -9,18 +9,18 @@ namespace DTO
     public class CauThu
     {
 
-        string MaCauThu { get; set; }
-        string MaDoi { get; set; }
-        string MaQuocTinh { get; set; }
-        string Ten { get; set; }
-        string ViTriChoi { get; set; }
-        DateTime NgaySinh { get; set; }
-        int SoAo { get; set; }
-        int SoBanThang { get; set; }
-        int SoTheVang { get; set; }
-        int SoTheDo { get; set; }
-        int SoLanRaSan { get; set; }
-        string Anh { get; set; }
+        public string MaCauThu { get; set; }
+        public string MaDoi { get; set; }
+        public string MaQuocTinh { get; set; }
+        public string Ten { get; set; }
+        public string ViTriChoi { get; set; }
+        public DateTime NgaySinh { get; set; }
+        public int SoAo { get; set; }
+        public int SoBanThang { get; set; }
+        public int SoTheVang { get; set; }
+        public int SoTheDo { get; set; }
+        public int SoLanRaSan { get; set; }
+        public string Anh { get; set; }
         public CauThu()
         {
         }
