@@ -8,17 +8,17 @@ namespace DTO
 {
     public class TranDau
     {
-        string MaTranDau { get; set; }
-        string MaDoiNha { get; set; }
-        string MaDoiKhach { get; set; }
-        int LuotDau { get; set; }
-        int VongDau { get; set; }
-        int SoBanThangDoiNha { get; set; }
-        int SoBanThangDoiKhach { get; set; }
-        int SoTheVangDoiNha { get; set; }
-        int SotheVangDoiKhach { get; set; }
-        int SoTheDoDoiNha { get; set; }
-        int SoTheDoDoiKhach { get; set; }
-        string GhiChu { get; set; }
+        public string MaTranDau { get; set; }
+        public string MaDoiNha { get; set; }
+        public string MaDoiKhach { get; set; }
+        public int LuotDau { get; set; }
+        public int VongDau { get; set; }
+        public int SoBanThangDoiNha { get; set; }
+        public int SoBanThangDoiKhach { get; set; }
+        public int SoTheVangDoiNha { get; set; }
+        public int SotheVangDoiKhach { get; set; }
+        public int SoTheDoDoiNha { get; set; }
+        public int SoTheDoDoiKhach { get; set; }
+        public string GhiChu { get; set; }
     }
 }
