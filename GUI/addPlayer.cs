@@ -10,21 +10,12 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-	public partial class dangKyTranDau : Form
+	public partial class addPlayer : Form
 	{
-		public dangKyTranDau()
+		public addPlayer()
 		{
 			InitializeComponent();
 		}
 
-		private void dangKyTranDau_Load(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label3_Click(object sender, EventArgs e)
-		{
-
-		}
 	}
 }
