@@ -1,6 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,17 @@ namespace DAL
         {
             string sql = "...";
             DatabaseAccess.Excute(sql);
+        }
+        public static List<DataTable> RetriveAll(TranDau tranDau)
+        {
+            List<DataTable> list=  new List<DataTable>();   
+            string sql = $"select * from TRANDAU_CAUTHU where MATRANDAU = {tranDau.MaTranDau} and MADOI = {tranDau.MaDoiNha}";
+            DataTable doinha = DatabaseAccess.ReadTable(sql);
+            list.Add(doinha);
+            sql = $"select * from TRANDAU_CAUTHU where MATRANDAU = {tranDau.MaTranDau} and MADOI = {tranDau.MaDoiKhach}";
+            DataTable khach = DatabaseAccess.ReadTable(sql);
+            list.Add(khach);
+            return list;
         }
     }
 }

@@ -90,6 +90,20 @@ namespace GUI
 		{
             OpenForm<playerList>(); 
 		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			OpenForm<DanhSachTranDau>();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+		}
 		// để hiển thị form bên trong panel của MainForm dùng OpenForm
 		// Hiển thị nổi Form.Show()
 

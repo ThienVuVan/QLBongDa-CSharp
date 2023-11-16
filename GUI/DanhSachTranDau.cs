@@ -16,5 +16,11 @@ namespace GUI
 		{
 			InitializeComponent();
 		}
+
+		private void btnDangKy_Click(object sender, EventArgs e)
+		{
+			dangKyTranDau dangKyTranDau = new dangKyTranDau();
+			dangKyTranDau.ShowDialog();
+		}
 	}
 }
