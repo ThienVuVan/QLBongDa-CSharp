@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms.Suite;
+﻿using BLL;
+using Guna.UI2.WinForms.Suite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,6 @@ namespace GUI
 
         private void Test_Load(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -106,8 +106,5 @@ namespace GUI
 		}
 		// để hiển thị form bên trong panel của MainForm dùng OpenForm
 		// Hiển thị nổi Form.Show()
-
-
-
-	}
+    }
 }

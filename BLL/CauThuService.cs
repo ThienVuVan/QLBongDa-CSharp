@@ -21,9 +21,9 @@ namespace BLL
             return CauThuAccess.RetrieveAllCauThu();
         }
 
-        public static DataTable Filter(CauThu cauThu)
+        public static DataTable Filter(string Ten, string MaDoi, Nullable<int> SoBanThang)
         {
-            return CauThuAccess.Filter(cauThu);
+            return CauThuAccess.Filter(Ten, MaDoi, SoBanThang);
         }
 
         public static DataTable FindThreeMaxGoal()
