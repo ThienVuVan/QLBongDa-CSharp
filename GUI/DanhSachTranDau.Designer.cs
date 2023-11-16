@@ -30,21 +30,21 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachTranDau));
 			this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-			this.btnCapNhat = new System.Windows.Forms.Button();
-			this.btnDangKy = new System.Windows.Forms.Button();
 			this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
-			this.txtTen = new Guna.UI2.WinForms.Guna2TextBox();
-			this.txtSoBanThang = new Guna.UI2.WinForms.Guna2TextBox();
+			this.txtTheDo = new Guna.UI2.WinForms.Guna2TextBox();
 			this.label3 = new System.Windows.Forms.Label();
-			this.txtTenDoiBong = new Guna.UI2.WinForms.Guna2TextBox();
+			this.txtSoBan = new Guna.UI2.WinForms.Guna2TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
 			this.btnFind = new Guna.UI2.WinForms.Guna2Button();
+			this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
 			this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+			this.cbDoiNha = new Guna.UI2.WinForms.Guna2ComboBox();
+			this.btnDelete = new System.Windows.Forms.Button();
+			this.btnCapNhat = new System.Windows.Forms.Button();
 			this.guna2Panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -55,30 +55,9 @@
 			this.guna2GroupBox1.Location = new System.Drawing.Point(12, 158);
 			this.guna2GroupBox1.Name = "guna2GroupBox1";
 			this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-			this.guna2GroupBox1.Size = new System.Drawing.Size(999, 504);
+			this.guna2GroupBox1.Size = new System.Drawing.Size(999, 430);
 			this.guna2GroupBox1.TabIndex = 1;
 			this.guna2GroupBox1.Text = "Danh sách các trận đấu";
-			// 
-			// btnCapNhat
-			// 
-			this.btnCapNhat.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCapNhat.Location = new System.Drawing.Point(694, 603);
-			this.btnCapNhat.Name = "btnCapNhat";
-			this.btnCapNhat.Size = new System.Drawing.Size(180, 37);
-			this.btnCapNhat.TabIndex = 2;
-			this.btnCapNhat.Text = "Cập nhật kết quả";
-			this.btnCapNhat.UseVisualStyleBackColor = true;
-			// 
-			// btnDangKy
-			// 
-			this.btnDangKy.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDangKy.Location = new System.Drawing.Point(496, 603);
-			this.btnDangKy.Name = "btnDangKy";
-			this.btnDangKy.Size = new System.Drawing.Size(180, 37);
-			this.btnDangKy.TabIndex = 2;
-			this.btnDangKy.Text = "Đăng ký trận đấu";
-			this.btnDangKy.UseVisualStyleBackColor = true;
-			this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
 			// 
 			// btnFilter
 			// 
@@ -91,58 +70,35 @@
 			this.btnFilter.ForeColor = System.Drawing.Color.Black;
 			this.btnFilter.HoverState.Parent = this.btnFilter;
 			this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
-			this.btnFilter.Location = new System.Drawing.Point(942, 104);
+			this.btnFilter.Location = new System.Drawing.Point(925, 108);
 			this.btnFilter.Name = "btnFilter";
 			this.btnFilter.ShadowDecoration.Parent = this.btnFilter;
 			this.btnFilter.Size = new System.Drawing.Size(70, 32);
 			this.btnFilter.TabIndex = 14;
 			this.btnFilter.Text = "Lọc";
 			// 
-			// txtTen
+			// txtTheDo
 			// 
-			this.txtTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtTen.DefaultText = "";
-			this.txtTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.txtTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-			this.txtTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtTen.DisabledState.Parent = this.txtTen;
-			this.txtTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.txtTen.FocusedState.Parent = this.txtTen;
-			this.txtTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.txtTen.HoverState.Parent = this.txtTen;
-			this.txtTen.Location = new System.Drawing.Point(139, 104);
-			this.txtTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.txtTen.Name = "txtTen";
-			this.txtTen.PasswordChar = '\0';
-			this.txtTen.PlaceholderText = "";
-			this.txtTen.SelectedText = "";
-			this.txtTen.ShadowDecoration.Parent = this.txtTen;
-			this.txtTen.Size = new System.Drawing.Size(221, 32);
-			this.txtTen.TabIndex = 11;
-			// 
-			// txtSoBanThang
-			// 
-			this.txtSoBanThang.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtSoBanThang.DefaultText = "";
-			this.txtSoBanThang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.txtSoBanThang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-			this.txtSoBanThang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtSoBanThang.DisabledState.Parent = this.txtSoBanThang;
-			this.txtSoBanThang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtSoBanThang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.txtSoBanThang.FocusedState.Parent = this.txtSoBanThang;
-			this.txtSoBanThang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.txtSoBanThang.HoverState.Parent = this.txtSoBanThang;
-			this.txtSoBanThang.Location = new System.Drawing.Point(863, 104);
-			this.txtSoBanThang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.txtSoBanThang.Name = "txtSoBanThang";
-			this.txtSoBanThang.PasswordChar = '\0';
-			this.txtSoBanThang.PlaceholderText = "";
-			this.txtSoBanThang.SelectedText = "";
-			this.txtSoBanThang.ShadowDecoration.Parent = this.txtSoBanThang;
-			this.txtSoBanThang.Size = new System.Drawing.Size(57, 32);
-			this.txtSoBanThang.TabIndex = 12;
+			this.txtTheDo.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTheDo.DefaultText = "";
+			this.txtTheDo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.txtTheDo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+			this.txtTheDo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtTheDo.DisabledState.Parent = this.txtTheDo;
+			this.txtTheDo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtTheDo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+			this.txtTheDo.FocusedState.Parent = this.txtTheDo;
+			this.txtTheDo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+			this.txtTheDo.HoverState.Parent = this.txtTheDo;
+			this.txtTheDo.Location = new System.Drawing.Point(836, 108);
+			this.txtTheDo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtTheDo.Name = "txtTheDo";
+			this.txtTheDo.PasswordChar = '\0';
+			this.txtTheDo.PlaceholderText = "";
+			this.txtTheDo.SelectedText = "";
+			this.txtTheDo.ShadowDecoration.Parent = this.txtTheDo;
+			this.txtTheDo.Size = new System.Drawing.Size(71, 32);
+			this.txtTheDo.TabIndex = 12;
 			// 
 			// label3
 			// 
@@ -150,52 +106,52 @@
 			this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.Location = new System.Drawing.Point(24, 115);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(99, 21);
+			this.label3.Size = new System.Drawing.Size(98, 21);
 			this.label3.TabIndex = 8;
-			this.label3.Text = "Tên cầu thủ:";
+			this.label3.Text = "Tên đội nhà:";
 			// 
-			// txtTenDoiBong
+			// txtSoBan
 			// 
-			this.txtTenDoiBong.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtTenDoiBong.DefaultText = "";
-			this.txtTenDoiBong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.txtTenDoiBong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-			this.txtTenDoiBong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtTenDoiBong.DisabledState.Parent = this.txtTenDoiBong;
-			this.txtTenDoiBong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.txtTenDoiBong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.txtTenDoiBong.FocusedState.Parent = this.txtTenDoiBong;
-			this.txtTenDoiBong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.txtTenDoiBong.HoverState.Parent = this.txtTenDoiBong;
-			this.txtTenDoiBong.Location = new System.Drawing.Point(502, 104);
-			this.txtTenDoiBong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.txtTenDoiBong.Name = "txtTenDoiBong";
-			this.txtTenDoiBong.PasswordChar = '\0';
-			this.txtTenDoiBong.PlaceholderText = "";
-			this.txtTenDoiBong.SelectedText = "";
-			this.txtTenDoiBong.ShadowDecoration.Parent = this.txtTenDoiBong;
-			this.txtTenDoiBong.Size = new System.Drawing.Size(227, 32);
-			this.txtTenDoiBong.TabIndex = 13;
+			this.txtSoBan.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtSoBan.DefaultText = "";
+			this.txtSoBan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.txtSoBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+			this.txtSoBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtSoBan.DisabledState.Parent = this.txtSoBan;
+			this.txtSoBan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtSoBan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+			this.txtSoBan.FocusedState.Parent = this.txtSoBan;
+			this.txtSoBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+			this.txtSoBan.HoverState.Parent = this.txtSoBan;
+			this.txtSoBan.Location = new System.Drawing.Point(592, 108);
+			this.txtSoBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtSoBan.Name = "txtSoBan";
+			this.txtSoBan.PasswordChar = '\0';
+			this.txtSoBan.PlaceholderText = "";
+			this.txtSoBan.SelectedText = "";
+			this.txtSoBan.ShadowDecoration.Parent = this.txtSoBan;
+			this.txtSoBan.Size = new System.Drawing.Size(105, 32);
+			this.txtSoBan.TabIndex = 13;
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(744, 115);
+			this.label5.Location = new System.Drawing.Point(735, 115);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(112, 21);
+			this.label5.Size = new System.Drawing.Size(85, 21);
 			this.label5.TabIndex = 9;
-			this.label5.Text = "Số bàn thắng:";
+			this.label5.Text = "Số thẻ đỏ:";
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(388, 115);
+			this.label4.Location = new System.Drawing.Point(473, 115);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(107, 21);
+			this.label4.Size = new System.Drawing.Size(112, 21);
 			this.label4.TabIndex = 10;
-			this.label4.Text = "Tên đội bóng:";
+			this.label4.Text = "Số bàn thắng:";
 			// 
 			// guna2Panel1
 			// 
@@ -226,50 +182,6 @@
 			this.btnFind.Size = new System.Drawing.Size(32, 34);
 			this.btnFind.TabIndex = 8;
 			// 
-			// btnAdd
-			// 
-			this.btnAdd.BorderRadius = 15;
-			this.btnAdd.BorderThickness = 1;
-			this.btnAdd.CheckedState.Parent = this.btnAdd;
-			this.btnAdd.CustomImages.Parent = this.btnAdd;
-			this.btnAdd.FillColor = System.Drawing.Color.White;
-			this.btnAdd.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAdd.ForeColor = System.Drawing.Color.Black;
-			this.btnAdd.HoverState.BorderColor = System.Drawing.Color.Black;
-			this.btnAdd.HoverState.Parent = this.btnAdd;
-			this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-			this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
-			this.btnAdd.Location = new System.Drawing.Point(27, 6);
-			this.btnAdd.Name = "btnAdd";
-			this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
-			this.btnAdd.Size = new System.Drawing.Size(190, 52);
-			this.btnAdd.TabIndex = 7;
-			this.btnAdd.Text = "Đăng ký trận đấu";
-			// 
-			// comboBox1
-			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Items.AddRange(new object[] {
-            "A - Z",
-            "Z - A",
-            "Số bàn thắng",
-            "Số thẻ đỏ",
-            "Số thẻ vàng"});
-			this.comboBox1.Location = new System.Drawing.Point(846, 19);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 24);
-			this.comboBox1.TabIndex = 3;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(698, 19);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(131, 24);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "Sắp xếp theo:";
-			// 
 			// btnUpdate
 			// 
 			this.btnUpdate.BorderRadius = 15;
@@ -290,24 +202,108 @@
 			this.btnUpdate.TabIndex = 7;
 			this.btnUpdate.Text = "Cập nhật kết quả";
 			// 
+			// btnAdd
+			// 
+			this.btnAdd.BorderRadius = 15;
+			this.btnAdd.BorderThickness = 1;
+			this.btnAdd.CheckedState.Parent = this.btnAdd;
+			this.btnAdd.CustomImages.Parent = this.btnAdd;
+			this.btnAdd.FillColor = System.Drawing.Color.White;
+			this.btnAdd.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAdd.ForeColor = System.Drawing.Color.Black;
+			this.btnAdd.HoverState.BorderColor = System.Drawing.Color.Black;
+			this.btnAdd.HoverState.Parent = this.btnAdd;
+			this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+			this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
+			this.btnAdd.Location = new System.Drawing.Point(27, 6);
+			this.btnAdd.Name = "btnAdd";
+			this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
+			this.btnAdd.Size = new System.Drawing.Size(190, 52);
+			this.btnAdd.TabIndex = 7;
+			this.btnAdd.Text = "Đăng ký trận đấu";
+			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Items.AddRange(new object[] {
+            "Số bàn thắng",
+            "Số thẻ đỏ",
+            "Số thẻ vàng",
+            "Tên đội nhà"});
+			this.comboBox1.Location = new System.Drawing.Point(846, 19);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(121, 24);
+			this.comboBox1.TabIndex = 3;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(698, 19);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(131, 24);
+			this.label2.TabIndex = 2;
+			this.label2.Text = "Sắp xếp theo:";
+			// 
+			// cbDoiNha
+			// 
+			this.cbDoiNha.BackColor = System.Drawing.Color.Transparent;
+			this.cbDoiNha.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.cbDoiNha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbDoiNha.FocusedColor = System.Drawing.Color.Empty;
+			this.cbDoiNha.FocusedState.Parent = this.cbDoiNha;
+			this.cbDoiNha.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.cbDoiNha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+			this.cbDoiNha.FormattingEnabled = true;
+			this.cbDoiNha.HoverState.Parent = this.cbDoiNha;
+			this.cbDoiNha.ItemHeight = 30;
+			this.cbDoiNha.ItemsAppearance.Parent = this.cbDoiNha;
+			this.cbDoiNha.Location = new System.Drawing.Point(140, 104);
+			this.cbDoiNha.Name = "cbDoiNha";
+			this.cbDoiNha.ShadowDecoration.Parent = this.cbDoiNha;
+			this.cbDoiNha.Size = new System.Drawing.Size(299, 36);
+			this.cbDoiNha.TabIndex = 15;
+			// 
+			// btnDelete
+			// 
+			this.btnDelete.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDelete.Location = new System.Drawing.Point(693, 605);
+			this.btnDelete.Name = "btnDelete";
+			this.btnDelete.Size = new System.Drawing.Size(106, 35);
+			this.btnDelete.TabIndex = 16;
+			this.btnDelete.Text = "Xóa";
+			this.btnDelete.UseVisualStyleBackColor = true;
+			// 
+			// btnCapNhat
+			// 
+			this.btnCapNhat.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCapNhat.Location = new System.Drawing.Point(815, 605);
+			this.btnCapNhat.Name = "btnCapNhat";
+			this.btnCapNhat.Size = new System.Drawing.Size(106, 35);
+			this.btnCapNhat.TabIndex = 16;
+			this.btnCapNhat.Text = "Cập nhật";
+			this.btnCapNhat.UseVisualStyleBackColor = true;
+			// 
 			// DanhSachTranDau
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1024, 652);
+			this.Controls.Add(this.btnCapNhat);
+			this.Controls.Add(this.btnDelete);
+			this.Controls.Add(this.cbDoiNha);
 			this.Controls.Add(this.btnFilter);
-			this.Controls.Add(this.txtTen);
-			this.Controls.Add(this.txtSoBanThang);
+			this.Controls.Add(this.txtTheDo);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.txtTenDoiBong);
+			this.Controls.Add(this.txtSoBan);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.guna2Panel1);
-			this.Controls.Add(this.btnDangKy);
-			this.Controls.Add(this.btnCapNhat);
 			this.Controls.Add(this.guna2GroupBox1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "DanhSachTranDau";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Danh sách trận đấu";
 			this.guna2Panel1.ResumeLayout(false);
 			this.guna2Panel1.PerformLayout();
@@ -318,13 +314,10 @@
 
 		#endregion
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-		private System.Windows.Forms.Button btnCapNhat;
-		private System.Windows.Forms.Button btnDangKy;
 		private Guna.UI2.WinForms.Guna2Button btnFilter;
-		private Guna.UI2.WinForms.Guna2TextBox txtTen;
-		private Guna.UI2.WinForms.Guna2TextBox txtSoBanThang;
+		private Guna.UI2.WinForms.Guna2TextBox txtTheDo;
 		private System.Windows.Forms.Label label3;
-		private Guna.UI2.WinForms.Guna2TextBox txtTenDoiBong;
+		private Guna.UI2.WinForms.Guna2TextBox txtSoBan;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label4;
 		private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
@@ -333,5 +326,8 @@
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label label2;
 		private Guna.UI2.WinForms.Guna2Button btnUpdate;
+		private Guna.UI2.WinForms.Guna2ComboBox cbDoiNha;
+		private System.Windows.Forms.Button btnDelete;
+		private System.Windows.Forms.Button btnCapNhat;
 	}
 }

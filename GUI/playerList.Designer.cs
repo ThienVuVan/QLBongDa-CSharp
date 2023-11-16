@@ -218,7 +218,8 @@
 			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.gridCauThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.gridCauThu.ColumnHeadersHeight = 4;
+			this.gridCauThu.ColumnHeadersHeight = 10;
+			this.gridCauThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
 			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -249,8 +250,8 @@
 			this.gridCauThu.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.gridCauThu.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
 			this.gridCauThu.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-			this.gridCauThu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-			this.gridCauThu.ThemeStyle.HeaderStyle.Height = 4;
+			this.gridCauThu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+			this.gridCauThu.ThemeStyle.HeaderStyle.Height = 10;
 			this.gridCauThu.ThemeStyle.ReadOnly = false;
 			this.gridCauThu.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
 			this.gridCauThu.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;

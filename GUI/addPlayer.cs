@@ -17,5 +17,8 @@ namespace GUI
 			InitializeComponent();
 		}
 
+		private void addPlayer_Load(object sender, EventArgs e)
+		{
+		}
 	}
 }
