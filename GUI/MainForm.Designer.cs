@@ -31,7 +31,6 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
-			this.formspanel = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.panel5 = new System.Windows.Forms.Panel();
@@ -60,15 +59,6 @@
 			// 
 			// timer1
 			// 
-			// 
-			// formspanel
-			// 
-			this.formspanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.formspanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.formspanel.Location = new System.Drawing.Point(233, 0);
-			this.formspanel.Name = "formspanel";
-			this.formspanel.Size = new System.Drawing.Size(1024, 652);
-			this.formspanel.TabIndex = 1;
 			// 
 			// panel3
 			// 
@@ -297,7 +287,6 @@
 
         #endregion
         private System.Windows.Forms.Timer timer1;
-		private System.Windows.Forms.Panel formspanel;
 		private System.Windows.Forms.Panel panel7;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Panel panel6;
@@ -313,5 +302,6 @@
 		private System.Windows.Forms.FlowLayoutPanel slidebar;
 		private System.Windows.Forms.Panel panel10;
 		private System.Windows.Forms.Button button8;
+		private System.Windows.Forms.Panel formspanel;
 	}
 }
