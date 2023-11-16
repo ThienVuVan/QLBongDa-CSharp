@@ -1,6 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,12 @@ namespace DAL
         {
             string sql = "...";
             DatabaseAccess.Excute(sql);
+        }
+        public static DataTable PlayerHaveScore(TranDau tranDau)
+        {
+            string sql = $"select b.MATRANDAU,b.MACAUTHU,b.THOIGIAN,a.MADOI,a.VITRI from TRANDAU_BANTHANG b join TRANDAU_CAUTHU a on a.MATRANDAU = b.MATRANDAU where MATRANDAU = {tranDau.MaTranDau} ";
+            
+            return DatabaseAccess.ReadTable(sql);
         }
     }
 }

@@ -407,14 +407,12 @@
 			this.guna2GroupBox1.ResumeLayout(false);
 			this.guna2GroupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
-			this.ResumeLayout(false);
-
+			this.ResumeLayout(false);    
 		}
 
 		#endregion
 
 		private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-		private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
 		private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
 		private System.Windows.Forms.PictureBox picBox;
@@ -422,15 +420,11 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.DateTimePicker dtpNgaySinh;
 		private System.Windows.Forms.ComboBox cbViTri;
 		private System.Windows.Forms.TextBox txtSoAo;
-		private System.Windows.Forms.TextBox txtVang;
-		private System.Windows.Forms.TextBox txtSoBan;
 		private System.Windows.Forms.TextBox txtQuocTich;
 		private System.Windows.Forms.TextBox txtMaDoi;
 		private System.Windows.Forms.TextBox txtName;

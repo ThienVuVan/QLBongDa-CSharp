@@ -1,7 +1,9 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,6 +27,11 @@ namespace DAL
         {
             string sql = "...";
             DatabaseAccess.Excute(sql);
+        }
+        public static DataTable GetPenatylCard(string matranDau)
+        {
+            string sql = $"select * from TRANDAU_THE where MATRANDAU = {matranDau}";
+            return DatabaseAccess.ReadTable(sql);
         }
     }
 }
