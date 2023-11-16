@@ -31,7 +31,6 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
-			this.formspanel = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.panel5 = new System.Windows.Forms.Panel();
@@ -43,6 +42,7 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
+			this.formspanel = new System.Windows.Forms.Panel();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
@@ -60,15 +60,6 @@
 			// 
 			// timer1
 			// 
-			// 
-			// formspanel
-			// 
-			this.formspanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.formspanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.formspanel.Location = new System.Drawing.Point(233, 0);
-			this.formspanel.Name = "formspanel";
-			this.formspanel.Size = new System.Drawing.Size(1024, 652);
-			this.formspanel.TabIndex = 1;
 			// 
 			// panel3
 			// 
@@ -96,6 +87,24 @@
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(267, 56);
 			this.panel5.TabIndex = 4;
+			// 
+			// button4
+			// 
+			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button4.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button4.ForeColor = System.Drawing.Color.Transparent;
+			this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+			this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button4.Location = new System.Drawing.Point(-12, -9);
+			this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.button4.Name = "button4";
+			this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+			this.button4.Size = new System.Drawing.Size(284, 70);
+			this.button4.TabIndex = 1;
+			this.button4.Text = "          Cầu thủ";
+			this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// panel6
 			// 
@@ -199,6 +208,13 @@
 			this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button8.UseVisualStyleBackColor = true;
 			// 
+			// formspanel
+			// 
+			this.formspanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.formspanel.Location = new System.Drawing.Point(233, 0);
+			this.formspanel.Name = "formspanel";
+			this.formspanel.Size = new System.Drawing.Size(1024, 652);
+			this.formspanel.TabIndex = 1;
 			// button2
 			// 
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -297,7 +313,6 @@
 
         #endregion
         private System.Windows.Forms.Timer timer1;
-		private System.Windows.Forms.Panel formspanel;
 		private System.Windows.Forms.Panel panel7;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Panel panel6;
@@ -313,5 +328,6 @@
 		private System.Windows.Forms.FlowLayoutPanel slidebar;
 		private System.Windows.Forms.Panel panel10;
 		private System.Windows.Forms.Button button8;
+		private System.Windows.Forms.Panel formspanel;
 	}
 }
