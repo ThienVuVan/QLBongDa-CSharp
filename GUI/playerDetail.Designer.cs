@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-	partial class addPlayer
+	partial class playerDetail
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addPlayer));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(playerDetail));
 			this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -54,10 +54,8 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.picBox = new System.Windows.Forms.PictureBox();
-			this.button2 = new System.Windows.Forms.Button();
-			this.btnCancel = new System.Windows.Forms.Button();
-			this.btnAddImg = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
+			this.btnCancel = new System.Windows.Forms.Button();
 			this.guna2GroupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
 			this.SuspendLayout();
@@ -122,7 +120,6 @@
 			this.guna2GroupBox1.Controls.Add(this.label3);
 			this.guna2GroupBox1.Controls.Add(this.label2);
 			this.guna2GroupBox1.Controls.Add(this.label1);
-			this.guna2GroupBox1.Controls.Add(this.btnAddImg);
 			this.guna2GroupBox1.Controls.Add(this.picBox);
 			this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
@@ -347,15 +344,15 @@
 			this.picBox.TabIndex = 1;
 			this.picBox.TabStop = false;
 			// 
-			// button2
+			// button1
 			// 
-			this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(431, 436);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(137, 44);
-			this.button2.TabIndex = 2;
-			this.button2.Text = "Làm lại";
-			this.button2.UseVisualStyleBackColor = true;
+			this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.Location = new System.Drawing.Point(431, 436);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(137, 44);
+			this.button1.TabIndex = 2;
+			this.button1.Text = "Chỉnh sửa";
+			this.button1.UseVisualStyleBackColor = true;
 			// 
 			// btnCancel
 			// 
@@ -367,42 +364,19 @@
 			this.btnCancel.Text = "Hủy";
 			this.btnCancel.UseVisualStyleBackColor = true;
 			// 
-			// btnAddImg
-			// 
-			this.btnAddImg.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAddImg.ForeColor = System.Drawing.Color.Black;
-			this.btnAddImg.Location = new System.Drawing.Point(64, 274);
-			this.btnAddImg.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-			this.btnAddImg.Name = "btnAddImg";
-			this.btnAddImg.Size = new System.Drawing.Size(101, 28);
-			this.btnAddImg.TabIndex = 2;
-			this.btnAddImg.Text = "Tải ảnh lên";
-			this.btnAddImg.UseVisualStyleBackColor = true;
-			// 
-			// button1
-			// 
-			this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(275, 436);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(137, 44);
-			this.button1.TabIndex = 2;
-			this.button1.Text = "Lưu";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// addPlayer
+			// PlayerDetail
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 500);
 			this.Controls.Add(this.btnCancel);
-			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.guna2GroupBox1);
 			this.Controls.Add(this.guna2ControlBox3);
 			this.Controls.Add(this.guna2ControlBox2);
 			this.Controls.Add(this.guna2ControlBox1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Name = "addPlayer";
+			this.Name = "PlayerDetail";
 			this.Text = "addPlayer";
 			this.guna2GroupBox1.ResumeLayout(false);
 			this.guna2GroupBox1.PerformLayout();
@@ -438,9 +412,7 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.TextBox txtSoLan;
 		private System.Windows.Forms.TextBox txtDo;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button btnCancel;
-		private System.Windows.Forms.Button btnAddImg;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnCancel;
 	}
 }

@@ -85,10 +85,15 @@ namespace GUI
 				newForm.BringToFront();
 			}
 		}
-        // để hiển thị form bên trong panel của MainForm dùng OpenForm
-        // Hiển thị nổi Form.Show()
 
-		
+		private void button4_Click(object sender, EventArgs e)
+		{
+            OpenForm<playerList>(); 
+		}
+		// để hiển thị form bên trong panel của MainForm dùng OpenForm
+		// Hiển thị nổi Form.Show()
+
+
 
 	}
 }
