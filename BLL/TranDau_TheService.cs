@@ -11,9 +11,9 @@ namespace BLL
 {
     public class TranDau_TheService
     {
-        public static DataTable PenatylCard(TranDau tranDau)
+        public static DataTable PenatylCard(string maTranDau)
         {
-            return TranDau_TheAccess.GetPenatylCard(tranDau);
+            return TranDau_TheAccess.GetPenatylCard(maTranDau);
         }
     }
 }

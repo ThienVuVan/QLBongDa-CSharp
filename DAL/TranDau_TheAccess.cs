@@ -28,9 +28,9 @@ namespace DAL
             string sql = "...";
             DatabaseAccess.Excute(sql);
         }
-        public static DataTable GetPenatylCard(TranDau tranDau)
+        public static DataTable GetPenatylCard(string matranDau)
         {
-            string sql = $"select * from TRANDAU_THE where MATRANDAU = {tranDau.MaTranDau}";
+            string sql = $"select * from TRANDAU_THE where MATRANDAU = {matranDau}";
             return DatabaseAccess.ReadTable(sql);
         }
     }

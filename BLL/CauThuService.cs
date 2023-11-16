@@ -30,5 +30,9 @@ namespace BLL
         {
             return CauThuAccess.FindThreeMaxGoal();
         }
+        public static DataTable GetMemBerOfTeam(string maDoi)
+        {
+            return CauThuAccess.GetMemBerOfTeam(maDoi);
+        }
     }
 }
