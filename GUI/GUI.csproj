@@ -224,11 +224,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="teamDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teamDetail.Designer.cs">
+      <DependentUpon>teamDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="addPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="addPlayer.Designer.cs">
       <DependentUpon>addPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachDoiBong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachDoiBong.Designer.cs">
+      <DependentUpon>DanhSachDoiBong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -280,6 +292,9 @@
       <DependentUpon>playerList.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="teamDetail.resx">
+      <DependentUpon>teamDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addPlayer.resx">
       <DependentUpon>addPlayer.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dangKyTranDau.resx">
       <DependentUpon>dangKyTranDau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachDoiBong.resx">
+      <DependentUpon>DanhSachDoiBong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhSachTranDau.resx">
       <DependentUpon>DanhSachTranDau.cs</DependentUpon>
@@ -425,6 +443,9 @@
     <Content Include="Resources\ImgMainForm\icons8-team-30.png" />
     <Content Include="Resources\ImgMainForm\icons8-trophy-30.png" />
     <Content Include="Resources\ImgMainForm\Soccer_icon-icons.com_67819.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

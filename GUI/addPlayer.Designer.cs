@@ -314,7 +314,6 @@
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
-
 		}
 
 		#endregion
@@ -324,7 +323,6 @@
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
 		private System.Windows.Forms.PictureBox picBox;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button btnAddImg;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
@@ -339,5 +337,7 @@
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button btnCancel;
+		private System.Windows.Forms.Button btnAddImg;
+		private System.Windows.Forms.Button button1;
 	}
 }
