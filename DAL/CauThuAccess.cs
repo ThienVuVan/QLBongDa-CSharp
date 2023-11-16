@@ -48,5 +48,10 @@ namespace DAL
             string sql = $"delete from dbo.CAUTHU where MaCauThu = {MaCauThu}";
             DatabaseAccess.Excute(sql);
         }
+        public static DataTable GetMemBerOfTeam(string maDoi)
+        {
+            string sql = $"select * from CAUTHU where MADOI = '{maDoi}'";
+            return DatabaseAccess.ReadTable(sql);
+        }
     }
 }

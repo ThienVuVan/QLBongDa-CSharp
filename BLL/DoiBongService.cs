@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace BLL
             DoiBongAccess.SaveDoiBong(doiBong);
         }
 
-        public static void UpdateDoiBong(DoiBong doiBong)
+        public static void UpdateDoiBong(DoiBong doiBong)   
         {
             DoiBongAccess.UpdateDoiBong(doiBong);
         }
@@ -23,6 +24,10 @@ namespace BLL
         public static void DeleteDoiBong(string MaDoi)
         {
             DoiBongAccess.DeleteDoiBong(MaDoi);
+        }
+        public static DataTable GetAllDoiBong()
+        {
+            return DoiBongAccess.GetAllTeam();
         }
     }
 }
