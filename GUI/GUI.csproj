@@ -228,12 +228,6 @@
     <Compile Include="teamDetail.Designer.cs">
       <DependentUpon>teamDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="playerDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="playerDetail.Designer.cs">
-      <DependentUpon>playerDetail.cs</DependentUpon>
-    </Compile>
     <Compile Include="addPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,9 +292,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="teamDetail.resx">
       <DependentUpon>teamDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="playerDetail.resx">
-      <DependentUpon>playerDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addPlayer.resx">
       <DependentUpon>addPlayer.cs</DependentUpon>
