@@ -435,6 +435,5 @@
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button btnCancel;
 		private System.Windows.Forms.Button btnAddImg;
-		private System.Windows.Forms.Button button1;
 	}
 }

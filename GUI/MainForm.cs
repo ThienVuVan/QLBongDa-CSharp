@@ -103,7 +103,6 @@ namespace GUI
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			
 		}
 		// để hiển thị form bên trong panel của MainForm dùng OpenForm
 		// Hiển thị nổi Form.Show()
