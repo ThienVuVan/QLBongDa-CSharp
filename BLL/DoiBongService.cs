@@ -11,6 +11,10 @@ namespace BLL
 {
     public class DoiBongService
     {
+        public static List<string> RetrieveAllNameDoiBong()
+        {
+            return DoiBongAccess.RetrieveAllNameDoiBong();
+        }
         public static void SaveDoiBong(DoiBong doiBong)
         {
             DoiBongAccess.SaveDoiBong(doiBong);

@@ -24,7 +24,6 @@ namespace GUI
 		{
 			CauThu cauThu = new CauThu();
 			cauThu.Ten = txtTen.Text;
-			gridCauThu.DataSource = CauThuService.Filter(cauThu);
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)

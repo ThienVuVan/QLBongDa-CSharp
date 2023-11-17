@@ -13,3 +13,4 @@ appsetting.json
 *.tmp
 *.ldf
 *.mdf
+UpgradeLog*
