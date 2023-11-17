@@ -24,15 +24,13 @@ namespace GUI
 		{
 			CauThu cauThu = new CauThu();
 			cauThu.Ten = txtTen.Text;
-			gridCauThu.DataSource = CauThuService.Filter(cauThu);
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			addPlayer addNewPlayer = new addPlayer();
 			addNewPlayer.ShowDialog();
-			MainForm mainForm = new MainForm();
-			mainForm.Enabled = false;
+			
 		}
 
 		private void playerList_Load(object sender, EventArgs e)

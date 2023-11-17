@@ -19,9 +19,9 @@ namespace BLL
         {
             return TranDauAccess.RetrieveAllTranDau();
         }
-        public static DataTable Filter(TranDau tranDau)
+        public static DataTable Filter(string MaTranDau, string TenDoiNha, Nullable<int> SoBanThangDoiNha, Nullable<int> SoTheDoDoiNha)
         {
-            return TranDauAccess.Filter(tranDau);
+            return TranDauAccess.Filter(MaTranDau, TenDoiNha, SoBanThangDoiNha, SoTheDoDoiNha);
         }
     }
 }
