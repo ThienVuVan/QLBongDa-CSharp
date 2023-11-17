@@ -30,7 +30,6 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addPlayer));
 			this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-			this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
 			this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -38,15 +37,11 @@
 			this.txtSoAo = new System.Windows.Forms.TextBox();
 			this.txtSoLan = new System.Windows.Forms.TextBox();
 			this.txtDo = new System.Windows.Forms.TextBox();
-			this.txtVang = new System.Windows.Forms.TextBox();
-			this.txtSoBan = new System.Windows.Forms.TextBox();
 			this.txtQuocTich = new System.Windows.Forms.TextBox();
 			this.txtMaDoi = new System.Windows.Forms.TextBox();
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
@@ -57,7 +52,6 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnAddImg = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
 			this.guna2GroupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
 			this.SuspendLayout();
@@ -73,19 +67,6 @@
 			this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
 			this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
 			this.guna2ControlBox1.TabIndex = 0;
-			// 
-			// guna2ControlBox2
-			// 
-			this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-			this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-			this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
-			this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-			this.guna2ControlBox2.Location = new System.Drawing.Point(704, -1);
-			this.guna2ControlBox2.Name = "guna2ControlBox2";
-			this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-			this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
-			this.guna2ControlBox2.TabIndex = 0;
 			// 
 			// guna2ControlBox3
 			// 
@@ -107,15 +88,11 @@
 			this.guna2GroupBox1.Controls.Add(this.txtSoAo);
 			this.guna2GroupBox1.Controls.Add(this.txtSoLan);
 			this.guna2GroupBox1.Controls.Add(this.txtDo);
-			this.guna2GroupBox1.Controls.Add(this.txtVang);
-			this.guna2GroupBox1.Controls.Add(this.txtSoBan);
 			this.guna2GroupBox1.Controls.Add(this.txtQuocTich);
 			this.guna2GroupBox1.Controls.Add(this.txtMaDoi);
 			this.guna2GroupBox1.Controls.Add(this.txtName);
 			this.guna2GroupBox1.Controls.Add(this.label10);
 			this.guna2GroupBox1.Controls.Add(this.label9);
-			this.guna2GroupBox1.Controls.Add(this.label8);
-			this.guna2GroupBox1.Controls.Add(this.label7);
 			this.guna2GroupBox1.Controls.Add(this.label6);
 			this.guna2GroupBox1.Controls.Add(this.label5);
 			this.guna2GroupBox1.Controls.Add(this.label4);
@@ -180,20 +157,6 @@
 			this.txtDo.Size = new System.Drawing.Size(121, 27);
 			this.txtDo.TabIndex = 4;
 			// 
-			// txtVang
-			// 
-			this.txtVang.Location = new System.Drawing.Point(342, 275);
-			this.txtVang.Name = "txtVang";
-			this.txtVang.Size = new System.Drawing.Size(121, 27);
-			this.txtVang.TabIndex = 4;
-			// 
-			// txtSoBan
-			// 
-			this.txtSoBan.Location = new System.Drawing.Point(342, 246);
-			this.txtSoBan.Name = "txtSoBan";
-			this.txtSoBan.Size = new System.Drawing.Size(121, 27);
-			this.txtSoBan.TabIndex = 4;
-			// 
 			// txtQuocTich
 			// 
 			this.txtQuocTich.Location = new System.Drawing.Point(342, 112);
@@ -238,30 +201,6 @@
 			this.label9.Size = new System.Drawing.Size(85, 21);
 			this.label9.TabIndex = 3;
 			this.label9.Text = "Số thẻ đỏ:";
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-			this.label8.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.ForeColor = System.Drawing.Color.Black;
-			this.label8.Location = new System.Drawing.Point(224, 281);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(103, 21);
-			this.label8.TabIndex = 3;
-			this.label8.Text = "Số thẻ vàng:";
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-			this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.ForeColor = System.Drawing.Color.Black;
-			this.label7.Location = new System.Drawing.Point(224, 249);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(112, 21);
-			this.label7.TabIndex = 3;
-			this.label7.Text = "Số bàn thắng:";
 			// 
 			// label6
 			// 
@@ -378,17 +317,6 @@
 			this.btnAddImg.TabIndex = 2;
 			this.btnAddImg.Text = "Tải ảnh lên";
 			this.btnAddImg.UseVisualStyleBackColor = true;
-			// 
-			// button1
-			// 
-			this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(275, 436);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(137, 44);
-			this.button1.TabIndex = 2;
-			this.button1.Text = "Lưu";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
 			// addPlayer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -396,10 +324,8 @@
 			this.ClientSize = new System.Drawing.Size(800, 500);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
 			this.Controls.Add(this.guna2GroupBox1);
 			this.Controls.Add(this.guna2ControlBox3);
-			this.Controls.Add(this.guna2ControlBox2);
 			this.Controls.Add(this.guna2ControlBox1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "addPlayer";
