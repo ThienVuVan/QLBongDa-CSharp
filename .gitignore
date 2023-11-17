@@ -8,8 +8,10 @@
 Publish/
 *.publish.htm
 packages/
+GUI/
 appsetting.json
 *.log
 *.tmp
 *.ldf
 *.mdf
+UpgradeLog*

@@ -13,7 +13,7 @@ namespace DAL
     public class DatabaseAccess
     {
         public static SqlConnection conn;
-        public static string str = "Data Source=LAPTOP-RGISSHG6\\SQLEXPRESS;Initial Catalog=QLBongDa;Integrated Security=True";
+        public static string str = "Data Source=THIENVUVAN\\SQLEXPRESS;Initial Catalog=QLBongDa;Integrated Security=True";
         public static SqlConnection Connect()
         {
             SqlConnection conn = new SqlConnection(str);
@@ -40,6 +40,15 @@ namespace DAL
             cm.ExecuteNonQuery();
             conn.Close();
             conn.Dispose();
+        }
+
+        public static object ExecuteScalar(string sql)
+        {
+            object result = null;
+            SqlConnection conn = Connect();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            result = cmd.ExecuteScalar();
+            return result;
         }
     }
 

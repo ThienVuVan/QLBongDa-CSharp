@@ -11,6 +11,18 @@ namespace DAL
 {
     public class DoiBongAccess
     {
+        public static List<string> RetrieveAllNameDoiBong()
+        {
+            List<string> list = new List<string>();
+            string sql = "select * from dbo.DOIBONG";
+            DataTable dt = DatabaseAccess.ReadTable(sql);
+            foreach (DataRow row in dt.Rows)
+            {
+                string tenValue = row["TEN"].ToString();
+                list.Add(tenValue);
+            }
+            return list;
+        }
         public static void SaveDoiBong(DoiBong doiBong)
         {
             string sql = $"insert into DOIBONG ([MADOI],[MASAN],[MATINH],[TENDOI],[HLV],[LOGO],[SODIEM],[SOBANTHANG],[SOBANTHUA],[SOLUONGCAUTHU]) " +

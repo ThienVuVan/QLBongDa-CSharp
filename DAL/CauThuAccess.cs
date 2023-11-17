@@ -16,10 +16,16 @@ namespace DAL
             return DatabaseAccess.ReadTable(sql);
         }
 
-        public static DataTable Filter(CauThu cauThu)
+        public static DataTable Filter(string Ten, string MaDoi, Nullable<int> SoBanThang)
         {
+            if (Ten == null) Ten = "none";
+            if(MaDoi == null) MaDoi = "none";
+            if (SoBanThang == null) SoBanThang = -1;
             string sql = $"select * from dbo.CAUTHU c where " +
-                $"c.Ten is null or c.Ten = N'{cauThu.Ten}'";
+                $"('{Ten}' = 'none' or c.Ten = N'{Ten}') and " +
+                $"('{MaDoi}' = 'none' or c.MaDoi = N'{MaDoi}') and " +
+                $"({SoBanThang} = -1 or c.SoBanThang = {SoBanThang})";
+            Console.WriteLine(sql);
             return DatabaseAccess.ReadTable(sql);
         }
         public static void SaveCauThu(CauThu cauThu)
