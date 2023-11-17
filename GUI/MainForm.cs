@@ -93,7 +93,7 @@ namespace GUI
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			
+			OpenForm<DanhSachDoiBong>();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
