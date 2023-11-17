@@ -35,8 +35,6 @@
 			this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
 			this.btnFind = new Guna.UI2.WinForms.Guna2Button();
 			this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.label2 = new System.Windows.Forms.Label();
 			this.lbSoLuong = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtTen = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,8 +55,6 @@
 			// 
 			this.guna2Panel1.Controls.Add(this.btnFind);
 			this.guna2Panel1.Controls.Add(this.btnAdd);
-			this.guna2Panel1.Controls.Add(this.comboBox1);
-			this.guna2Panel1.Controls.Add(this.label2);
 			this.guna2Panel1.Controls.Add(this.lbSoLuong);
 			this.guna2Panel1.Controls.Add(this.label1);
 			this.guna2Panel1.Location = new System.Drawing.Point(0, 34);
@@ -103,30 +99,6 @@
 			this.btnAdd.TabIndex = 7;
 			this.btnAdd.Text = "Thêm cầu thủ";
 			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-			// 
-			// comboBox1
-			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Items.AddRange(new object[] {
-            "A - Z",
-            "Z - A",
-            "Số bàn thắng",
-            "Số thẻ đỏ",
-            "Số thẻ vàng"});
-			this.comboBox1.Location = new System.Drawing.Point(846, 19);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 24);
-			this.comboBox1.TabIndex = 3;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(698, 19);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(131, 24);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "Sắp xếp theo:";
 			// 
 			// lbSoLuong
 			// 
@@ -380,8 +352,6 @@
 		private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label lbSoLuong;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.Label label2;
 		private Guna.UI2.WinForms.Guna2TextBox txtTen;
 		private System.Windows.Forms.Label label3;
 		private Guna.UI2.WinForms.Guna2Button btnAdd;

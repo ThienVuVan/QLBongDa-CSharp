@@ -32,8 +32,6 @@ namespace GUI
 			addPlayer addNewPlayer = new addPlayer();
 			addNewPlayer.ShowDialog();
 			
-			MainForm mainForm = new MainForm();
-			mainForm.Opacity = 0.5;
 		}
 
 		private void playerList_Load(object sender, EventArgs e)

@@ -43,7 +43,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.btnAddImg = new System.Windows.Forms.Button();
 			this.picBox = new System.Windows.Forms.PictureBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
@@ -73,7 +72,7 @@
 			this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
 			this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
 			this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-			this.guna2ControlBox3.Location = new System.Drawing.Point(704, -1);
+			this.guna2ControlBox3.Location = new System.Drawing.Point(653, -1);
 			this.guna2ControlBox3.Name = "guna2ControlBox3";
 			this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
 			this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
@@ -94,12 +93,11 @@
 			this.guna2GroupBox1.Controls.Add(this.label3);
 			this.guna2GroupBox1.Controls.Add(this.label2);
 			this.guna2GroupBox1.Controls.Add(this.label1);
-			this.guna2GroupBox1.Controls.Add(this.btnAddImg);
 			this.guna2GroupBox1.Controls.Add(this.picBox);
 			this.guna2GroupBox1.FillColor = System.Drawing.Color.Transparent;
 			this.guna2GroupBox1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-			this.guna2GroupBox1.Location = new System.Drawing.Point(21, 56);
+			this.guna2GroupBox1.Location = new System.Drawing.Point(25, 41);
 			this.guna2GroupBox1.Name = "guna2GroupBox1";
 			this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
 			this.guna2GroupBox1.Size = new System.Drawing.Size(750, 374);
@@ -225,19 +223,6 @@
 			this.label1.TabIndex = 3;
 			this.label1.Text = "Họ và tên:";
 			// 
-			// btnAddImg
-			// 
-			this.btnAddImg.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.btnAddImg.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAddImg.ForeColor = System.Drawing.Color.Black;
-			this.btnAddImg.Location = new System.Drawing.Point(64, 274);
-			this.btnAddImg.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-			this.btnAddImg.Name = "btnAddImg";
-			this.btnAddImg.Size = new System.Drawing.Size(101, 28);
-			this.btnAddImg.TabIndex = 2;
-			this.btnAddImg.Text = "Tải ảnh lên";
-			this.btnAddImg.UseVisualStyleBackColor = true;
-			// 
 			// picBox
 			// 
 			this.picBox.BackColor = System.Drawing.Color.Transparent;
@@ -311,20 +296,17 @@
 			this.Controls.Add(this.guna2GroupBox2);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
 			this.Controls.Add(this.guna2GroupBox1);
 			this.Controls.Add(this.guna2ControlBox3);
 			this.Controls.Add(this.guna2ControlBox1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "addPlayer";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "addPlayer";
 			this.Load += new System.EventHandler(this.addPlayer_Load);
 			this.guna2GroupBox1.ResumeLayout(false);
 			this.guna2GroupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
-			this.ResumeLayout(false);
-
+			this.ResumeLayout(false);    
 		}
 
 		#endregion
@@ -334,7 +316,6 @@
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
 		private System.Windows.Forms.PictureBox picBox;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button btnAddImg;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
