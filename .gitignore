@@ -8,6 +8,7 @@
 Publish/
 *.publish.htm
 packages/
+GUI/
 appsetting.json
 *.log
 *.tmp
