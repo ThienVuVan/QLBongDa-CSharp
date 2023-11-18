@@ -17,6 +17,19 @@ namespace GUI
             InitializeComponent();
         }
 
+		private void btnAddImg_Click(object sender, EventArgs e)
+		{
+            OpenFileDialog ofd = new OpenFileDialog();
+			ofd.Filter = "Image Files|*.png;*.jpg;*.jpeg;*.gif;*.bmp";
+            ofd.FilterIndex = 1;
+            ofd.Title = "Chọn ảnh";
+			ofd.ShowDialog(this);
+            
+		}
 
+		private void btnReset_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

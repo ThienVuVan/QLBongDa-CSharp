@@ -32,6 +32,7 @@
 			this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
 			this.cbViTri = new System.Windows.Forms.ComboBox();
 			this.txtSoAo = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
 			this.guna2GroupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
@@ -72,7 +72,7 @@
 			this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
 			this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
 			this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-			this.guna2ControlBox3.Location = new System.Drawing.Point(653, -1);
+			this.guna2ControlBox3.Location = new System.Drawing.Point(704, -1);
 			this.guna2ControlBox3.Name = "guna2ControlBox3";
 			this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
 			this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
@@ -103,6 +103,14 @@
 			this.guna2GroupBox1.Size = new System.Drawing.Size(750, 374);
 			this.guna2GroupBox1.TabIndex = 1;
 			this.guna2GroupBox1.Text = "Thông tin cầu thủ";
+			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(342, 100);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(121, 26);
+			this.comboBox1.TabIndex = 7;
 			// 
 			// dtpNgaySinh
 			// 
@@ -267,14 +275,6 @@
 			this.btnCancel.Text = "Hủy";
 			this.btnCancel.UseVisualStyleBackColor = true;
 			// 
-			// comboBox1
-			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(342, 100);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 26);
-			this.comboBox1.TabIndex = 7;
-			// 
 			// guna2GroupBox2
 			// 
 			this.guna2GroupBox2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -306,7 +306,8 @@
 			this.guna2GroupBox1.ResumeLayout(false);
 			this.guna2GroupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
-			this.ResumeLayout(false);    
+			this.ResumeLayout(false);
+
 		}
 
 		#endregion

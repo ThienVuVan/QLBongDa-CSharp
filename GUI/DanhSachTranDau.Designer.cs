@@ -81,7 +81,7 @@
 			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.dgDanhSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.dgDanhSach.ColumnHeadersHeight = 4;
+			this.dgDanhSach.ColumnHeadersHeight = 55;
 			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
 			dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,7 +113,7 @@
 			this.dgDanhSach.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dgDanhSach.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
 			this.dgDanhSach.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-			this.dgDanhSach.ThemeStyle.HeaderStyle.Height = 4;
+			this.dgDanhSach.ThemeStyle.HeaderStyle.Height = 55;
 			this.dgDanhSach.ThemeStyle.ReadOnly = false;
 			this.dgDanhSach.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
 			this.dgDanhSach.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -122,6 +122,7 @@
 			this.dgDanhSach.ThemeStyle.RowsStyle.Height = 24;
 			this.dgDanhSach.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.dgDanhSach.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			this.dgDanhSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDanhSach_CellContentClick);
 			// 
 			// btnFilter
 			// 
@@ -344,6 +345,7 @@
 			this.Name = "DanhSachTranDau";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Danh sách trận đấu";
+			this.Load += new System.EventHandler(this.DanhSachTranDau_Load);
 			this.guna2GroupBox1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgDanhSach)).EndInit();
 			this.guna2Panel1.ResumeLayout(false);

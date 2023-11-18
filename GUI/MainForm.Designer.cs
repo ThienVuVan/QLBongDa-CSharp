@@ -33,8 +33,6 @@
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.button2 = new System.Windows.Forms.Button();
-			this.panel7 = new System.Windows.Forms.Panel();
-			this.button6 = new System.Windows.Forms.Button();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.button4 = new System.Windows.Forms.Button();
 			this.panel6 = new System.Windows.Forms.Panel();
@@ -46,8 +44,8 @@
 			this.slidebar = new System.Windows.Forms.FlowLayoutPanel();
 			this.panel10 = new System.Windows.Forms.Panel();
 			this.button8 = new System.Windows.Forms.Button();
+			this.panelform = new System.Windows.Forms.Panel();
 			this.panel3.SuspendLayout();
-			this.panel7.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -56,9 +54,6 @@
 			this.slidebar.SuspendLayout();
 			this.panel10.SuspendLayout();
 			this.SuspendLayout();
-			// 
-			// timer1
-			// 
 			// 
 			// panel3
 			// 
@@ -86,32 +81,6 @@
 			this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
-			// 
-			// panel7
-			// 
-			this.panel7.Controls.Add(this.button6);
-			this.panel7.Location = new System.Drawing.Point(3, 419);
-			this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.panel7.Name = "panel7";
-			this.panel7.Size = new System.Drawing.Size(267, 56);
-			this.panel7.TabIndex = 6;
-			// 
-			// button6
-			// 
-			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button6.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button6.ForeColor = System.Drawing.Color.White;
-			this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-			this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button6.Location = new System.Drawing.Point(-12, -9);
-			this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.button6.Name = "button6";
-			this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-			this.button6.Size = new System.Drawing.Size(284, 70);
-			this.button6.TabIndex = 1;
-			this.button6.Text = "          Cài đặt";
-			this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button6.UseVisualStyleBackColor = true;
 			// 
 			// panel5
 			// 
@@ -223,7 +192,6 @@
 			this.slidebar.Controls.Add(this.panel3);
 			this.slidebar.Controls.Add(this.panel6);
 			this.slidebar.Controls.Add(this.panel5);
-			this.slidebar.Controls.Add(this.panel7);
 			this.slidebar.Dock = System.Windows.Forms.DockStyle.Left;
 			this.slidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 			this.slidebar.Location = new System.Drawing.Point(0, 0);
@@ -260,18 +228,26 @@
 			this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button8.UseVisualStyleBackColor = true;
 			// 
+			// panelform
+			// 
+			this.panelform.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panelform.Location = new System.Drawing.Point(233, 0);
+			this.panelform.Name = "panelform";
+			this.panelform.Size = new System.Drawing.Size(1109, 652);
+			this.panelform.TabIndex = 1;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1257, 652);
+			this.ClientSize = new System.Drawing.Size(1342, 652);
+			this.Controls.Add(this.panelform);
 			this.Controls.Add(this.slidebar);
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Load += new System.EventHandler(this.Test_Load);
 			this.panel3.ResumeLayout(false);
-			this.panel7.ResumeLayout(false);
 			this.panel5.ResumeLayout(false);
 			this.panel6.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
@@ -285,8 +261,6 @@
 
         #endregion
         private System.Windows.Forms.Timer timer1;
-		private System.Windows.Forms.Panel panel7;
-		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Panel panel6;
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Panel panel5;
@@ -301,5 +275,6 @@
 		private System.Windows.Forms.Panel panel10;
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.Panel formspanel;
+		private System.Windows.Forms.Panel panelform;
 	}
 }

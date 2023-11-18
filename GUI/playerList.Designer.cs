@@ -60,7 +60,7 @@
 			this.guna2Panel1.Location = new System.Drawing.Point(0, 34);
 			this.guna2Panel1.Name = "guna2Panel1";
 			this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-			this.guna2Panel1.Size = new System.Drawing.Size(1022, 67);
+			this.guna2Panel1.Size = new System.Drawing.Size(1296, 67);
 			this.guna2Panel1.TabIndex = 1;
 			// 
 			// btnFind
@@ -73,7 +73,7 @@
 			this.btnFind.HoverState.Parent = this.btnFind;
 			this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
 			this.btnFind.ImageSize = new System.Drawing.Size(30, 30);
-			this.btnFind.Location = new System.Drawing.Point(1156, 22);
+			this.btnFind.Location = new System.Drawing.Point(1142, 17);
 			this.btnFind.Name = "btnFind";
 			this.btnFind.ShadowDecoration.Parent = this.btnFind;
 			this.btnFind.Size = new System.Drawing.Size(32, 34);
@@ -133,7 +133,7 @@
 			this.txtTen.FocusedState.Parent = this.txtTen;
 			this.txtTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
 			this.txtTen.HoverState.Parent = this.txtTen;
-			this.txtTen.Location = new System.Drawing.Point(126, 108);
+			this.txtTen.Location = new System.Drawing.Point(129, 113);
 			this.txtTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txtTen.Name = "txtTen";
 			this.txtTen.PasswordChar = '\0';
@@ -147,7 +147,7 @@
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(9, 113);
+			this.label3.Location = new System.Drawing.Point(23, 121);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(99, 21);
 			this.label3.TabIndex = 4;
@@ -156,7 +156,7 @@
 			// btnEdit
 			// 
 			this.btnEdit.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEdit.Location = new System.Drawing.Point(650, 586);
+			this.btnEdit.Location = new System.Drawing.Point(875, 594);
 			this.btnEdit.Name = "btnEdit";
 			this.btnEdit.Size = new System.Drawing.Size(147, 46);
 			this.btnEdit.TabIndex = 3;
@@ -166,7 +166,7 @@
 			// btnDelete
 			// 
 			this.btnDelete.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDelete.Location = new System.Drawing.Point(835, 586);
+			this.btnDelete.Location = new System.Drawing.Point(1036, 594);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(95, 46);
 			this.btnDelete.TabIndex = 3;
@@ -190,8 +190,7 @@
 			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.gridCauThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.gridCauThu.ColumnHeadersHeight = 10;
-			this.gridCauThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+			this.gridCauThu.ColumnHeadersHeight = 50;
 			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
 			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -202,13 +201,13 @@
 			this.gridCauThu.DefaultCellStyle = dataGridViewCellStyle3;
 			this.gridCauThu.EnableHeadersVisualStyles = false;
 			this.gridCauThu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			this.gridCauThu.Location = new System.Drawing.Point(13, 157);
+			this.gridCauThu.Location = new System.Drawing.Point(13, 165);
 			this.gridCauThu.Name = "gridCauThu";
 			this.gridCauThu.RowHeadersVisible = false;
 			this.gridCauThu.RowHeadersWidth = 51;
 			this.gridCauThu.RowTemplate.Height = 24;
 			this.gridCauThu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.gridCauThu.Size = new System.Drawing.Size(999, 423);
+			this.gridCauThu.Size = new System.Drawing.Size(1283, 415);
 			this.gridCauThu.TabIndex = 4;
 			this.gridCauThu.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
 			this.gridCauThu.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -222,8 +221,8 @@
 			this.gridCauThu.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.gridCauThu.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
 			this.gridCauThu.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-			this.gridCauThu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-			this.gridCauThu.ThemeStyle.HeaderStyle.Height = 10;
+			this.gridCauThu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+			this.gridCauThu.ThemeStyle.HeaderStyle.Height = 50;
 			this.gridCauThu.ThemeStyle.ReadOnly = false;
 			this.gridCauThu.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
 			this.gridCauThu.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -232,12 +231,13 @@
 			this.gridCauThu.ThemeStyle.RowsStyle.Height = 24;
 			this.gridCauThu.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.gridCauThu.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			this.gridCauThu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCauThu_CellContentClick);
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(354, 113);
+			this.label4.Location = new System.Drawing.Point(460, 121);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(107, 21);
 			this.label4.TabIndex = 4;
@@ -256,7 +256,7 @@
 			this.txtTenDoiBong.FocusedState.Parent = this.txtTenDoiBong;
 			this.txtTenDoiBong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
 			this.txtTenDoiBong.HoverState.Parent = this.txtTenDoiBong;
-			this.txtTenDoiBong.Location = new System.Drawing.Point(483, 108);
+			this.txtTenDoiBong.Location = new System.Drawing.Point(583, 113);
 			this.txtTenDoiBong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txtTenDoiBong.Name = "txtTenDoiBong";
 			this.txtTenDoiBong.PasswordChar = '\0';
@@ -270,7 +270,7 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(729, 113);
+			this.label5.Location = new System.Drawing.Point(910, 121);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(112, 21);
 			this.label5.TabIndex = 4;
@@ -289,7 +289,7 @@
 			this.txtSoBanThang.FocusedState.Parent = this.txtSoBanThang;
 			this.txtSoBanThang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
 			this.txtSoBanThang.HoverState.Parent = this.txtSoBanThang;
-			this.txtSoBanThang.Location = new System.Drawing.Point(862, 108);
+			this.txtSoBanThang.Location = new System.Drawing.Point(1036, 113);
 			this.txtSoBanThang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txtSoBanThang.Name = "txtSoBanThang";
 			this.txtSoBanThang.PasswordChar = '\0';
@@ -310,7 +310,7 @@
 			this.btnFilter.ForeColor = System.Drawing.Color.Black;
 			this.btnFilter.HoverState.Parent = this.btnFilter;
 			this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
-			this.btnFilter.Location = new System.Drawing.Point(942, 108);
+			this.btnFilter.Location = new System.Drawing.Point(1210, 113);
 			this.btnFilter.Name = "btnFilter";
 			this.btnFilter.ShadowDecoration.Parent = this.btnFilter;
 			this.btnFilter.Size = new System.Drawing.Size(70, 34);
@@ -322,7 +322,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1024, 652);
+			this.ClientSize = new System.Drawing.Size(1308, 652);
 			this.Controls.Add(this.btnFilter);
 			this.Controls.Add(this.gridCauThu);
 			this.Controls.Add(this.btnDelete);

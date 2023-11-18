@@ -60,15 +60,15 @@ namespace GUI
 		public void OpenForm<MyForm>() where MyForm : Form, new()
 		{
 			
-			Form form = formspanel.Controls.OfType<MyForm>().FirstOrDefault();
+			Form form = panelform.Controls.OfType<MyForm>().FirstOrDefault();
 			if (form == null)
 			{
 				form = new MyForm();
 				form.TopLevel = false;
 				form.FormBorderStyle = FormBorderStyle.None;
 				form.Dock = DockStyle.Fill;
-				formspanel.Controls.Add(form);
-				formspanel.Tag = form;
+				panelform.Controls.Add(form);
+				panelform.Tag = form;
 				form.Show();
 				form.BringToFront();
 			}
@@ -79,8 +79,8 @@ namespace GUI
 				newForm.TopLevel = false;
 				newForm.FormBorderStyle = FormBorderStyle.None;
 				newForm.Dock = DockStyle.Fill;
-				formspanel.Controls.Add(newForm);
-				formspanel.Tag = newForm;
+				panelform.Controls.Add(newForm);
+				panelform.Tag = newForm;
 				newForm.Show();
 				newForm.BringToFront();
 			}
@@ -104,6 +104,7 @@ namespace GUI
 		private void button1_Click(object sender, EventArgs e)
 		{
 		}
+
 		// để hiển thị form bên trong panel của MainForm dùng OpenForm
 		// Hiển thị nổi Form.Show()
 

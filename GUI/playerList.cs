@@ -36,6 +36,23 @@ namespace GUI
 		private void playerList_Load(object sender, EventArgs e)
 		{
 			gridCauThu.DataSource = CauThuService.RetrieveAllCauThu();
+			gridCauThu.Columns["MACAUTHU"].HeaderText = "Mã cầu thủ";
+			gridCauThu.Columns["MADOI"].HeaderText = "Mã đội bóng";
+			gridCauThu.Columns["MAQUOCTICH"].HeaderText = "Mã quốc tịch";
+			gridCauThu.Columns["TEN"].HeaderText = "Họ và tên";
+			gridCauThu.Columns["VITRICHOI"].HeaderText = "Vị trí";
+			gridCauThu.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
+			gridCauThu.Columns["SOAO"].HeaderText = "Số áo";
+			gridCauThu.Columns["SOBANTHANG"].HeaderText = "Số bàn thắng";
+			gridCauThu.Columns["SOTHEVANG"].HeaderText = "Thẻ vàng";
+			gridCauThu.Columns["SOTHEDO"].HeaderText = "Thẻ đỏ";
+			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
+			gridCauThu.Columns["ANH"].HeaderText = "Ảnh";
+
+		}
+
+		private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
 		}
 	}
 }
