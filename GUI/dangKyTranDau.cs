@@ -71,6 +71,8 @@ namespace GUI
 			tranDau.MaDoiNha = cbNha.SelectedItem.ToString();
 			tranDau.MaDoiKhach = cbKhach.SelectedItem.ToString();
 
+			MessageBox.Show(cbNha.SelectedItem.ToString());
+
 			dgvDangKy.DataSource = TranDauService.RetrieveAllTranDau();
 			dgvDangKy.Columns["MATRANDAU"].HeaderText = "Mã trận đấu";
 			dgvDangKy.Columns["MADOINHA"].HeaderText = "Mã đội nhà";
@@ -96,6 +98,13 @@ namespace GUI
 
 			dgvDangKy.Columns["GHICHU"].HeaderText = "Status";
 
+			TranDauService.SaveTranDau(tranDau);
+
+		}
+
+		private void btnHuy_Click(object sender, EventArgs e)
+		{
+			Close();
 		}
 	}
 }

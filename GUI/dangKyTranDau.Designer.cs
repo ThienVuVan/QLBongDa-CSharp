@@ -30,6 +30,7 @@
 		{
 			this.btnThem = new System.Windows.Forms.Button();
 			this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+			this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
 			this.txtLuotDau = new System.Windows.Forms.TextBox();
 			this.txtVongDau = new System.Windows.Forms.TextBox();
 			this.cbNha = new System.Windows.Forms.ComboBox();
@@ -45,7 +46,6 @@
 			this.button3 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
-			this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
 			this.guna2GroupBox1.SuspendLayout();
 			this.guna2GroupBox2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDangKy)).BeginInit();
@@ -85,6 +85,29 @@
 			this.guna2GroupBox1.TabIndex = 6;
 			this.guna2GroupBox1.Text = "Thông tin trận đấu";
 			// 
+			// cbStatus
+			// 
+			this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+			this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbStatus.FocusedColor = System.Drawing.Color.Empty;
+			this.cbStatus.FocusedState.Parent = this.cbStatus;
+			this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+			this.cbStatus.FormattingEnabled = true;
+			this.cbStatus.HoverState.Parent = this.cbStatus;
+			this.cbStatus.ItemHeight = 30;
+			this.cbStatus.Items.AddRange(new object[] {
+            "On time",
+            "Finished",
+            "Not yet"});
+			this.cbStatus.ItemsAppearance.Parent = this.cbStatus;
+			this.cbStatus.Location = new System.Drawing.Point(437, 177);
+			this.cbStatus.Name = "cbStatus";
+			this.cbStatus.ShadowDecoration.Parent = this.cbStatus;
+			this.cbStatus.Size = new System.Drawing.Size(140, 36);
+			this.cbStatus.TabIndex = 5;
+			// 
 			// txtLuotDau
 			// 
 			this.txtLuotDau.Location = new System.Drawing.Point(448, 90);
@@ -116,6 +139,7 @@
 			this.btnHuy.TabIndex = 4;
 			this.btnHuy.Text = "Hủy";
 			this.btnHuy.UseVisualStyleBackColor = true;
+			this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
 			// 
 			// cbKhach
 			// 
@@ -233,29 +257,6 @@
 			this.button5.TabIndex = 4;
 			this.button5.Text = "Xóa trận đấu";
 			this.button5.UseVisualStyleBackColor = true;
-			// 
-			// cbStatus
-			// 
-			this.cbStatus.BackColor = System.Drawing.Color.Transparent;
-			this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-			this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.cbStatus.FocusedColor = System.Drawing.Color.Empty;
-			this.cbStatus.FocusedState.Parent = this.cbStatus;
-			this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-			this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-			this.cbStatus.FormattingEnabled = true;
-			this.cbStatus.HoverState.Parent = this.cbStatus;
-			this.cbStatus.ItemHeight = 30;
-			this.cbStatus.Items.AddRange(new object[] {
-            "On time",
-            "Finished",
-            "Not yet"});
-			this.cbStatus.ItemsAppearance.Parent = this.cbStatus;
-			this.cbStatus.Location = new System.Drawing.Point(437, 177);
-			this.cbStatus.Name = "cbStatus";
-			this.cbStatus.ShadowDecoration.Parent = this.cbStatus;
-			this.cbStatus.Size = new System.Drawing.Size(140, 36);
-			this.cbStatus.TabIndex = 5;
 			// 
 			// dangKyTranDau
 			// 
