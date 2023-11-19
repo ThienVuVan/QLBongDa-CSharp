@@ -121,7 +121,7 @@
 			this.guna2GroupBox1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
 			this.guna2GroupBox1.Location = new System.Drawing.Point(31, 65);
-			this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.guna2GroupBox1.Name = "guna2GroupBox1";
 			this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
 			this.guna2GroupBox1.Size = new System.Drawing.Size(963, 284);
@@ -131,7 +131,7 @@
 			// txtSoCauThu
 			// 
 			this.txtSoCauThu.Location = new System.Drawing.Point(363, 175);
-			this.txtSoCauThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtSoCauThu.Margin = new System.Windows.Forms.Padding(4);
 			this.txtSoCauThu.Name = "txtSoCauThu";
 			this.txtSoCauThu.Size = new System.Drawing.Size(231, 27);
 			this.txtSoCauThu.TabIndex = 3;
@@ -139,7 +139,7 @@
 			// txtHLV
 			// 
 			this.txtHLV.Location = new System.Drawing.Point(363, 139);
-			this.txtHLV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtHLV.Margin = new System.Windows.Forms.Padding(4);
 			this.txtHLV.Name = "txtHLV";
 			this.txtHLV.Size = new System.Drawing.Size(231, 27);
 			this.txtHLV.TabIndex = 3;
@@ -147,7 +147,7 @@
 			// txtMaTinh
 			// 
 			this.txtMaTinh.Location = new System.Drawing.Point(363, 103);
-			this.txtMaTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtMaTinh.Margin = new System.Windows.Forms.Padding(4);
 			this.txtMaTinh.Name = "txtMaTinh";
 			this.txtMaTinh.Size = new System.Drawing.Size(231, 27);
 			this.txtMaTinh.TabIndex = 3;
@@ -155,7 +155,7 @@
 			// txtTenDoi
 			// 
 			this.txtTenDoi.Location = new System.Drawing.Point(363, 68);
-			this.txtTenDoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtTenDoi.Margin = new System.Windows.Forms.Padding(4);
 			this.txtTenDoi.Name = "txtTenDoi";
 			this.txtTenDoi.Size = new System.Drawing.Size(231, 27);
 			this.txtTenDoi.TabIndex = 3;
@@ -207,17 +207,18 @@
 			// btnFinish
 			// 
 			this.btnFinish.Location = new System.Drawing.Point(641, 213);
-			this.btnFinish.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnFinish.Margin = new System.Windows.Forms.Padding(4);
 			this.btnFinish.Name = "btnFinish";
 			this.btnFinish.Size = new System.Drawing.Size(113, 42);
 			this.btnFinish.TabIndex = 1;
 			this.btnFinish.Text = "Hoàn thành";
 			this.btnFinish.UseVisualStyleBackColor = true;
+			this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
 			// 
 			// btnCancel
 			// 
 			this.btnCancel.Location = new System.Drawing.Point(785, 213);
-			this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(81, 42);
 			this.btnCancel.TabIndex = 1;
@@ -227,7 +228,7 @@
 			// btnReset
 			// 
 			this.btnReset.Location = new System.Drawing.Point(351, 226);
-			this.btnReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnReset.Margin = new System.Windows.Forms.Padding(4);
 			this.btnReset.Name = "btnReset";
 			this.btnReset.Size = new System.Drawing.Size(113, 28);
 			this.btnReset.TabIndex = 1;
@@ -238,7 +239,7 @@
 			// btnAddImg
 			// 
 			this.btnAddImg.Location = new System.Drawing.Point(60, 233);
-			this.btnAddImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnAddImg.Margin = new System.Windows.Forms.Padding(4);
 			this.btnAddImg.Name = "btnAddImg";
 			this.btnAddImg.Size = new System.Drawing.Size(100, 28);
 			this.btnAddImg.TabIndex = 1;
@@ -252,7 +253,7 @@
 			this.picBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox.BackgroundImage")));
 			this.picBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.picBox.Location = new System.Drawing.Point(29, 68);
-			this.picBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.picBox.Margin = new System.Windows.Forms.Padding(4);
 			this.picBox.Name = "picBox";
 			this.picBox.Size = new System.Drawing.Size(167, 154);
 			this.picBox.TabIndex = 0;

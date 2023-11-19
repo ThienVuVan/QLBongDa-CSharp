@@ -15,7 +15,12 @@ namespace BLL
         {
             return DoiBongAccess.RetrieveAllNameDoiBong();
         }
-        public static void SaveDoiBong(DoiBong doiBong)
+
+		public static List<string> RetrieveAllIdDoiBong()
+		{
+			return DoiBongAccess.RetrieveAllIdDoiBong();
+		}
+		public static void SaveDoiBong(DoiBong doiBong)
         {
             DoiBongAccess.SaveDoiBong(doiBong);
         }

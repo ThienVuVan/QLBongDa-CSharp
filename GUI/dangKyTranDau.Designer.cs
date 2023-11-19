@@ -28,48 +28,49 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.button1 = new System.Windows.Forms.Button();
+			this.btnThem = new System.Windows.Forms.Button();
 			this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.comboBox2 = new System.Windows.Forms.ComboBox();
-			this.button2 = new System.Windows.Forms.Button();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.txtLuotDau = new System.Windows.Forms.TextBox();
+			this.txtVongDau = new System.Windows.Forms.TextBox();
+			this.cbNha = new System.Windows.Forms.ComboBox();
+			this.btnHuy = new System.Windows.Forms.Button();
+			this.cbKhach = new System.Windows.Forms.ComboBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.dgvDangKy = new System.Windows.Forms.DataGridView();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
+			this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
 			this.guna2GroupBox1.SuspendLayout();
 			this.guna2GroupBox2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvDangKy)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// button1
+			// btnThem
 			// 
-			this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(518, 262);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(141, 33);
-			this.button1.TabIndex = 4;
-			this.button1.Text = "Thêm";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnThem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnThem.Location = new System.Drawing.Point(518, 262);
+			this.btnThem.Name = "btnThem";
+			this.btnThem.Size = new System.Drawing.Size(141, 33);
+			this.btnThem.TabIndex = 4;
+			this.btnThem.Text = "Thêm";
+			this.btnThem.UseVisualStyleBackColor = true;
+			this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
 			// 
 			// guna2GroupBox1
 			// 
-			this.guna2GroupBox1.Controls.Add(this.richTextBox1);
-			this.guna2GroupBox1.Controls.Add(this.textBox2);
-			this.guna2GroupBox1.Controls.Add(this.textBox1);
-			this.guna2GroupBox1.Controls.Add(this.comboBox2);
-			this.guna2GroupBox1.Controls.Add(this.button2);
-			this.guna2GroupBox1.Controls.Add(this.button1);
-			this.guna2GroupBox1.Controls.Add(this.comboBox1);
+			this.guna2GroupBox1.Controls.Add(this.cbStatus);
+			this.guna2GroupBox1.Controls.Add(this.txtLuotDau);
+			this.guna2GroupBox1.Controls.Add(this.txtVongDau);
+			this.guna2GroupBox1.Controls.Add(this.cbNha);
+			this.guna2GroupBox1.Controls.Add(this.btnHuy);
+			this.guna2GroupBox1.Controls.Add(this.btnThem);
+			this.guna2GroupBox1.Controls.Add(this.cbKhach);
 			this.guna2GroupBox1.Controls.Add(this.label4);
 			this.guna2GroupBox1.Controls.Add(this.label5);
 			this.guna2GroupBox1.Controls.Add(this.label3);
@@ -84,54 +85,45 @@
 			this.guna2GroupBox1.TabIndex = 6;
 			this.guna2GroupBox1.Text = "Thông tin trận đấu";
 			// 
-			// richTextBox1
+			// txtLuotDau
 			// 
-			this.richTextBox1.Location = new System.Drawing.Point(116, 181);
-			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(835, 66);
-			this.richTextBox1.TabIndex = 3;
-			this.richTextBox1.Text = "";
-			this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+			this.txtLuotDau.Location = new System.Drawing.Point(448, 90);
+			this.txtLuotDau.Name = "txtLuotDau";
+			this.txtLuotDau.Size = new System.Drawing.Size(100, 28);
+			this.txtLuotDau.TabIndex = 2;
 			// 
-			// textBox2
+			// txtVongDau
 			// 
-			this.textBox2.Location = new System.Drawing.Point(448, 90);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(100, 28);
-			this.textBox2.TabIndex = 2;
+			this.txtVongDau.Location = new System.Drawing.Point(448, 56);
+			this.txtVongDau.Name = "txtVongDau";
+			this.txtVongDau.Size = new System.Drawing.Size(100, 28);
+			this.txtVongDau.TabIndex = 2;
 			// 
-			// textBox1
+			// cbNha
 			// 
-			this.textBox1.Location = new System.Drawing.Point(448, 56);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(100, 28);
-			this.textBox1.TabIndex = 2;
+			this.cbNha.FormattingEnabled = true;
+			this.cbNha.Location = new System.Drawing.Point(189, 128);
+			this.cbNha.Name = "cbNha";
+			this.cbNha.Size = new System.Drawing.Size(316, 29);
+			this.cbNha.TabIndex = 1;
 			// 
-			// comboBox2
+			// btnHuy
 			// 
-			this.comboBox2.FormattingEnabled = true;
-			this.comboBox2.Location = new System.Drawing.Point(189, 128);
-			this.comboBox2.Name = "comboBox2";
-			this.comboBox2.Size = new System.Drawing.Size(316, 29);
-			this.comboBox2.TabIndex = 1;
+			this.btnHuy.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnHuy.Location = new System.Drawing.Point(674, 262);
+			this.btnHuy.Name = "btnHuy";
+			this.btnHuy.Size = new System.Drawing.Size(141, 33);
+			this.btnHuy.TabIndex = 4;
+			this.btnHuy.Text = "Hủy";
+			this.btnHuy.UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// cbKhach
 			// 
-			this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(674, 262);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(141, 33);
-			this.button2.TabIndex = 4;
-			this.button2.Text = "Hủy";
-			this.button2.UseVisualStyleBackColor = true;
-			// 
-			// comboBox1
-			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(628, 129);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(323, 29);
-			this.comboBox1.TabIndex = 1;
+			this.cbKhach.FormattingEnabled = true;
+			this.cbKhach.Location = new System.Drawing.Point(628, 129);
+			this.cbKhach.Name = "cbKhach";
+			this.cbKhach.Size = new System.Drawing.Size(323, 29);
+			this.cbKhach.TabIndex = 1;
 			// 
 			// label4
 			// 
@@ -149,7 +141,7 @@
 			this.label5.AutoSize = true;
 			this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
 			this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(41, 202);
+			this.label5.Location = new System.Drawing.Point(352, 192);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(69, 21);
 			this.label5.TabIndex = 0;
@@ -191,7 +183,7 @@
 			// 
 			// guna2GroupBox2
 			// 
-			this.guna2GroupBox2.Controls.Add(this.dataGridView1);
+			this.guna2GroupBox2.Controls.Add(this.dgvDangKy);
 			this.guna2GroupBox2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
 			this.guna2GroupBox2.Location = new System.Drawing.Point(14, 353);
@@ -201,15 +193,16 @@
 			this.guna2GroupBox2.TabIndex = 7;
 			this.guna2GroupBox2.Text = "Kết quả đăng ký trận đấu:";
 			// 
-			// dataGridView1
+			// dgvDangKy
 			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(15, 55);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersWidth = 51;
-			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(966, 150);
-			this.dataGridView1.TabIndex = 0;
+			this.dgvDangKy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dgvDangKy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvDangKy.Location = new System.Drawing.Point(15, 55);
+			this.dgvDangKy.Name = "dgvDangKy";
+			this.dgvDangKy.RowHeadersWidth = 51;
+			this.dgvDangKy.RowTemplate.Height = 24;
+			this.dgvDangKy.Size = new System.Drawing.Size(966, 150);
+			this.dgvDangKy.TabIndex = 0;
 			// 
 			// button3
 			// 
@@ -241,6 +234,29 @@
 			this.button5.Text = "Xóa trận đấu";
 			this.button5.UseVisualStyleBackColor = true;
 			// 
+			// cbStatus
+			// 
+			this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+			this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbStatus.FocusedColor = System.Drawing.Color.Empty;
+			this.cbStatus.FocusedState.Parent = this.cbStatus;
+			this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+			this.cbStatus.FormattingEnabled = true;
+			this.cbStatus.HoverState.Parent = this.cbStatus;
+			this.cbStatus.ItemHeight = 30;
+			this.cbStatus.Items.AddRange(new object[] {
+            "On time",
+            "Finished",
+            "Not yet"});
+			this.cbStatus.ItemsAppearance.Parent = this.cbStatus;
+			this.cbStatus.Location = new System.Drawing.Point(437, 177);
+			this.cbStatus.Name = "cbStatus";
+			this.cbStatus.ShadowDecoration.Parent = this.cbStatus;
+			this.cbStatus.Size = new System.Drawing.Size(140, 36);
+			this.cbStatus.TabIndex = 5;
+			// 
 			// dangKyTranDau
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -258,29 +274,29 @@
 			this.guna2GroupBox1.ResumeLayout(false);
 			this.guna2GroupBox1.PerformLayout();
 			this.guna2GroupBox2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvDangKy)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnThem;
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.ComboBox comboBox2;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.TextBox txtLuotDau;
+		private System.Windows.Forms.TextBox txtVongDau;
+		private System.Windows.Forms.ComboBox cbNha;
+		private System.Windows.Forms.ComboBox cbKhach;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.RichTextBox richTextBox1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btnHuy;
 		private System.Windows.Forms.Label label5;
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
-		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.DataGridView dgvDangKy;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button button5;
+		private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
 	}
 }

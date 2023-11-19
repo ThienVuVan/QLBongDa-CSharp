@@ -29,14 +29,23 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addPlayer));
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.btnImg = new System.Windows.Forms.Button();
+			this.cbQuocTich = new System.Windows.Forms.ComboBox();
+			this.cbMaDoi = new System.Windows.Forms.ComboBox();
+			this.btnReset = new System.Windows.Forms.Button();
 			this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+			this.btnThem = new System.Windows.Forms.Button();
 			this.cbViTri = new System.Windows.Forms.ComboBox();
 			this.txtSoAo = new System.Windows.Forms.TextBox();
-			this.txtQuocTich = new System.Windows.Forms.TextBox();
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
@@ -49,8 +58,14 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+			this.openImg = new System.Windows.Forms.OpenFileDialog();
+			this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+			this.dgvTeammate = new Guna.UI2.WinForms.Guna2DataGridView();
 			this.guna2GroupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
+			this.guna2GroupBox2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTeammate)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// guna2ControlBox1
@@ -59,7 +74,7 @@
 			this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
 			this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
 			this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-			this.guna2ControlBox1.Location = new System.Drawing.Point(755, -1);
+			this.guna2ControlBox1.Location = new System.Drawing.Point(899, -1);
 			this.guna2ControlBox1.Name = "guna2ControlBox1";
 			this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
 			this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
@@ -72,7 +87,7 @@
 			this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
 			this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
 			this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-			this.guna2ControlBox3.Location = new System.Drawing.Point(704, -1);
+			this.guna2ControlBox3.Location = new System.Drawing.Point(848, -1);
 			this.guna2ControlBox3.Name = "guna2ControlBox3";
 			this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
 			this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
@@ -81,11 +96,14 @@
 			// guna2GroupBox1
 			// 
 			this.guna2GroupBox1.BackColor = System.Drawing.Color.White;
-			this.guna2GroupBox1.Controls.Add(this.comboBox1);
+			this.guna2GroupBox1.Controls.Add(this.btnImg);
+			this.guna2GroupBox1.Controls.Add(this.cbQuocTich);
+			this.guna2GroupBox1.Controls.Add(this.cbMaDoi);
+			this.guna2GroupBox1.Controls.Add(this.btnReset);
 			this.guna2GroupBox1.Controls.Add(this.dtpNgaySinh);
+			this.guna2GroupBox1.Controls.Add(this.btnThem);
 			this.guna2GroupBox1.Controls.Add(this.cbViTri);
 			this.guna2GroupBox1.Controls.Add(this.txtSoAo);
-			this.guna2GroupBox1.Controls.Add(this.txtQuocTich);
 			this.guna2GroupBox1.Controls.Add(this.txtName);
 			this.guna2GroupBox1.Controls.Add(this.label6);
 			this.guna2GroupBox1.Controls.Add(this.label5);
@@ -100,17 +118,47 @@
 			this.guna2GroupBox1.Location = new System.Drawing.Point(25, 41);
 			this.guna2GroupBox1.Name = "guna2GroupBox1";
 			this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-			this.guna2GroupBox1.Size = new System.Drawing.Size(750, 374);
+			this.guna2GroupBox1.Size = new System.Drawing.Size(899, 374);
 			this.guna2GroupBox1.TabIndex = 1;
 			this.guna2GroupBox1.Text = "Thông tin cầu thủ";
 			// 
-			// comboBox1
+			// btnImg
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(342, 100);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 26);
-			this.comboBox1.TabIndex = 7;
+			this.btnImg.Location = new System.Drawing.Point(55, 262);
+			this.btnImg.Name = "btnImg";
+			this.btnImg.Size = new System.Drawing.Size(132, 26);
+			this.btnImg.TabIndex = 9;
+			this.btnImg.Text = "Tải ảnh lên";
+			this.btnImg.UseVisualStyleBackColor = true;
+			this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
+			// 
+			// cbQuocTich
+			// 
+			this.cbQuocTich.FormattingEnabled = true;
+			this.cbQuocTich.Location = new System.Drawing.Point(342, 140);
+			this.cbQuocTich.Name = "cbQuocTich";
+			this.cbQuocTich.Size = new System.Drawing.Size(121, 26);
+			this.cbQuocTich.TabIndex = 8;
+			// 
+			// cbMaDoi
+			// 
+			this.cbMaDoi.FormattingEnabled = true;
+			this.cbMaDoi.Location = new System.Drawing.Point(342, 100);
+			this.cbMaDoi.Name = "cbMaDoi";
+			this.cbMaDoi.Size = new System.Drawing.Size(181, 26);
+			this.cbMaDoi.TabIndex = 7;
+			// 
+			// btnReset
+			// 
+			this.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.btnReset.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnReset.Location = new System.Drawing.Point(587, 316);
+			this.btnReset.Name = "btnReset";
+			this.btnReset.Size = new System.Drawing.Size(137, 44);
+			this.btnReset.TabIndex = 2;
+			this.btnReset.Text = "Hủy";
+			this.btnReset.UseVisualStyleBackColor = true;
+			this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
 			// 
 			// dtpNgaySinh
 			// 
@@ -119,6 +167,17 @@
 			this.dtpNgaySinh.Name = "dtpNgaySinh";
 			this.dtpNgaySinh.Size = new System.Drawing.Size(201, 26);
 			this.dtpNgaySinh.TabIndex = 6;
+			// 
+			// btnThem
+			// 
+			this.btnThem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnThem.Location = new System.Drawing.Point(428, 316);
+			this.btnThem.Name = "btnThem";
+			this.btnThem.Size = new System.Drawing.Size(137, 44);
+			this.btnThem.TabIndex = 2;
+			this.btnThem.Text = "Thêm";
+			this.btnThem.UseVisualStyleBackColor = true;
+			this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
 			// 
 			// cbViTri
 			// 
@@ -145,19 +204,13 @@
 			this.txtSoAo.Size = new System.Drawing.Size(121, 26);
 			this.txtSoAo.TabIndex = 4;
 			// 
-			// txtQuocTich
-			// 
-			this.txtQuocTich.Location = new System.Drawing.Point(342, 140);
-			this.txtQuocTich.Name = "txtQuocTich";
-			this.txtQuocTich.Size = new System.Drawing.Size(121, 26);
-			this.txtQuocTich.TabIndex = 4;
-			// 
 			// txtName
 			// 
 			this.txtName.Location = new System.Drawing.Point(342, 53);
 			this.txtName.Name = "txtName";
 			this.txtName.Size = new System.Drawing.Size(331, 26);
 			this.txtName.TabIndex = 4;
+			this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
 			// 
 			// label6
 			// 
@@ -240,6 +293,7 @@
 			this.picBox.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
 			this.picBox.Name = "picBox";
 			this.picBox.Size = new System.Drawing.Size(167, 154);
+			this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.picBox.TabIndex = 1;
 			this.picBox.TabStop = false;
 			// 
@@ -256,10 +310,10 @@
 			// 
 			// button2
 			// 
-			this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(453, 644);
+			this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button2.Location = new System.Drawing.Point(573, 705);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(137, 44);
+			this.button2.Size = new System.Drawing.Size(137, 33);
 			this.button2.TabIndex = 2;
 			this.button2.Text = "Làm lại";
 			this.button2.UseVisualStyleBackColor = true;
@@ -267,24 +321,144 @@
 			// btnCancel
 			// 
 			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.btnCancel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCancel.Location = new System.Drawing.Point(621, 644);
+			this.btnCancel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCancel.Location = new System.Drawing.Point(726, 705);
 			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(137, 44);
+			this.btnCancel.Size = new System.Drawing.Size(137, 33);
 			this.btnCancel.TabIndex = 2;
 			this.btnCancel.Text = "Hủy";
 			this.btnCancel.UseVisualStyleBackColor = true;
 			// 
 			// guna2GroupBox2
 			// 
+			this.guna2GroupBox2.Controls.Add(this.dgvTeammate);
+			this.guna2GroupBox2.Controls.Add(this.guna2DataGridView1);
 			this.guna2GroupBox2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
 			this.guna2GroupBox2.Location = new System.Drawing.Point(21, 437);
 			this.guna2GroupBox2.Name = "guna2GroupBox2";
 			this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-			this.guna2GroupBox2.Size = new System.Drawing.Size(750, 184);
+			this.guna2GroupBox2.Size = new System.Drawing.Size(903, 262);
 			this.guna2GroupBox2.TabIndex = 3;
 			this.guna2GroupBox2.Text = "Cầu thủ cùng thuộc đội";
+			// 
+			// guna2DataGridView1
+			// 
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+			this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+			this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
+			this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+			this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+			this.guna2DataGridView1.EnableHeadersVisualStyles = false;
+			this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			this.guna2DataGridView1.Location = new System.Drawing.Point(0, 42);
+			this.guna2DataGridView1.Name = "guna2DataGridView1";
+			this.guna2DataGridView1.RowHeadersVisible = false;
+			this.guna2DataGridView1.RowHeadersWidth = 51;
+			this.guna2DataGridView1.RowTemplate.Height = 24;
+			this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.guna2DataGridView1.Size = new System.Drawing.Size(240, 150);
+			this.guna2DataGridView1.TabIndex = 0;
+			this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
+			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+			this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+			this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+			this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+			this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+			this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+			this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+			this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+			this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
+			this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			// 
+			// dgvTeammate
+			// 
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+			this.dgvTeammate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.dgvTeammate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvTeammate.BackgroundColor = System.Drawing.Color.White;
+			this.dgvTeammate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dgvTeammate.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+			this.dgvTeammate.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvTeammate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this.dgvTeammate.ColumnHeadersHeight = 40;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvTeammate.DefaultCellStyle = dataGridViewCellStyle3;
+			this.dgvTeammate.EnableHeadersVisualStyles = false;
+			this.dgvTeammate.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			this.dgvTeammate.Location = new System.Drawing.Point(0, 42);
+			this.dgvTeammate.Name = "dgvTeammate";
+			this.dgvTeammate.RowHeadersVisible = false;
+			this.dgvTeammate.RowHeadersWidth = 51;
+			this.dgvTeammate.RowTemplate.Height = 24;
+			this.dgvTeammate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvTeammate.Size = new System.Drawing.Size(900, 217);
+			this.dgvTeammate.TabIndex = 1;
+			this.dgvTeammate.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+			this.dgvTeammate.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+			this.dgvTeammate.ThemeStyle.AlternatingRowsStyle.Font = null;
+			this.dgvTeammate.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+			this.dgvTeammate.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+			this.dgvTeammate.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+			this.dgvTeammate.ThemeStyle.BackColor = System.Drawing.Color.White;
+			this.dgvTeammate.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			this.dgvTeammate.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			this.dgvTeammate.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dgvTeammate.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dgvTeammate.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+			this.dgvTeammate.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+			this.dgvTeammate.ThemeStyle.HeaderStyle.Height = 40;
+			this.dgvTeammate.ThemeStyle.ReadOnly = false;
+			this.dgvTeammate.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+			this.dgvTeammate.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+			this.dgvTeammate.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dgvTeammate.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+			this.dgvTeammate.ThemeStyle.RowsStyle.Height = 24;
+			this.dgvTeammate.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			this.dgvTeammate.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
 			// 
 			// addPlayer
 			// 
@@ -292,7 +466,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.CancelButton = this.btnCancel;
-			this.ClientSize = new System.Drawing.Size(800, 700);
+			this.ClientSize = new System.Drawing.Size(944, 750);
 			this.Controls.Add(this.guna2GroupBox2);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.button2);
@@ -306,6 +480,9 @@
 			this.guna2GroupBox1.ResumeLayout(false);
 			this.guna2GroupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
+			this.guna2GroupBox2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTeammate)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -325,12 +502,18 @@
 		private System.Windows.Forms.DateTimePicker dtpNgaySinh;
 		private System.Windows.Forms.ComboBox cbViTri;
 		private System.Windows.Forms.TextBox txtSoAo;
-		private System.Windows.Forms.TextBox txtQuocTich;
 		private System.Windows.Forms.TextBox txtName;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button btnCancel;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox cbMaDoi;
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
+		private System.Windows.Forms.Button btnReset;
+		private System.Windows.Forms.Button btnThem;
+		private System.Windows.Forms.ComboBox cbQuocTich;
+		private System.Windows.Forms.Button btnImg;
+		private System.Windows.Forms.OpenFileDialog openImg;
+		private Guna.UI2.WinForms.Guna2DataGridView dgvTeammate;
+		private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
 	}
 }

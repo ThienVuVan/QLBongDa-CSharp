@@ -31,5 +31,10 @@ namespace GUI
 		{
 
 		}
+
+		private void btnFinish_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

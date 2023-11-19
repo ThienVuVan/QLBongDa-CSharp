@@ -16,6 +16,7 @@ namespace DAL
             return DatabaseAccess.ReadTable(sql);
         }
 
+
         public static DataTable Filter(string Ten, string MaDoi, Nullable<int> SoBanThang)
         {
             if (Ten == null) Ten = "none";
