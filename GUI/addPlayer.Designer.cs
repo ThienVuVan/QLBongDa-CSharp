@@ -32,11 +32,10 @@
 			this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
 			this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.cbMaDoi = new System.Windows.Forms.ComboBox();
 			this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
 			this.cbViTri = new System.Windows.Forms.ComboBox();
 			this.txtSoAo = new System.Windows.Forms.TextBox();
-			this.txtQuocTich = new System.Windows.Forms.TextBox();
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
@@ -49,6 +48,11 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+			this.btnThem = new System.Windows.Forms.Button();
+			this.btnReset = new System.Windows.Forms.Button();
+			this.cbQuocTich = new System.Windows.Forms.ComboBox();
+			this.btnImg = new System.Windows.Forms.Button();
+			this.openImg = new System.Windows.Forms.OpenFileDialog();
 			this.guna2GroupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
 			this.SuspendLayout();
@@ -81,11 +85,14 @@
 			// guna2GroupBox1
 			// 
 			this.guna2GroupBox1.BackColor = System.Drawing.Color.White;
-			this.guna2GroupBox1.Controls.Add(this.comboBox1);
+			this.guna2GroupBox1.Controls.Add(this.btnImg);
+			this.guna2GroupBox1.Controls.Add(this.cbQuocTich);
+			this.guna2GroupBox1.Controls.Add(this.cbMaDoi);
+			this.guna2GroupBox1.Controls.Add(this.btnReset);
 			this.guna2GroupBox1.Controls.Add(this.dtpNgaySinh);
+			this.guna2GroupBox1.Controls.Add(this.btnThem);
 			this.guna2GroupBox1.Controls.Add(this.cbViTri);
 			this.guna2GroupBox1.Controls.Add(this.txtSoAo);
-			this.guna2GroupBox1.Controls.Add(this.txtQuocTich);
 			this.guna2GroupBox1.Controls.Add(this.txtName);
 			this.guna2GroupBox1.Controls.Add(this.label6);
 			this.guna2GroupBox1.Controls.Add(this.label5);
@@ -104,13 +111,13 @@
 			this.guna2GroupBox1.TabIndex = 1;
 			this.guna2GroupBox1.Text = "Thông tin cầu thủ";
 			// 
-			// comboBox1
+			// cbMaDoi
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(342, 100);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 26);
-			this.comboBox1.TabIndex = 7;
+			this.cbMaDoi.FormattingEnabled = true;
+			this.cbMaDoi.Location = new System.Drawing.Point(342, 100);
+			this.cbMaDoi.Name = "cbMaDoi";
+			this.cbMaDoi.Size = new System.Drawing.Size(181, 26);
+			this.cbMaDoi.TabIndex = 7;
 			// 
 			// dtpNgaySinh
 			// 
@@ -145,19 +152,13 @@
 			this.txtSoAo.Size = new System.Drawing.Size(121, 26);
 			this.txtSoAo.TabIndex = 4;
 			// 
-			// txtQuocTich
-			// 
-			this.txtQuocTich.Location = new System.Drawing.Point(342, 140);
-			this.txtQuocTich.Name = "txtQuocTich";
-			this.txtQuocTich.Size = new System.Drawing.Size(121, 26);
-			this.txtQuocTich.TabIndex = 4;
-			// 
 			// txtName
 			// 
 			this.txtName.Location = new System.Drawing.Point(342, 53);
 			this.txtName.Name = "txtName";
 			this.txtName.Size = new System.Drawing.Size(331, 26);
 			this.txtName.TabIndex = 4;
+			this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
 			// 
 			// label6
 			// 
@@ -240,6 +241,7 @@
 			this.picBox.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
 			this.picBox.Name = "picBox";
 			this.picBox.Size = new System.Drawing.Size(167, 154);
+			this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.picBox.TabIndex = 1;
 			this.picBox.TabStop = false;
 			// 
@@ -286,6 +288,47 @@
 			this.guna2GroupBox2.TabIndex = 3;
 			this.guna2GroupBox2.Text = "Cầu thủ cùng thuộc đội";
 			// 
+			// btnThem
+			// 
+			this.btnThem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnThem.Location = new System.Drawing.Point(428, 316);
+			this.btnThem.Name = "btnThem";
+			this.btnThem.Size = new System.Drawing.Size(137, 44);
+			this.btnThem.TabIndex = 2;
+			this.btnThem.Text = "Thêm";
+			this.btnThem.UseVisualStyleBackColor = true;
+			this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+			// 
+			// btnReset
+			// 
+			this.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.btnReset.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnReset.Location = new System.Drawing.Point(587, 316);
+			this.btnReset.Name = "btnReset";
+			this.btnReset.Size = new System.Drawing.Size(137, 44);
+			this.btnReset.TabIndex = 2;
+			this.btnReset.Text = "Hủy";
+			this.btnReset.UseVisualStyleBackColor = true;
+			this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+			// 
+			// cbQuocTich
+			// 
+			this.cbQuocTich.FormattingEnabled = true;
+			this.cbQuocTich.Location = new System.Drawing.Point(342, 140);
+			this.cbQuocTich.Name = "cbQuocTich";
+			this.cbQuocTich.Size = new System.Drawing.Size(121, 26);
+			this.cbQuocTich.TabIndex = 8;
+			// 
+			// btnImg
+			// 
+			this.btnImg.Location = new System.Drawing.Point(55, 262);
+			this.btnImg.Name = "btnImg";
+			this.btnImg.Size = new System.Drawing.Size(132, 26);
+			this.btnImg.TabIndex = 9;
+			this.btnImg.Text = "Tải ảnh lên";
+			this.btnImg.UseVisualStyleBackColor = true;
+			this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
+			// 
 			// addPlayer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,12 +368,16 @@
 		private System.Windows.Forms.DateTimePicker dtpNgaySinh;
 		private System.Windows.Forms.ComboBox cbViTri;
 		private System.Windows.Forms.TextBox txtSoAo;
-		private System.Windows.Forms.TextBox txtQuocTich;
 		private System.Windows.Forms.TextBox txtName;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button btnCancel;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox cbMaDoi;
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
+		private System.Windows.Forms.Button btnReset;
+		private System.Windows.Forms.Button btnThem;
+		private System.Windows.Forms.ComboBox cbQuocTich;
+		private System.Windows.Forms.Button btnImg;
+		private System.Windows.Forms.OpenFileDialog openImg;
 	}
 }

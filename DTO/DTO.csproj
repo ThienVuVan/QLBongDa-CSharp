@@ -44,6 +44,7 @@
     <Compile Include="CauThu.cs" />
     <Compile Include="DoiBong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuocTich.cs" />
     <Compile Include="SanBong.cs" />
     <Compile Include="Tinh.cs" />
     <Compile Include="TranDau.cs" />

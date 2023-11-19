@@ -61,6 +61,7 @@
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="DoiBongAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuocTichAccess.cs" />
     <Compile Include="SanBongAccess.cs" />
     <Compile Include="TinhAccess.cs" />
     <Compile Include="TranDauAccess.cs" />
