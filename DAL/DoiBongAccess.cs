@@ -90,5 +90,6 @@ namespace DAL
             string sql = "select * from DOIBONG";
             return DatabaseAccess.ReadTable(sql);
         }
-    }
+
+	}
 }

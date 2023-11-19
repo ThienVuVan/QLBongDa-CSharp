@@ -45,7 +45,7 @@ namespace DAL
 
         public static DataTable FindThreeMaxGoal()
         {
-            string sql = $"select top 3 from dbo.CAUTHU order by SoBanThang desc";
+            string sql = $"select top 3 with ties * from dbo.CAUTHU order by SoBanThang desc";
             return DatabaseAccess.ReadTable(sql);
         }
 
@@ -65,5 +65,20 @@ namespace DAL
             string sql = $"select * from CAUTHU where MADOI = '{maDoi}'";
             return DatabaseAccess.ReadTable(sql);
         }
-    }
+		public static DataTable GetMemBerOfListTeam(List<string> maDoi)
+		{
+			if (maDoi == null || maDoi.Count == 0)
+			{
+				// Trả về DataTable trống nếu danh sách mã đội rỗng hoặc null
+				return new DataTable();
+			}
+
+			// Sử dụng phương thức string.Join để kết hợp danh sách mã đội thành một chuỗi được ngăn cách bởi dấu phẩy trong câu lệnh SQL
+			string maDoiString = string.Join("','", maDoi);
+
+			string sql = $"SELECT * FROM CAUTHU WHERE MADOI IN ('{maDoiString}')";
+
+			return DatabaseAccess.ReadTable(sql);
+		}
+	}
 }

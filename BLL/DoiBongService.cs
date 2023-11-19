@@ -42,5 +42,5 @@ namespace BLL
         {
             return DoiBongAccess.GetAllTeam();
         }
-    }
+	}
 }

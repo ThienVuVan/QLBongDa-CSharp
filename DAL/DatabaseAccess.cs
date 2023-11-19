@@ -56,8 +56,6 @@ namespace DAL
             conn.Dispose();
             return result;
         }
-
-
     }
 
 }

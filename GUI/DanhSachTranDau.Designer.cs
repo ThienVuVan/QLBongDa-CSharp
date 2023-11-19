@@ -47,6 +47,8 @@
 			this.cbDoiNha = new Guna.UI2.WinForms.Guna2ComboBox();
 			this.btnDelete = new System.Windows.Forms.Button();
 			this.btnCapNhat = new System.Windows.Forms.Button();
+			this.btnXuatFile = new System.Windows.Forms.Button();
+			this.dlgSave = new System.Windows.Forms.SaveFileDialog();
 			this.guna2GroupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgDanhSach)).BeginInit();
 			this.guna2Panel1.SuspendLayout();
@@ -326,11 +328,23 @@
 			this.btnCapNhat.Text = "Cập nhật";
 			this.btnCapNhat.UseVisualStyleBackColor = true;
 			// 
+			// btnXuatFile
+			// 
+			this.btnXuatFile.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXuatFile.Location = new System.Drawing.Point(562, 605);
+			this.btnXuatFile.Name = "btnXuatFile";
+			this.btnXuatFile.Size = new System.Drawing.Size(106, 35);
+			this.btnXuatFile.TabIndex = 17;
+			this.btnXuatFile.Text = "Xuất File";
+			this.btnXuatFile.UseVisualStyleBackColor = true;
+			this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
+			// 
 			// DanhSachTranDau
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1024, 652);
+			this.Controls.Add(this.btnXuatFile);
 			this.Controls.Add(this.btnCapNhat);
 			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.cbDoiNha);
@@ -371,5 +385,7 @@
 		private System.Windows.Forms.Button btnDelete;
 		private System.Windows.Forms.Button btnCapNhat;
 		private Guna.UI2.WinForms.Guna2DataGridView dgDanhSach;
+		private System.Windows.Forms.Button btnXuatFile;
+		private System.Windows.Forms.SaveFileDialog dlgSave;
 	}
 }

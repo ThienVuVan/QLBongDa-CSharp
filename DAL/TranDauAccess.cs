@@ -40,7 +40,6 @@ namespace DAL
 			if (MaTranDau == null) MaTranDau = "none";
             if (SoBanThangDoiNha == null) SoBanThangDoiNha = -1;
             if (SoTheDoDoiNha == null) SoTheDoDoiNha = -1;
-
             string sql = $"select * from dbo.TRANDAU b where " +
                 $"('{MaTranDau}' = 'none' or b.MaTranDau = '{MaTranDau}') and " +
                 $"('{MaDoiNha}' = 'none' or b.MaDoiNha = '{MaDoiNha}') and " +
