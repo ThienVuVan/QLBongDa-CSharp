@@ -3,38 +3,110 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DTO;
+using Guna.UI2.WinForms.Suite;
 
 namespace GUI
 {
-    public partial class dangKyDoiBong : Form
-    {
-        public dangKyDoiBong()
-        {
-            InitializeComponent();
-        }
+	public partial class dangKyDoiBong : Form
+	{
+		public dangKyDoiBong()
+		{
+			InitializeComponent();
+		}
 
 		private void btnAddImg_Click(object sender, EventArgs e)
 		{
-            OpenFileDialog ofd = new OpenFileDialog();
-			ofd.Filter = "Image Files|*.png;*.jpg;*.jpeg;*.gif;*.bmp";
-            ofd.FilterIndex = 1;
-            ofd.Title = "Chọn ảnh";
-			ofd.ShowDialog(this);
-            
+			//         OpenFileDialog ofd = new OpenFileDialog();
+			//ofd.Filter = "Image Files|*.png;*.jpg;*.jpeg;*.gif;*.bmp";
+			//         ofd.FilterIndex = 1;
+			//         ofd.Title = "Chọn ảnh";
+			//ofd.ShowDialog(this);
+			// open file dialog   
+
+			// image filters  
+			openImg.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+			if (openImg.ShowDialog() == DialogResult.OK)
+			{
+				// display image in picture box  
+				picBox.Image = new Bitmap(openImg.FileName);
+
+
+			}
+
 		}
 
 		private void btnReset_Click(object sender, EventArgs e)
 		{
-
+			txtTenDoi.Text = "";
+			txtMaTinh.Text = "";
+			txtHLV.Text = "";
+			txtSoCauThu.Text = "";
 		}
 
 		private void btnFinish_Click(object sender, EventArgs e)
 		{
+			if (txtTenDoi.Text == "" || txtMaTinh.Text == "" || txtHLV.Text == "" || txtSoCauThu.Text == "")
+			{
+				MessageBox.Show("Hãy nhập đủ dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); return;
+			}
+			// Lấy thời gian hiện tại
+			TimeSpan thoiGianHienTai = DateTime.Now.TimeOfDay;
 
+			// Lấy tổng số giây và làm tròn nó về phần nguyên
+			int soGiayNguyen = (int)Math.Round(thoiGianHienTai.TotalSeconds);
+
+			// Chuyển đổi thành chuỗi
+			string chuoiThoiGian = soGiayNguyen.ToString();
+
+			DoiBong doiBong = new DoiBong();
+
+			doiBong.TenDoi = txtTenDoi.Text;
+			doiBong.MaTinh = txtMaTinh.Text;
+			doiBong.MaDoi = chuoiThoiGian;
+			doiBong.HLV = txtHLV.Text;
+			doiBong.SoLuongCauThu = int.Parse(txtSoCauThu.Text);
+			doiBong.LoGo = openImg.FileName.Trim().Split('\\').Last();
+			doiBong.SoBanThang = 0;
+			doiBong.SoBanThua = 0;
+			doiBong.SoDiem = 0;
+			doiBong.MaSan = "not updated";
+
+			try
+			{
+				// Đường dẫn thư mục mà bạn muốn lưu ảnh vào
+				string duongDanThuMuc = Path.Combine("E:\\Year3\\SEMESTER 1\\BTL Csharp\\QLBongDa-CSharp\\GUI\\Resources\\IMGLogo\\");
+				// Đường dẫn đầy đủ cho việc lưu ảnh vào thư mục
+				string duongDanLuu = Path.Combine(duongDanThuMuc, doiBong.LoGo);
+
+				// Copy tệp tin ảnh vào thư mục
+				File.Copy(openImg.FileName.Trim(), duongDanLuu, true);
+
+				MessageBox.Show("Dữ liệu đã được nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Đã xảy ra lỗi khi nhập ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+
+			this.Close();
+
+		}
+
+		private void dangKyDoiBong_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnCancel_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }
