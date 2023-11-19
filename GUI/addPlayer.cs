@@ -88,7 +88,6 @@ namespace GUI
 			string duongDanThuMuc = Path.Combine("D:\\LapTrinhTrucQuan\\QLBongDa-CSharp\\GUI\\Resources\\IMGCauThu");
 			// Đường dẫn đầy đủ cho việc lưu ảnh vào thư mục
 			string duongDanLuu = Path.Combine(duongDanThuMuc, cauThu.Anh);
-
 			// Copy tệp tin ảnh vào thư mục
 			File.Copy(openImg.FileName.Trim(), duongDanLuu, true);
 

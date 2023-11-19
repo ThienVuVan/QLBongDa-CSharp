@@ -40,8 +40,8 @@ namespace DAL
             if (SoTheDoDoiNha == null) SoTheDoDoiNha = -1;
 
             string sql = $"select * from dbo.TRANDAU b where " +
-                $"'{MaTranDau}' = 'none' or b.MaTranDau = N'{MaTranDau}' and " +
-                $"'{MaDoiNha}' = 'none' or b.MaDoiNha = N'{MaDoiNha}' and " +
+                $"'{MaTranDau}' = 'none' or b.MaTranDau = '{MaTranDau}' and " +
+                $"'{MaDoiNha}' = 'none' or b.MaDoiNha = '{MaDoiNha}' and " +
                 $"{SoBanThangDoiNha} = -1 or b.SoBanThangDoiNha = {SoBanThangDoiNha} and " +
                 $"{SoTheDoDoiNha} = -1 or b.SoTheDoDoiNha = {SoTheDoDoiNha}";
             return DatabaseAccess.ReadTable(sql);
