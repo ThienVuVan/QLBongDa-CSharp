@@ -34,6 +34,20 @@ namespace GUI
 			{
 				cbQuocTich.Items.Add(qt);	
 			}
+
+			dgvTeammate.DataSource = CauThuService.GetMemBerOfTeam(cbMaDoi.Text);
+			dgvTeammate.Columns["MACAUTHU"].HeaderText = "Mã cầu thủ";
+			dgvTeammate.Columns["MADOI"].HeaderText = "Mã đội bóng";
+			dgvTeammate.Columns["MAQUOCTICH"].HeaderText = "Mã quốc tịch";
+			dgvTeammate.Columns["TEN"].HeaderText = "Họ và tên";
+			dgvTeammate.Columns["VITRICHOI"].HeaderText = "Vị trí";
+			dgvTeammate.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
+			dgvTeammate.Columns["SOAO"].HeaderText = "Số áo";
+			dgvTeammate.Columns["SOBANTHANG"].HeaderText = "Số bàn thắng";
+			dgvTeammate.Columns["SOTHEVANG"].HeaderText = "Thẻ vàng";
+			dgvTeammate.Columns["SOTHEDO"].HeaderText = "Thẻ đỏ";
+			dgvTeammate.Columns["SOLANRASAN"].HeaderText = "Ra sân";
+			dgvTeammate.Columns["ANH"].HeaderText = "Ảnh";
 		}
 
 		private void txtName_TextChanged(object sender, EventArgs e)

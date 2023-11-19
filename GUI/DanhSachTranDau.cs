@@ -42,6 +42,7 @@ namespace GUI
 			dgDanhSach.Columns["SOBANTHANGDOIKHACH"].HeaderText = "Bàn thắng đội khách";
 			dgDanhSach.Columns["SOTHEVANGDOINHA"].HeaderText = "Thẻ vàng đội nhà";
 			dgDanhSach.Columns["SOTHEVANGDOIKHACH"].HeaderText = "Thẻ vàng đội khách";
+			dgDanhSach.Columns["SOTHEDODOINHA"].HeaderText = "Thẻ đỏ đội nhà";
 			dgDanhSach.Columns["SOTHEDODOIKHACH"].HeaderText = "Thẻ đỏ đội khách";
 			dgDanhSach.Columns["GHICHU"].HeaderText = "Ghi chú";
 		}
