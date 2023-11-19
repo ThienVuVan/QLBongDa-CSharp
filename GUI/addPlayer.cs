@@ -5,11 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DTO;
+using GUI.Properties;
 using Guna.UI2.WinForms.Suite;
 
 namespace GUI
@@ -48,9 +50,12 @@ namespace GUI
 			dgvTeammate.Columns["SOTHEDO"].HeaderText = "Thẻ đỏ";
 			dgvTeammate.Columns["SOLANRASAN"].HeaderText = "Ra sân";
 			dgvTeammate.Columns["ANH"].HeaderText = "Ảnh";
-		}
+            
+			
+        }
+		
 
-		private void txtName_TextChanged(object sender, EventArgs e)
+        private void txtName_TextChanged(object sender, EventArgs e)
 		{
 		
 		}
@@ -77,25 +82,36 @@ namespace GUI
 
 			cauThu.Ten = txtName.Text;
 			cauThu.MaCauThu = chuoiThoiGian;
-			cauThu.MaQuocTinh = cbQuocTich.SelectedIndex.ToString();
-			cauThu.MaDoi = cbMaDoi.SelectedIndex.ToString();
+			cauThu.MaQuocTinh = cbQuocTich.SelectedItem.ToString();
+			cauThu.MaDoi = cbMaDoi.SelectedItem.ToString();
 			cauThu.NgaySinh = dtpNgaySinh.Value;
-			cauThu.ViTriChoi = cbViTri.SelectedIndex.ToString();
-			cauThu.Anh = openImg.FileName.Trim().Split('\\').Last();
+			cauThu.ViTriChoi = cbViTri.SelectedItem.ToString();
+			cauThu.Anh = Path.GetFileName(openImg.FileName);
 			cauThu.SoBanThang = 0;
 			cauThu.SoLanRaSan = 0;
 			cauThu.SoTheDo = 0;
 			cauThu.SoTheVang = 0;
 
-			// Đường dẫn thư mục mà bạn muốn lưu ảnh vào
-			string duongDanThuMuc = Path.Combine("D:\\LapTrinhTrucQuan\\QLBongDa-CSharp\\GUI\\Resources\\IMGCauThu");
-			// Đường dẫn đầy đủ cho việc lưu ảnh vào thư mục
-			string duongDanLuu = Path.Combine(duongDanThuMuc, cauThu.Anh);
 
+            string duongDanThuMuc = Path.Combine("F:\\Desktop\\BTL_Winform\\QLBongDa-CSharp\\GUI\\Resources\\IMGCauThu");
+            // Đường dẫn đầy đủ cho việc lưu ảnh vào thư mục
+            string duongDanLuu = Path.Combine(duongDanThuMuc,Path.GetFileName(openImg.FileName));
 			// Copy tệp tin ảnh vào thư mục
-			File.Copy(openImg.FileName.Trim(), duongDanLuu, true);
+			if (File.Exists(duongDanLuu))
+			{
+				MessageBox.Show("Anh da ton tai");
+                CauThuService.SaveCauThu(cauThu);
+                return;
+			}
+			else
+			{
+                File.Copy(openImg.FileName.Trim(), duongDanLuu);
+                CauThuService.SaveCauThu(cauThu);
+            }
+			
+			
 
-		}
+        }
 
 		private void btnReset_Click(object sender, EventArgs e)
 		{
@@ -122,5 +138,10 @@ namespace GUI
 				
 			}
 		}
-	}
+
+        private void cbMaDoi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			dgvTeammate.DataSource = CauThuService.GetMemBerOfTeam(cbMaDoi.SelectedItem.ToString());
+        }
+    }
 }

@@ -22,8 +22,8 @@ namespace GUI
 
 		private void btnFilter_Click(object sender, EventArgs e)
 		{
-			CauThu cauThu = new CauThu();
-			cauThu.Ten = txtTen.Text;
+
+			gridCauThu.DataSource = CauThuService.Filter(txtTen.Text, txtTenDoiBong.Text,txtSoBanThang.Text == "" ? 0 : int.Parse(txtSoBanThang.Text));
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
