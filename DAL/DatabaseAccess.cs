@@ -13,10 +13,11 @@ namespace DAL
     public class DatabaseAccess
     {
         public static SqlConnection conn;
-        public static string str = "Data Source=DESKTOP-H1TC08I;Initial Catalog=QuanLyGiaiBong;Integrated Security=True";
+        public static string str = "Data Source=THIENVUVAN\\SQLEXPRESS;Initial Catalog=QuanLyGiaiBong;Integrated Security=True";
         public static SqlConnection Connect()
         {
             SqlConnection conn = new SqlConnection(str);
+            conn.Open();
             return conn;
         }
 

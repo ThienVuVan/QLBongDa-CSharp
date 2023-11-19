@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,23 @@ namespace GUI
 {
     public partial class teamDetail : Form
     {
-        public teamDetail()
+        string MaDoi;
+        public teamDetail(string MaDoiBong)
         {
+            this.MaDoi = MaDoiBong;
             InitializeComponent();
         }
 
+        private void teamDetail_Load(object sender, EventArgs e)
+        {
+            DoiBong doiBong = DoiBongService.GetDoiBongById(MaDoi);
+            txtTenDoi.Text = doiBong.TenDoi;
+            txtMaTinh.Text = doiBong.MaTinh;
+            txtHLV.Text = doiBong.HLV;
+            txtSoCauThu.Text = doiBong.SoLuongCauThu.ToString();
 
-	}
+            DataTable listCauThu = CauThuService.GetMemBerOfTeam(MaDoi);
+            guna2DataGridView1.DataSource = listCauThu;
+        }
+    }
 }

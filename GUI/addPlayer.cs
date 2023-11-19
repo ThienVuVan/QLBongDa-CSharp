@@ -93,10 +93,10 @@ namespace GUI
 			cauThu.SoTheVang = 0;
 
 
-            string duongDanThuMuc = Path.Combine("F:\\Desktop\\BTL_Winform\\QLBongDa-CSharp\\GUI\\Resources\\IMGCauThu");
-            // Đường dẫn đầy đủ cho việc lưu ảnh vào thư mục
-            string duongDanLuu = Path.Combine(duongDanThuMuc,Path.GetFileName(openImg.FileName));
-			// Copy tệp tin ảnh vào thư mục
+      string duongDanThuMuc = Path.Combine("F:\\Desktop\\BTL_Winform\\QLBongDa-CSharp\\GUI\\Resources\\IMGCauThu");
+      // Đường dẫn đầy đủ cho việc lưu ảnh vào thư mục
+      string duongDanLuu = Path.Combine(duongDanThuMuc,Path.GetFileName(openImg.FileName));
+      // Copy tệp tin ảnh vào thư mục
 			if (File.Exists(duongDanLuu))
 			{
 				MessageBox.Show("Anh da ton tai");
