@@ -61,7 +61,7 @@ namespace GUI
 				DataGridViewRow selectedRow = dgDanhSach.SelectedRows[0];
 				string maTranDau = selectedRow.Cells["MATRANDAU"].Value.ToString();
 				MessageBox.Show($"{maTranDau}");
-				DataTable dsIn = TranDauService.Filter(maTranDau,null,null,null);
+				DataTable dsIn = TranDauService.Filter(maTranDau, null, null, null);
 				if (dsIn.Rows.Count > 0)
 				{
 					// Khai báo và khởi tạo các đối tượng Excel
@@ -130,35 +130,35 @@ namespace GUI
 					MessageBox.Show("Không có danh sách hàng để xuất ra file");
 				}
 			}
-      
-		private void btnFilter_Click(object sender, EventArgs e)
-		{
-			
-			int? soBanThang = null;
-			int? soTheDo = null;
-			string tenDoiNha = cbDoiNha.SelectedItem?.ToString(); // Kiểm tra giá trị null
-
-			// Kiểm tra và chuyển đổi dữ liệu từ TextBox sang kiểu int?
-			if (!string.IsNullOrWhiteSpace(txtSoBan.Text) && int.TryParse(txtSoBan.Text, out int banThang))
-			{
-				soBanThang = banThang;
-			}
-
-			if (!string.IsNullOrWhiteSpace(txtTheDo.Text) && int.TryParse(txtTheDo.Text, out int theDo))
-			{
-				soTheDo = theDo;
-			}
-
-			DataTable filteredData = TranDauService.Filter(null, tenDoiNha, soBanThang, soTheDo);
-
-			if (filteredData.Rows.Count == 0)
-			{
-				dgDanhSach.DataSource = null;
-				MessageBox.Show("Không tìm thấy dữ liệu phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				return;
-			}
-
-			dgDanhSach.DataSource = filteredData;
 		}
+
+
+			private void btnFilter_Click(object sender, EventArgs e)
+			{
+				int? soBanThang = null;
+				int? soTheDo = null;
+				string tenDoiNha = cbDoiNha.SelectedItem?.ToString(); // Kiểm tra giá trị null
+
+				// Kiểm tra và chuyển đổi dữ liệu từ TextBox sang kiểu int?
+				if (!string.IsNullOrWhiteSpace(txtSoBan.Text) && int.TryParse(txtSoBan.Text, out int banThang))
+				{
+					soBanThang = banThang;
+				}
+
+				if (!string.IsNullOrWhiteSpace(txtTheDo.Text) && int.TryParse(txtTheDo.Text, out int theDo))
+				{
+					soTheDo = theDo;
+				}
+
+				DataTable filteredData = TranDauService.Filter(null, tenDoiNha, soBanThang, soTheDo);
+
+				if (filteredData.Rows.Count == 0)
+				{
+					dgDanhSach.DataSource = null;
+					MessageBox.Show("Không tìm thấy dữ liệu phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					return;
+				}
+				dgDanhSach.DataSource = filteredData;
+			}
 	}
 }
