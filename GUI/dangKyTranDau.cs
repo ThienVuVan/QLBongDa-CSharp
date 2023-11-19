@@ -47,6 +47,10 @@ namespace GUI
 
 		private void btnThem_Click(object sender, EventArgs e)
 		{
+			if(txtLuotDau.Text == "" || txtVongDau.Text == "" || cbNha.Text == "" || cbKhach.Text == "" || cbStatus.Text == "")
+			{
+				MessageBox.Show("Hãy nhập đủ dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); return;
+			}
 			// Lấy thời gian hiện tại
 			TimeSpan thoiGianHienTai = DateTime.Now.TimeOfDay;
 
