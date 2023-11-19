@@ -18,7 +18,7 @@ namespace DAL
             DataTable dt = DatabaseAccess.ReadTable(sql);
             foreach (DataRow row in dt.Rows)
             {
-                string tenValue = row["TEN"].ToString();
+                string tenValue = row["TENDOI"].ToString();
                 list.Add(tenValue);
             }
             return list;

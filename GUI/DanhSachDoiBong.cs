@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,19 +24,26 @@ namespace GUI
 			this.Close();
 		}
 
-		private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+
+		private void DanhSachDoiBong_Load(object sender, EventArgs e)
 		{
-			if (e.RowIndex >= 0)
-			{
-				DataGridViewRow selectedRow = guna2DataGridView1.Rows[e.RowIndex];
+			dgvDoiBong.DataSource = DoiBongService.GetAllDoiBong();
+			dgvDoiBong.Columns["MADOI"].HeaderText = "Mã đội";
+			dgvDoiBong.Columns["MASAN"].HeaderText = "Mã sân";
+			dgvDoiBong.Columns["MATINH"].HeaderText = "Mã tỉnh";
+			dgvDoiBong.Columns["TENDOI"].HeaderText = "Tên đội";
+			dgvDoiBong.Columns["HLV"].HeaderText = "HLV";
+			dgvDoiBong.Columns["LOGO"].HeaderText = "Logo";
+			dgvDoiBong.Columns["SODIEM"].HeaderText = "Điểm";
+			dgvDoiBong.Columns["SOBANTHANG"].HeaderText = "Bàn thắng";
+			dgvDoiBong.Columns["SOBANTHUA"].HeaderText = "Bàn thua";
+			dgvDoiBong.Columns["SOLUONGCAUTHU"].HeaderText = "Số cầu thủ";
+		}
 
-				// Lấy giá trị từ dòng đã chọn
-				string id = selectedRow.Cells["Mã đội"].Value.ToString();
-				MessageBox.Show($"{id}");
-
-				// Hiển thị form chi tiết
-
-			}
+		private void btnAdd_Click(object sender, EventArgs e)
+		{
+			dangKyDoiBong dangKyDoiBong = new dangKyDoiBong();
+			dangKyDoiBong.ShowDialog(this);
 		}
 	}
 }
