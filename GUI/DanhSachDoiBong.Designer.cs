@@ -337,6 +337,17 @@
 			this.btnXuatFile.Text = "Xuất File";
 			this.btnXuatFile.UseVisualStyleBackColor = true;
 			this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
+      // 
+      // btnViewDetail
+      // 
+      this.btnViewDetail.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.btnViewDetail.Location = new System.Drawing.Point(20, 474);
+      this.btnViewDetail.Name = "btnViewDetail";
+      this.btnViewDetail.Size = new System.Drawing.Size(107, 30);
+      this.btnViewDetail.TabIndex = 9;
+      this.btnViewDetail.Text = "Xem Chi Tiết";
+      this.btnViewDetail.UseVisualStyleBackColor = true;
+      this.btnViewDetail.Click += new System.EventHandler(this.btnViewDetail_Click);
 			// 
 			// DanhSachDoiBong
 			// 
@@ -360,7 +371,6 @@
 			this.guna2Panel2.PerformLayout();
 			this.guna2GroupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
-
 		}
 
 		#endregion
@@ -382,5 +392,5 @@
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
 		private System.Windows.Forms.Button btnXuatFile;
 		private System.Windows.Forms.SaveFileDialog dlgSave;
-	}
+    private System.Windows.Forms.Button btnViewDetail;
 }

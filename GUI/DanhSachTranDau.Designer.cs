@@ -143,6 +143,7 @@
 			this.btnFilter.Size = new System.Drawing.Size(70, 32);
 			this.btnFilter.TabIndex = 14;
 			this.btnFilter.Text = "Lọc";
+			this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
 			// 
 			// txtTheDo
 			// 

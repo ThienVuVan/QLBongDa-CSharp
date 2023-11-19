@@ -130,4 +130,17 @@ namespace GUI
 			}
 		}
 	}
+        private void btnViewDetail_Click(object sender, EventArgs e)
+        {
+			if(dgvDoiBong.SelectedRows.Count == 0)
+			{
+				MessageBox.Show("Hãy chọn đội bóng!");
+			}
+
+            DataGridViewRow selectedRow = dgvDoiBong.SelectedRows[0];
+            string MaDoi = selectedRow.Cells["MADOI"].Value.ToString();
+			teamDetail detail = new teamDetail(MaDoi);
+			detail.Show();
+        }
+    }
 }
