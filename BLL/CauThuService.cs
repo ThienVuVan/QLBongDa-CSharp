@@ -34,5 +34,9 @@ namespace BLL
         {
             return CauThuAccess.GetMemBerOfTeam(maDoi);
         }
-    }
+        public static DataTable GetMemBerOfListTeam(List<string> maDoi)
+        {
+            return CauThuAccess.GetMemBerOfListTeam(maDoi);
+        }
+	}
 }
