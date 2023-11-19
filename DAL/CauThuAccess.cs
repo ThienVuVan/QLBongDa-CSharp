@@ -19,22 +19,27 @@ namespace DAL
 
         public static DataTable Filter(string Ten, string MaDoi, Nullable<int> SoBanThang)
         {
-            if (Ten == null) Ten = "none";
-            if(MaDoi == null) MaDoi = "none";
-            if (SoBanThang == null) SoBanThang = -1;
-            string sql = $"select * from dbo.CAUTHU c where " +
-                $"('{Ten}' = 'none' or c.Ten = N'{Ten}') and " +
-                $"('{MaDoi}' = 'none' or c.MaDoi = N'{MaDoi}') and " +
-                $"({SoBanThang} = -1 or c.SoBanThang = {SoBanThang})";
-            Console.WriteLine(sql);
+            string sql = $"select * from CAUTHU where TEN is not null ";
+            if(Ten != "")
+            {
+                sql += $"and TEN = N'{Ten}'";
+            }
+            if(MaDoi != "")
+            {
+                sql += $" and MADOI = '{MaDoi}'";
+            }
+            if(SoBanThang != null)
+            {
+                sql += $" and SOBANTHANG = {SoBanThang}";
+            }
             return DatabaseAccess.ReadTable(sql);
         }
         public static void SaveCauThu(CauThu cauThu)
         {
-            string sql = $"insert into dbo.CAUTHU values({cauThu.MaCauThu}, {cauThu.MaDoi}," +
-               $"{cauThu.MaQuocTinh}, {cauThu.Ten}, {cauThu.ViTriChoi}, {cauThu.NgaySinh}," +
+            string sql = $"insert into dbo.CAUTHU values('{cauThu.MaCauThu}', '{cauThu.MaDoi}'," +
+               $"'{cauThu.MaQuocTinh}', N'{cauThu.Ten}', N'{cauThu.ViTriChoi}', '{cauThu.NgaySinh}'," +
                $"{cauThu.SoAo}, {cauThu.SoBanThang}, {cauThu.SoTheVang}," +
-               $"{cauThu.SoTheDo}, {cauThu.SoLanRaSan}, {cauThu.Anh})";
+               $"{cauThu.SoTheDo}, {cauThu.SoLanRaSan}, '{cauThu.Anh}')";
             DatabaseAccess.Excute(sql);
         }
 
