@@ -265,6 +265,7 @@
 			this.btnUpdate.Size = new System.Drawing.Size(190, 52);
 			this.btnUpdate.TabIndex = 7;
 			this.btnUpdate.Text = "Cập nhật kết quả";
+			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
 			// 
 			// btnAdd
 			// 

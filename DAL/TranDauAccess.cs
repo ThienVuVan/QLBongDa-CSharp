@@ -12,11 +12,12 @@ namespace DAL
     {
         public static void SaveTranDau(TranDau tranDau)
         {
-            string sql = $"insert into dbo.TRANDAU values({tranDau.MaTranDau},{tranDau.MaDoiNha}," +
-                $"{tranDau.MaDoiKhach}, {tranDau.LuotDau}, {tranDau.VongDau}, {tranDau.SoBanThangDoiNha}," +
-                $"{tranDau.SoBanThangDoiKhach}, {tranDau.SoTheVangDoiNha}, {tranDau.SotheVangDoiKhach}," +
-                $"{tranDau.SoTheDoDoiNha}, {tranDau.SoTheDoDoiKhach}, {tranDau.GhiChu})";
-            DatabaseAccess.Excute(sql);
+			string sql = $"insert into dbo.TRANDAU values('{tranDau.MaTranDau}','{tranDau.MaDoiNha}'," +
+				$"'{tranDau.MaDoiKhach}', {tranDau.LuotDau}, {tranDau.VongDau}, {tranDau.SoBanThangDoiNha}," +
+				$"{tranDau.SoBanThangDoiKhach}, {tranDau.SoTheVangDoiNha}, {tranDau.SotheVangDoiKhach}," +
+				$"{tranDau.SoTheDoDoiNha}, {tranDau.SoTheDoDoiKhach}, '{tranDau.GhiChu}')";
+
+			DatabaseAccess.Excute(sql);
         }
 
         public static DataTable RetrieveAllTranDau()

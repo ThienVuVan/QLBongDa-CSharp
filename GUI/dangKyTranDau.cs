@@ -59,6 +59,8 @@ namespace GUI
 
 			TranDau tranDau = new TranDau();
 			tranDau.MaTranDau = chuoiThoiGian + txtVongDau.Text.ToString() + txtLuotDau.Text.ToString();
+			tranDau.MaDoiNha = cbNha.SelectedItem.ToString();
+			tranDau.MaDoiKhach = cbKhach.SelectedItem.ToString();
 			tranDau.LuotDau = int.Parse(txtLuotDau.Text);
 			tranDau.VongDau = int.Parse(txtVongDau.Text);
 			tranDau.GhiChu = cbStatus.SelectedIndex.ToString();
@@ -68,10 +70,7 @@ namespace GUI
 			tranDau.SoTheDoDoiNha = 0;
 			tranDau.SotheVangDoiKhach = 0;
 			tranDau.SoTheVangDoiNha = 0;
-			tranDau.MaDoiNha = cbNha.SelectedItem.ToString();
-			tranDau.MaDoiKhach = cbKhach.SelectedItem.ToString();
 
-			MessageBox.Show(cbNha.SelectedItem.ToString());
 
 			dgvDangKy.DataSource = TranDauService.RetrieveAllTranDau();
 			dgvDangKy.Columns["MATRANDAU"].HeaderText = "Mã trận đấu";
@@ -81,12 +80,12 @@ namespace GUI
 			dgvDangKy.Columns["VONGDAU"].HeaderText = "Vòng đấu";
 			dgvDangKy.Columns["SOBANTHANGDOINHA"].HeaderText = "Số bàn thắng đội nhà";
 			dgvDangKy.Columns["SOBANTHANGDOIKHACH"].HeaderText = "Số bàn thắng đội khách";
-			dgvDangKy.Columns["SOBANTHANGDOINHA"].Visible = false;
-			dgvDangKy.Columns["SOBANTHANGDOIKHACH"].Visible = false;
-			dgvDangKy.Columns["SOTHEVANGDOINHA"].Visible = false;
-			dgvDangKy.Columns["SOTHEVANGDOIKHACH"].Visible = false;
-			dgvDangKy.Columns["SOTHEDODOIKHACH"].Visible = false;
-			dgvDangKy.Columns["SOTHEDODOINHA"].Visible = false;
+			//dgvDangKy.Columns["SOBANTHANGDOINHA"].Visible = false;
+			//dgvDangKy.Columns["SOBANTHANGDOIKHACH"].Visible = false;
+			//dgvDangKy.Columns["SOTHEVANGDOINHA"].Visible = false;
+			//dgvDangKy.Columns["SOTHEVANGDOIKHACH"].Visible = false;
+			//dgvDangKy.Columns["SOTHEDODOIKHACH"].Visible = false;
+			//dgvDangKy.Columns["SOTHEDODOINHA"].Visible = false;
 
 
 
@@ -105,6 +104,27 @@ namespace GUI
 		private void btnHuy_Click(object sender, EventArgs e)
 		{
 			Close();
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void dgvDangKy_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			try
+			{
+				txtLuotDau.Text = dgvDangKy.CurrentRow.Cells[3].Value.ToString();
+				txtVongDau.Text = dgvDangKy.CurrentRow.Cells[4].Value.ToString();
+				cbNha.SelectedItem = dgvDangKy.CurrentRow.Cells[];
+				
+			}
+			catch (Exception ex)
+			{
+
+			}
+
 		}
 	}
 }

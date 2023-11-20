@@ -227,6 +227,7 @@
 			this.dgvDangKy.RowTemplate.Height = 24;
 			this.dgvDangKy.Size = new System.Drawing.Size(966, 150);
 			this.dgvDangKy.TabIndex = 0;
+			this.dgvDangKy.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDangKy_CellContentClick);
 			// 
 			// button3
 			// 
@@ -247,6 +248,7 @@
 			this.button4.TabIndex = 4;
 			this.button4.Text = "Sửa trận đấu";
 			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// button5
 			// 
