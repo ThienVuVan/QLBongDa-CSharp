@@ -50,14 +50,14 @@ namespace GUI
 
 		private void btnXuatFile_Click(object sender, EventArgs e)
 		{
-			if (dgvDoiBong.SelectedRows.Count >0)
+			if (dgvDoiBong.SelectedRows.Count > 0)
 			{
 				List<string> MaDoi = new List<string>();
-				for(int i=0; i< dgvDoiBong.SelectedRows.Count; i++)
+				for (int i = 0; i < dgvDoiBong.SelectedRows.Count; i++)
 				{
 					DataGridViewRow selectedRow = dgvDoiBong.SelectedRows[i];
 					MaDoi.Add(selectedRow.Cells["MADOI"].Value.ToString());
-					
+
 				}
 				DataTable dsIn = CauThuService.GetMemBerOfListTeam(MaDoi);
 				//MessageBox.Show($"{MaDoi}");
@@ -119,28 +119,27 @@ namespace GUI
 					dlgSave.DefaultExt = ".xls";
 					if (dlgSave.ShowDialog() == System.Windows.Forms.DialogResult.OK)
 						exBook.SaveAs(dlgSave.FileName.ToString());//Lưu file Excel
-					MessageBox.Show("Xuất file thành công","Thông báo");
+					MessageBox.Show("Xuất file thành công", "Thông báo");
 					exApp.Quit();//Thoát khỏi ứng dụng
 				}
 				else
 				{
 					MessageBox.Show("Không có danh sách hàng để xuất ra file");
 				}
-				
 			}
 		}
-	}
-        private void btnViewDetail_Click(object sender, EventArgs e)
+
+        private void btnViewDetail_Click_1(object sender, EventArgs e)
         {
-			if(dgvDoiBong.SelectedRows.Count == 0)
-			{
-				MessageBox.Show("Hãy chọn đội bóng!");
-			}
+            if (dgvDoiBong.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Hãy chọn đội bóng!");
+            }
 
             DataGridViewRow selectedRow = dgvDoiBong.SelectedRows[0];
             string MaDoi = selectedRow.Cells["MADOI"].Value.ToString();
-			teamDetail detail = new teamDetail(MaDoi);
-			detail.Show();
+            teamDetail detail = new teamDetail(MaDoi);
+            detail.Show();
         }
     }
 }

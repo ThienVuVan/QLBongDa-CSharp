@@ -22,6 +22,11 @@ namespace DTO
             SoLuongCauThu = soLuongCauThu;
         }
 
+        public DoiBong()
+        {
+    
+        }
+
         public string MaDoi { get; set; }
         public string MaSan { get; set; }
         public string MaTinh { get; set; }

@@ -23,5 +23,10 @@ namespace BLL
         {
             return TranDauAccess.Filter(MaTranDau, TenDoiNha, SoBanThangDoiNha, SoTheDoDoiNha);
         }
+
+        public static void UpdateTranDau(TranDau tranDau)
+        {
+            TranDauAccess.UpdateTranDau(tranDau);
+        }
     }
 }
