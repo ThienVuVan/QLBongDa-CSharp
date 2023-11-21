@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,9 +18,18 @@ namespace DAL
         }
 
 
-        public static DataTable Filter(string Ten, string MaDoi, Nullable<int> SoBanThang)
+        public static DataTable Filter(string Ten, string TenDoi, Nullable<int> SoBanThang)
         {
             string sql = $"select * from CAUTHU where TEN is not null ";
+            string MaDoi;
+            if(TenDoi == "")
+            {
+                MaDoi = "";
+            }
+            else
+            {
+                MaDoi = (string)DatabaseAccess.ExecuteScalar($"select MADOI from DOIBONG where TENDOI = N'{TenDoi}'");
+            }
             if(Ten != "")
             {
                 sql += $"and TEN = N'{Ten}'";
@@ -51,19 +61,26 @@ namespace DAL
 
         public static void UpdateCauThu(CauThu cauThu)
         {
-            string sql = "...";
+            string sql = $"update CAUTHU set ";
             DatabaseAccess.Excute(sql);
         }
 
         public static void DeleteCauThu(string MaCauThu)
         {
-            string sql = $"delete from dbo.CAUTHU where MaCauThu = {MaCauThu}";
+            string sql = $"delete from dbo.CAUTHU where MaCauThu = '{MaCauThu}'";
             DatabaseAccess.Excute(sql);
         }
         public static DataTable GetMemBerOfTeam(string maDoi)
         {
             string sql = $"select * from CAUTHU where MADOI = '{maDoi}'";
             return DatabaseAccess.ReadTable(sql);
+        }
+        public static List<string> GetAllName()
+        {
+            List<string> list = new List<string>();
+            string sql = "select TEN from dbo.CAUTHU";
+            list = (List<string>)DatabaseAccess.ExecuteScalar(sql);
+            return list;
         }
     }
 }

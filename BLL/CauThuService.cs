@@ -20,6 +20,10 @@ namespace BLL
         {
             return CauThuAccess.RetrieveAllCauThu();
         }
+        public static void DeleteCauThu(string maCauThu)
+        {
+            CauThuAccess.DeleteCauThu(maCauThu);
+        }
 
         public static DataTable Filter(string Ten, string MaDoi, Nullable<int> SoBanThang)
         {
@@ -33,6 +37,10 @@ namespace BLL
         public static DataTable GetMemBerOfTeam(string maDoi)
         {
             return CauThuAccess.GetMemBerOfTeam(maDoi);
+        }
+        public static List<string> GetAllName()
+        {
+            return CauThuAccess.GetAllName();
         }
     }
 }
