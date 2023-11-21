@@ -48,8 +48,6 @@ namespace GUI
 
 		private void btnThem_Click(object sender, EventArgs e)
 		{
-			//Nếu nút thêm mới enabled thì sẽ thực hiện thêm
-
 			if (btnThemMoi.Enabled == true)
 			{
 				// Lấy thời gian hiện tại

@@ -47,6 +47,8 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.txtSoBanThang = new Guna.UI2.WinForms.Guna2TextBox();
 			this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
+			this.btnTop3 = new System.Windows.Forms.Button();
+			this.dlgSave = new System.Windows.Forms.SaveFileDialog();
 			this.guna2Panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridCauThu)).BeginInit();
 			this.SuspendLayout();
@@ -318,11 +320,23 @@
 			this.btnFilter.Text = "Lọc";
 			this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
 			// 
+			// btnTop3
+			// 
+			this.btnTop3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTop3.Location = new System.Drawing.Point(27, 594);
+			this.btnTop3.Name = "btnTop3";
+			this.btnTop3.Size = new System.Drawing.Size(147, 46);
+			this.btnTop3.TabIndex = 7;
+			this.btnTop3.Text = "Top 3 Player";
+			this.btnTop3.UseVisualStyleBackColor = true;
+			this.btnTop3.Click += new System.EventHandler(this.btnTop3_Click);
+			// 
 			// playerList
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1308, 652);
+			this.Controls.Add(this.btnTop3);
 			this.Controls.Add(this.btnFilter);
 			this.Controls.Add(this.gridCauThu);
 			this.Controls.Add(this.btnDelete);
@@ -364,5 +378,7 @@
 		private System.Windows.Forms.Label label5;
 		private Guna.UI2.WinForms.Guna2TextBox txtSoBanThang;
 		private Guna.UI2.WinForms.Guna2Button btnFilter;
+		private System.Windows.Forms.Button btnTop3;
+		private System.Windows.Forms.SaveFileDialog dlgSave;
 	}
 }
