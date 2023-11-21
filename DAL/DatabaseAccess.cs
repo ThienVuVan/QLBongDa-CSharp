@@ -13,16 +13,18 @@ namespace DAL
     public class DatabaseAccess
     {
         public static SqlConnection conn;
-        public static string str = "Data Source=DESKTOP-QDCMI8G\\SQLEXPRESS;Initial Catalog=Lttq_QuanLyGiaiBong;User ID=sa;Password=1234";
+        public static string str = "Data Source=THIENVUVAN\\SQLEXPRESS;Initial Catalog=QuanLyGiaiBong;Integrated Security=True";
         public static SqlConnection Connect()
         {
             SqlConnection conn = new SqlConnection(str);
+            conn.Open();
             return conn;
         }
 
         public static DataTable ReadTable(string sql)
         {
             SqlConnection conn = Connect();
+            conn.Open();
             DataTable tb = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             da.Fill(tb);
@@ -35,6 +37,7 @@ namespace DAL
         {
             SqlCommand cm = new SqlCommand();
             SqlConnection conn = Connect();
+            conn.Open();
             cm.CommandText = sql;
             cm.Connection = conn;
             cm.ExecuteNonQuery();
@@ -46,8 +49,11 @@ namespace DAL
         {
             object result = null;
             SqlConnection conn = Connect();
+            conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);
             result = cmd.ExecuteScalar();
+            conn.Close();
+            conn.Dispose();
             return result;
         }
     }

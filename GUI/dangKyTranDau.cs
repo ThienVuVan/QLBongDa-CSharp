@@ -47,6 +47,10 @@ namespace GUI
 
 		private void btnThem_Click(object sender, EventArgs e)
 		{
+			if(txtLuotDau.Text == "" || txtVongDau.Text == "" || cbNha.Text == "" || cbKhach.Text == "" || cbStatus.Text == "")
+			{
+				MessageBox.Show("Hãy nhập đủ dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); return;
+			}
 			// Lấy thời gian hiện tại
 			TimeSpan thoiGianHienTai = DateTime.Now.TimeOfDay;
 
@@ -70,6 +74,8 @@ namespace GUI
 			tranDau.SoTheVangDoiNha = 0;
 			tranDau.MaDoiNha = cbNha.SelectedItem.ToString();
 			tranDau.MaDoiKhach = cbKhach.SelectedItem.ToString();
+
+			MessageBox.Show(cbNha.SelectedItem.ToString());
 
 			dgvDangKy.DataSource = TranDauService.RetrieveAllTranDau();
 			dgvDangKy.Columns["MATRANDAU"].HeaderText = "Mã trận đấu";
@@ -96,6 +102,13 @@ namespace GUI
 
 			dgvDangKy.Columns["GHICHU"].HeaderText = "Status";
 
+			TranDauService.SaveTranDau(tranDau);
+
+		}
+
+		private void btnHuy_Click(object sender, EventArgs e)
+		{
+			Close();
 		}
 	}
 }

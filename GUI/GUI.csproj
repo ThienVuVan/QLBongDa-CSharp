@@ -457,6 +457,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\IMGCauThu\" />
+    <Folder Include="Resources\IMGLogo\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
