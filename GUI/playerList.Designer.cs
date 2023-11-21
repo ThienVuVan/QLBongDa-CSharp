@@ -42,6 +42,7 @@
 			this.btnEdit = new System.Windows.Forms.Button();
 			this.btnDelete = new System.Windows.Forms.Button();
 			this.gridCauThu = new Guna.UI2.WinForms.Guna2DataGridView();
+       this.ANHCAUTHU = new System.Windows.Forms.DataGridViewImageColumn();
 			this.label4 = new System.Windows.Forms.Label();
 			this.txtTenDoiBong = new Guna.UI2.WinForms.Guna2TextBox();
 			this.label5 = new System.Windows.Forms.Label();
@@ -110,7 +111,14 @@
 			this.lbSoLuong.Name = "lbSoLuong";
 			this.lbSoLuong.Size = new System.Drawing.Size(38, 29);
 			this.lbSoLuong.TabIndex = 1;
-			this.lbSoLuong.Text = "60";
+			this.lbSoLuong.Text = "0";
+      //
+      // ANHCAUTHU
+      // 
+      this.ANHCAUTHU.FillWeight = 150F;
+      this.ANHCAUTHU.HeaderText = "ANHCAUTHU";
+      this.ANHCAUTHU.MinimumWidth = 8;
+      this.ANHCAUTHU.Name = "ANHCAUTHU";
 			// 
 			// label1
 			// 
@@ -378,7 +386,7 @@
 		private System.Windows.Forms.Label label5;
 		private Guna.UI2.WinForms.Guna2TextBox txtSoBanThang;
 		private Guna.UI2.WinForms.Guna2Button btnFilter;
+    private System.Windows.Forms.DataGridViewImageColumn ANHCAUTHU;
 		private System.Windows.Forms.Button btnTop3;
 		private System.Windows.Forms.SaveFileDialog dlgSave;
-	}
 }

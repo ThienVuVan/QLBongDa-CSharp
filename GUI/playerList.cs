@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,10 @@ namespace GUI
 
 		private void playerList_Load(object sender, EventArgs e)
 		{
-			gridCauThu.DataSource = CauThuService.RetrieveAllCauThu();
+			DataTable dt = CauThuService.RetrieveAllCauThu();
+			int numberCauThu = dt.Rows.Count;
+			lbSoLuong.Text = numberCauThu.ToString();
+			gridCauThu.DataSource = dt;
 			gridCauThu.Columns["MACAUTHU"].HeaderText = "Mã cầu thủ";
 			gridCauThu.Columns["MADOI"].HeaderText = "Mã đội bóng";
 			gridCauThu.Columns["MAQUOCTICH"].HeaderText = "Mã quốc tịch";
@@ -48,7 +52,23 @@ namespace GUI
 			gridCauThu.Columns["SOTHEVANG"].HeaderText = "Thẻ vàng";
 			gridCauThu.Columns["SOTHEDO"].HeaderText = "Thẻ đỏ";
 			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
-			gridCauThu.Columns["ANH"].HeaderText = "Ảnh";
+			gridCauThu.Columns["ANH"].HeaderText = "Anh";
+
+            DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
+            imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+		
+
+            foreach (DataGridViewRow row in gridCauThu.Rows)
+			{
+				if (row.Cells["ANH"].Value != null)
+				{
+					string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
+					Image image = Image.FromFile(path);
+                    row.Cells["ANHCAUTHU"].Value = image;
+                }
+			}
+
+
 
 		}
 
@@ -56,6 +76,16 @@ namespace GUI
 		{
 		}
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+			if(MessageBox.Show("Bạn có muốn xóa cầu thủ này không?","Thông Báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
+			{
+                string MaCauThu = gridCauThu.SelectedRows[0].Cells[0].Value.ToString();
+                CauThuService.DeleteCauThu(MaCauThu);
+                gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
+            }
+        }
+    }
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
 			if (gridCauThu.SelectedRows.Count > 0)
