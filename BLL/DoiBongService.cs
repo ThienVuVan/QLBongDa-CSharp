@@ -11,6 +11,10 @@ namespace BLL
 {
     public class DoiBongService
     {
+        public static DoiBong GetDoiBongById(string MaDoi)
+        {
+            return DoiBongAccess.GetDoiBongById(MaDoi);
+        }
         public static List<string> RetrieveAllNameDoiBong()
         {
             return DoiBongAccess.RetrieveAllNameDoiBong();
@@ -38,5 +42,5 @@ namespace BLL
         {
             return DoiBongAccess.GetAllTeam();
         }
-    }
+	}
 }

@@ -8,6 +8,25 @@ namespace DTO
 {
     public class DoiBong
     {
+        public DoiBong(string maDoi, string maSan, string maTinh, string tenDoi, string hLV, string loGo, int soDiem, int soBanThang, int soBanThua, int soLuongCauThu)
+        {
+            MaDoi = maDoi;
+            MaSan = maSan;
+            MaTinh = maTinh;
+            TenDoi = tenDoi;
+            HLV = hLV;
+            LoGo = loGo;
+            SoDiem = soDiem;
+            SoBanThang = soBanThang;
+            SoBanThua = soBanThua;
+            SoLuongCauThu = soLuongCauThu;
+        }
+
+        public DoiBong()
+        {
+    
+        }
+
         public string MaDoi { get; set; }
         public string MaSan { get; set; }
         public string MaTinh { get; set; }
