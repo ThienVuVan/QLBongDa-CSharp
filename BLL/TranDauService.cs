@@ -28,5 +28,9 @@ namespace BLL
         {
             TranDauAccess.UpdateTranDau(tranDau);
         }
+        public static TranDau GetTranDauById(string MaTranDau)
+        {
+            return TranDauAccess.GetTranDauById(MaTranDau);
+        }
     }
 }

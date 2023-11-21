@@ -12,12 +12,12 @@ namespace DAL
     {
         public static void SaveTranDau(TranDau tranDau)
         {
-			string sql = $"insert into dbo.TRANDAU values('{tranDau.MaTranDau}','{tranDau.MaDoiNha}'," +
-				$"'{tranDau.MaDoiKhach}', {tranDau.LuotDau}, {tranDau.VongDau}, {tranDau.SoBanThangDoiNha}," +
-				$"{tranDau.SoBanThangDoiKhach}, {tranDau.SoTheVangDoiNha}, {tranDau.SotheVangDoiKhach}," +
-				$"{tranDau.SoTheDoDoiNha}, {tranDau.SoTheDoDoiKhach}, '{tranDau.GhiChu}')";
+            string sql = $"insert into dbo.TRANDAU values('{tranDau.MaTranDau}','{tranDau.MaDoiNha}'," +
+                $"'{tranDau.MaDoiKhach}', {tranDau.LuotDau}, {tranDau.VongDau}, {tranDau.SoBanThangDoiNha}," +
+                $"{tranDau.SoBanThangDoiKhach}, {tranDau.SoTheVangDoiNha}, {tranDau.SotheVangDoiKhach}," +
+                $"{tranDau.SoTheDoDoiNha}, {tranDau.SoTheDoDoiKhach}, '{tranDau.GhiChu}')";
 
-			DatabaseAccess.Excute(sql);
+            DatabaseAccess.Excute(sql);
         }
 
         public static DataTable RetrieveAllTranDau()
@@ -34,11 +34,11 @@ namespace DAL
             {
                 string sql1 = $"select MaDoi from dbo.DOIBONG where TenDoi = N'{TenDoiNha}'";
                 MaDoiNha = (string)DatabaseAccess.ExecuteScalar(sql1);
-				
-			}
 
-			
-			if (MaTranDau == null) MaTranDau = "none";
+            }
+
+
+            if (MaTranDau == null) MaTranDau = "none";
             if (SoBanThangDoiNha == null) SoBanThangDoiNha = -1;
             if (SoTheDoDoiNha == null) SoTheDoDoiNha = -1;
             string sql = $"select * from dbo.TRANDAU b where " +
@@ -51,7 +51,7 @@ namespace DAL
 
         public static void UpdateTranDau(TranDau tranDau)
         {
-            if(tranDau.GhiChu == "Finished")
+            if (tranDau.GhiChu == "Finished")
             {
                 string sql = $"update dbo.TRANDAU c set " +
                 $"set c.SoBanThangDoiNha = {tranDau.SoBanThangDoiNha}," +
@@ -72,9 +72,9 @@ namespace DAL
                 {
                     DiemDoiNha += 3;
                     DatabaseAccess.Excute(updateNha);
-                   
+
                 }
-                else if(tranDau.SoBanThangDoiNha < tranDau.SoBanThangDoiKhach)
+                else if (tranDau.SoBanThangDoiNha < tranDau.SoBanThangDoiKhach)
                 {
                     DiemDoiKhach += 3;
                     DatabaseAccess.Excute(updateKhach);
@@ -107,8 +107,37 @@ namespace DAL
             string sql = "...";
             DatabaseAccess.Excute(sql);
         }
-        
 
-        
+        public static TranDau GetTranDauById(string MaTranDau)
+        {
+            string sql = $"select * from dbo.TRANDAU where MATRANDAU = '{MaTranDau}'";
+            DataTable result = DatabaseAccess.ReadTable(sql);
+            if (result.Rows.Count > 0)
+            {
+                DataRow row = result.Rows[0];
+                TranDau tranDau = ConvertDataRowToTranDau(row);
+                return tranDau;
+            }
+            return null;
+        }
+
+        private static TranDau ConvertDataRowToTranDau(DataRow row)
+        {
+            TranDau tranDau = new TranDau(
+                    row["MATRANDAU"].ToString(),
+                    row["MADOINHA"].ToString(),
+                    row["MADOIKHACH"].ToString(),
+                    row["LUOTDAU"].ToString(),
+                    row["VONGDAU"].ToString(),
+                    int.Parse(row["SOBANTHANGDOINHA"].ToString().Trim()),
+                    int.Parse(row["SOBANTHANGDOIKHACH"].ToString().Trim()),
+                    int.Parse(row["SOTHEVANGDOINHA"].ToString().Trim()),
+                    int.Parse(row["SOTHEVANGDOIKHACH"].ToString().Trim()),
+                    int.Parse(row["SOTHEDODOINHA"].ToString().Trim()),
+                    int.Parse(row["SOTHEDODOIKHACH"].ToString().Trim()),
+                    row["GHICHU"].ToString()
+                );
+            return tranDau;
+        }
     }
 }

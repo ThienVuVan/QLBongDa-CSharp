@@ -67,9 +67,6 @@ namespace GUI
                     row.Cells["ANHCAUTHU"].Value = image;
                 }
 			}
-
-
-
 		}
 
 		private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -85,7 +82,7 @@ namespace GUI
                 gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
             }
         }
-    }
+
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
 			if (gridCauThu.SelectedRows.Count > 0)

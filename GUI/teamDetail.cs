@@ -32,5 +32,11 @@ namespace GUI
             DataTable listCauThu = CauThuService.GetMemBerOfTeam(MaDoi);
             guna2DataGridView1.DataSource = listCauThu;
         }
+
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+
+            // lấy các giá trị từ text box, bind vào DoiBong, gọi đến service update.
+        }
     }
 }

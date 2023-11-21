@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,53 @@ namespace GUI
 {
 	public partial class detailTranDau : Form
 	{
-		public detailTranDau()
+        private string MaTranDau;
+        private TranDau tranDau;
+        public detailTranDau(string MaTranDau)
 		{
+			this.MaTranDau = MaTranDau.Trim();
 			InitializeComponent();
 		}
-	}
+
+        private void detailTranDau_Load(object sender, EventArgs e)
+        {
+
+            
+            tranDau = TranDauService.GetTranDauById(MaTranDau);
+            txtLuotDau.Text = tranDau.LuotDau.ToString();
+            txtVongDau.Text = tranDau.VongDau.ToString();
+            txtBanThangNha.Text = tranDau.SoBanThangDoiNha.ToString();
+            txtBanThangKhach.Text = tranDau.SoBanThangDoiKhach.ToString();
+            txtDoNha.Text = tranDau.SoTheDoDoiNha.ToString();
+            txtKhach.Text = tranDau.SoTheDoDoiKhach.ToString();
+            txtVangNha.Text = tranDau.SoTheVangDoiNha.ToString();
+            txtVangKhach.Text = tranDau.SotheVangDoiKhach.ToString();
+            cbNha.Text = tranDau.MaDoiNha.ToString();
+            cbKhach.Text = tranDau.MaDoiKhach.ToString();
+
+        }
+
+        private void btnLamLai_Click(object sender, EventArgs e)
+        {
+            TranDau tranDau = TranDauService.GetTranDauById(MaTranDau);
+            txtLuotDau.Text = tranDau.LuotDau.ToString();
+            txtVongDau.Text = tranDau.VongDau.ToString();
+            txtBanThangNha.Text = tranDau.SoBanThangDoiNha.ToString();
+            txtBanThangKhach.Text = tranDau.SoBanThangDoiKhach.ToString();
+            txtDoNha.Text = tranDau.SoTheDoDoiNha.ToString();
+            txtKhach.Text = tranDau.SoTheDoDoiKhach.ToString();
+            txtVangNha.Text = tranDau.SoTheVangDoiNha.ToString();
+            txtVangKhach.Text = tranDau.SotheVangDoiKhach.ToString();
+            cbNha.Text = tranDau.MaDoiNha.ToString();
+            cbKhach.Text = tranDau.MaDoiKhach.ToString();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            tranDau.LuotDau = txtLuotDau.Text.Trim();
+            tranDau.VongDau = txtVongDau.Text.Trim();
+            
+            
+        }
+    }
 }
