@@ -223,6 +223,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="detailTranDau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detailTranDau.Designer.cs">
+      <DependentUpon>detailTranDau.cs</DependentUpon>
+    </Compile>
     <Compile Include="teamDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,9 @@
       <DependentUpon>playerList.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="detailTranDau.resx">
+      <DependentUpon>detailTranDau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="teamDetail.resx">
       <DependentUpon>teamDetail.cs</DependentUpon>
     </EmbeddedResource>

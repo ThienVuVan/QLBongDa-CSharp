@@ -144,21 +144,12 @@ namespace GUI
 				{
 					soBanThang = banThang;
 				}
+		}
+		private void btnUpdate_Click(object sender, EventArgs e)
+		{
+			detailTranDau detailTranDau = new detailTranDau();
+			detailTranDau.ShowDialog();
+		}
 
-				if (!string.IsNullOrWhiteSpace(txtTheDo.Text) && int.TryParse(txtTheDo.Text, out int theDo))
-				{
-					soTheDo = theDo;
-				}
-
-				DataTable filteredData = TranDauService.Filter(null, tenDoiNha, soBanThang, soTheDo);
-
-				if (filteredData.Rows.Count == 0)
-				{
-					dgDanhSach.DataSource = null;
-					MessageBox.Show("Không tìm thấy dữ liệu phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-					return;
-				}
-				dgDanhSach.DataSource = filteredData;
-			}
 	}
 }
