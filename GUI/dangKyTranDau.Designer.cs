@@ -43,9 +43,9 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
 			this.dgvDangKy = new System.Windows.Forms.DataGridView();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
+			this.btnThemMoi = new System.Windows.Forms.Button();
+			this.btnSua = new System.Windows.Forms.Button();
+			this.btnXoaTranDau = new System.Windows.Forms.Button();
 			this.guna2GroupBox1.SuspendLayout();
 			this.guna2GroupBox2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDangKy)).BeginInit();
@@ -229,36 +229,37 @@
 			this.dgvDangKy.TabIndex = 0;
 			this.dgvDangKy.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDangKy_CellContentClick);
 			// 
-			// button3
+			// btnThemMoi
 			// 
-			this.button3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(377, 576);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(141, 33);
-			this.button3.TabIndex = 4;
-			this.button3.Text = "Thêm trận đấu";
-			this.button3.UseVisualStyleBackColor = true;
+			this.btnThemMoi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnThemMoi.Location = new System.Drawing.Point(377, 576);
+			this.btnThemMoi.Name = "btnThemMoi";
+			this.btnThemMoi.Size = new System.Drawing.Size(141, 33);
+			this.btnThemMoi.TabIndex = 4;
+			this.btnThemMoi.Text = "Thêm trận đấu";
+			this.btnThemMoi.UseVisualStyleBackColor = true;
+			this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
 			// 
-			// button4
+			// btnSua
 			// 
-			this.button4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button4.Location = new System.Drawing.Point(531, 576);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(141, 33);
-			this.button4.TabIndex = 4;
-			this.button4.Text = "Sửa trận đấu";
-			this.button4.UseVisualStyleBackColor = true;
-			this.button4.Click += new System.EventHandler(this.button4_Click);
+			this.btnSua.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSua.Location = new System.Drawing.Point(531, 576);
+			this.btnSua.Name = "btnSua";
+			this.btnSua.Size = new System.Drawing.Size(141, 33);
+			this.btnSua.TabIndex = 4;
+			this.btnSua.Text = "Sửa trận đấu";
+			this.btnSua.UseVisualStyleBackColor = true;
+			this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
 			// 
-			// button5
+			// btnXoaTranDau
 			// 
-			this.button5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Location = new System.Drawing.Point(687, 576);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(141, 33);
-			this.button5.TabIndex = 4;
-			this.button5.Text = "Xóa trận đấu";
-			this.button5.UseVisualStyleBackColor = true;
+			this.btnXoaTranDau.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXoaTranDau.Location = new System.Drawing.Point(687, 576);
+			this.btnXoaTranDau.Name = "btnXoaTranDau";
+			this.btnXoaTranDau.Size = new System.Drawing.Size(141, 33);
+			this.btnXoaTranDau.TabIndex = 4;
+			this.btnXoaTranDau.Text = "Xóa trận đấu";
+			this.btnXoaTranDau.UseVisualStyleBackColor = true;
 			// 
 			// dangKyTranDau
 			// 
@@ -267,9 +268,9 @@
 			this.ClientSize = new System.Drawing.Size(1024, 652);
 			this.Controls.Add(this.guna2GroupBox2);
 			this.Controls.Add(this.guna2GroupBox1);
-			this.Controls.Add(this.button5);
-			this.Controls.Add(this.button4);
-			this.Controls.Add(this.button3);
+			this.Controls.Add(this.btnXoaTranDau);
+			this.Controls.Add(this.btnSua);
+			this.Controls.Add(this.btnThemMoi);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "dangKyTranDau";
 			this.Text = "Đăng ký trận đấu";
@@ -297,9 +298,9 @@
 		private System.Windows.Forms.Label label5;
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
 		private System.Windows.Forms.DataGridView dgvDangKy;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button btnThemMoi;
+		private System.Windows.Forms.Button btnSua;
+		private System.Windows.Forms.Button btnXoaTranDau;
 		private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
 	}
 }

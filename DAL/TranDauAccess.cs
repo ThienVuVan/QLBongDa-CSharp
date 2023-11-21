@@ -52,7 +52,7 @@ namespace DAL
 
         public static void UpdateTranDau(TranDau tranDau)
         {
-            if(tranDau.GhiChu == "KetThuc")
+            if(tranDau.GhiChu == "Finished")
             {
                 string sql = $"update dbo.TRANDAU c set " +
                 $"set c.SoBanThangDoiNha = {tranDau.SoBanThangDoiNha}," +
