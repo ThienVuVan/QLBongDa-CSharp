@@ -84,7 +84,7 @@ namespace GUI
                 CauThuService.DeleteCauThu(MaCauThu);
                 gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
             }
-        }
+        
     }
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
