@@ -166,5 +166,10 @@ namespace GUI
         {
             dgvDoiBong.DataSource = DoiBongService.GetAllDoiBong();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
