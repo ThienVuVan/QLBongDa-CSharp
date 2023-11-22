@@ -24,9 +24,19 @@ namespace GUI
 
 		private void btnFilter_Click(object sender, EventArgs e)
 		{
+			DataTable dt = CauThuService.Filter(cbTenCauThu.SelectedItem == null ? "" : cbTenCauThu.SelectedItem.ToString(), cbTenDoiBong.SelectedItem == null ? "" : cbTenDoiBong.SelectedItem.ToString(), txtSoBanThang.Text == "" ? 0 : int.Parse(txtSoBanThang.Text));
+			
+            if (dt.Rows.Count > 0)
+			{
+                gridCauThu.DataSource = dt;
+			}
+			else
+			{
+				MessageBox.Show("không tìm thấy cầu thủ nào !");
+			}
+            
 
-			gridCauThu.DataSource = CauThuService.Filter(cbTenCauThu.SelectedItem ==  null ? "": cbTenCauThu.SelectedItem.ToString(), cbTenDoiBong.SelectedItem == null ? "" : cbTenDoiBong.SelectedItem.ToString(),txtSoBanThang.Text == "" ? 0 : int.Parse(txtSoBanThang.Text));
-		}
+        }
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
@@ -87,7 +97,6 @@ namespace GUI
                 gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
             }
         }
-
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
 			if (gridCauThu.SelectedRows.Count > 0)
@@ -150,7 +159,7 @@ namespace GUI
 					dlgSave.FilterIndex = 1;
 					dlgSave.AddExtension = true;
 					dlgSave.DefaultExt = ".xls";
-					if (dlgSave.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+					if (dlgSave.ShowDialog() == DialogResult.OK)
 						exBook.SaveAs(dlgSave.FileName.ToString());//Lưu file Excel
 					MessageBox.Show("Xuất file thành công", "Thông báo");
 					exApp.Quit();//Thoát khỏi ứng dụng
@@ -166,7 +175,26 @@ namespace GUI
         {
 			string maCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
 			CauThuDetail detail = new CauThuDetail(maCauThu);
-			detail.ShowDialog();
+            detail.ShowDialog();
+        }
+
+        private void txtSoBanThang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+			if (!char.IsDigit(e.KeyChar))
+			{
+				MessageBox.Show("Chỉ được nhập số");
+				e.Handled = true;
+			}
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string MaCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
+                CauThuService.DeleteCauThu(MaCauThu);
+                gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
+            }
         }
 
 

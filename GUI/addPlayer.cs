@@ -92,7 +92,7 @@ namespace GUI
                 // Copy tệp tin ảnh vào thư mục
                 if (File.Exists(duongDanLuu))
                 {
-                    MessageBox.Show("Anh da ton tai");
+                    MessageBox.Show("Ảnh đã tồn tại");
                     CauThuService.SaveCauThu(cauThu);
                     return;
                 }
@@ -103,8 +103,8 @@ namespace GUI
                 }
 
             }
-            // Lấy thời gian hiện tại
-
+			// Lấy thời gian hiện tại
+			addPlayer_Load(sender, e);
 
 
         }
@@ -150,8 +150,17 @@ namespace GUI
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-			if(!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)){
+			if(!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar)){
 				MessageBox.Show("Chỉ được nhập vào chữ cái a - z");
+				e.Handled = true;
+			}
+        }
+
+        private void txtSoAo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+			if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar)) 
+			{
+				MessageBox.Show("chỉ được nhập vào số");
 				e.Handled = true;
 			}
         }

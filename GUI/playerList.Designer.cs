@@ -27,7 +27,7 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent()
-    {
+		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(playerList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -260,6 +260,7 @@
             this.txtSoBanThang.ShadowDecoration.Parent = this.txtSoBanThang;
             this.txtSoBanThang.Size = new System.Drawing.Size(43, 27);
             this.txtSoBanThang.TabIndex = 5;
+            this.txtSoBanThang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoBanThang_KeyPress);
             // 
             // btnTop3
             // 
