@@ -42,10 +42,11 @@ namespace BLL
         {
             return CauThuAccess.GetAllName();
         }
-    }
+    
         public static DataTable GetMemBerOfListTeam(List<string> maDoi)
         {
             return CauThuAccess.GetMemBerOfListTeam(maDoi);
         }
 	}
+
 }

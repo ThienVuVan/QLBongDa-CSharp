@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(playerList));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
 			this.btnFind = new Guna.UI2.WinForms.Guna2Button();
 			this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
@@ -50,12 +50,14 @@
 			this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
 			this.btnTop3 = new System.Windows.Forms.Button();
 			this.dlgSave = new System.Windows.Forms.SaveFileDialog();
+			this.btnReset = new Guna.UI2.WinForms.Guna2Button();
 			this.guna2Panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridCauThu)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// guna2Panel1
 			// 
+			this.guna2Panel1.Controls.Add(this.btnReset);
 			this.guna2Panel1.Controls.Add(this.btnFind);
 			this.guna2Panel1.Controls.Add(this.btnAdd);
 			this.guna2Panel1.Controls.Add(this.lbSoLuong);
@@ -109,16 +111,9 @@
 			this.lbSoLuong.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lbSoLuong.Location = new System.Drawing.Point(371, 14);
 			this.lbSoLuong.Name = "lbSoLuong";
-			this.lbSoLuong.Size = new System.Drawing.Size(38, 29);
+			this.lbSoLuong.Size = new System.Drawing.Size(26, 29);
 			this.lbSoLuong.TabIndex = 1;
 			this.lbSoLuong.Text = "0";
-			//
-			// ANHCAUTHU
-			// 
-			this.ANHCAUTHU.FillWeight = 150F;
-			this.ANHCAUTHU.HeaderText = "ANHCAUTHU";
-			this.ANHCAUTHU.MinimumWidth = 8;
-			this.ANHCAUTHU.Name = "ANHCAUTHU";
 			// 
 			// label1
 			// 
@@ -185,30 +180,30 @@
 			// 
 			// gridCauThu
 			// 
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-			this.gridCauThu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+			this.gridCauThu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
 			this.gridCauThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.gridCauThu.BackgroundColor = System.Drawing.Color.White;
 			this.gridCauThu.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.gridCauThu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.gridCauThu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.gridCauThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.gridCauThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
 			this.gridCauThu.ColumnHeadersHeight = 50;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.gridCauThu.DefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.gridCauThu.DefaultCellStyle = dataGridViewCellStyle6;
 			this.gridCauThu.EnableHeadersVisualStyles = false;
 			this.gridCauThu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.gridCauThu.Location = new System.Drawing.Point(13, 165);
@@ -242,6 +237,14 @@
 			this.gridCauThu.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.gridCauThu.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
 			this.gridCauThu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCauThu_CellContentClick);
+			// 
+			// ANHCAUTHU
+			// 
+			this.ANHCAUTHU.FillWeight = 150F;
+			this.ANHCAUTHU.HeaderText = "ANHCAUTHU";
+			this.ANHCAUTHU.MinimumWidth = 8;
+			this.ANHCAUTHU.Name = "ANHCAUTHU";
+			this.ANHCAUTHU.Width = 125;
 			// 
 			// label4
 			// 
@@ -339,6 +342,24 @@
 			this.btnTop3.UseVisualStyleBackColor = true;
 			this.btnTop3.Click += new System.EventHandler(this.btnTop3_Click);
 			// 
+			// btnReset
+			// 
+			this.btnReset.BorderRadius = 10;
+			this.btnReset.BorderThickness = 1;
+			this.btnReset.CheckedState.Parent = this.btnReset;
+			this.btnReset.CustomImages.Parent = this.btnReset;
+			this.btnReset.FillColor = System.Drawing.Color.White;
+			this.btnReset.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnReset.ForeColor = System.Drawing.Color.Black;
+			this.btnReset.HoverState.Parent = this.btnReset;
+			this.btnReset.Location = new System.Drawing.Point(1200, 31);
+			this.btnReset.Name = "btnReset";
+			this.btnReset.ShadowDecoration.Parent = this.btnReset;
+			this.btnReset.Size = new System.Drawing.Size(93, 33);
+			this.btnReset.TabIndex = 9;
+			this.btnReset.Text = "Làm mới";
+			this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+			// 
 			// playerList
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -389,5 +410,6 @@
 		private System.Windows.Forms.DataGridViewImageColumn ANHCAUTHU;
 		private System.Windows.Forms.Button btnTop3;
 		private System.Windows.Forms.SaveFileDialog dlgSave;
+		private Guna.UI2.WinForms.Guna2Button btnReset;
 	}
 }
