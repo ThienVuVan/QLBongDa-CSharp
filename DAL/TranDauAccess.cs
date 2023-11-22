@@ -53,58 +53,69 @@ namespace DAL
         {
             if (tranDau.GhiChu == "Finished")
             {
-                string sql = $"update dbo.TRANDAU c set " +
-                $"set c.SoBanThangDoiNha = {tranDau.SoBanThangDoiNha}," +
-                $"c.SoBanThangDoiKhach = {tranDau.SoBanThangDoiKhach}," +
-                $"c.SoTheVangDoiNha = {tranDau.SoTheVangDoiNha}," +
-                $"c.SotheVangDoiKhach = {tranDau.SotheVangDoiKhach}," +
-                $"c.SoTheDoDoiNha = {tranDau.SoTheDoDoiNha}," +
-                $"c.SoTheDoDoiKhach = {tranDau.SoTheDoDoiKhach}," +
-                $"c.GhiChu = {tranDau.GhiChu})" +
-                $"where c.MaTranDau = N'{tranDau.MaTranDau}'";
+                string sql = $"update dbo.TRANDAU set " +
+                $"SoBanThangDoiNha = {tranDau.SoBanThangDoiNha}, " +
+                $"SoBanThangDoiKhach = {tranDau.SoBanThangDoiKhach}, " +
+                $"SoTheVangDoiNha = {tranDau.SoTheVangDoiNha}, " +
+                $"SotheVangDoiKhach = {tranDau.SotheVangDoiKhach}, " +
+                $"SoTheDoDoiNha = {tranDau.SoTheDoDoiNha}, " +
+                $"SoTheDoDoiKhach = {tranDau.SoTheDoDoiKhach}, " +
+                $"GhiChu = N'{tranDau.GhiChu}' " +
+                $"where MaTranDau = '{tranDau.MaTranDau}'";
                 DatabaseAccess.Excute(sql);
 
-                int DiemDoiNha = (int)DatabaseAccess.ExecuteScalar($"select Diem from dbo.DOIBONG where MaDoi = N'{tranDau.MaDoiNha}'");
-                int DiemDoiKhach = (int)DatabaseAccess.ExecuteScalar($"select Diem from dbo.DOIBONG where MaDoi = N'{tranDau.MaDoiKhach}'");
-                string updateKhach = $"update dbo.DOIBONG set Diem = {DiemDoiKhach} where MaDoi = N'{tranDau.MaDoiKhach}'";
-                string updateNha = $"update dbo.DOIBONG set Diem = {DiemDoiNha} where MaDoi = N'{tranDau.MaDoiNha}'";
+                int DiemDoiNha = (int)DatabaseAccess.ExecuteScalar($"select SoDiem from dbo.DOIBONG where MaDoi = '{tranDau.MaDoiNha}'");
+                int DiemDoiKhach = (int)DatabaseAccess.ExecuteScalar($"select SODIEM from dbo.DOIBONG where MaDoi = '{tranDau.MaDoiKhach}'");
+                
                 if (tranDau.SoBanThangDoiNha > tranDau.SoBanThangDoiKhach)
                 {
                     DiemDoiNha += 3;
+                    string updateNha = $"update dbo.DOIBONG set SoDiem = {DiemDoiNha} where MaDoi = '{tranDau.MaDoiNha}'";
                     DatabaseAccess.Excute(updateNha);
 
                 }
                 else if (tranDau.SoBanThangDoiNha < tranDau.SoBanThangDoiKhach)
                 {
                     DiemDoiKhach += 3;
+                    string updateKhach = $"update dbo.DOIBONG set SoDiem = {DiemDoiKhach} where MaDoi = '{tranDau.MaDoiKhach}'";
                     DatabaseAccess.Excute(updateKhach);
                 }
                 else
                 {
                     DiemDoiNha += 1;
                     DiemDoiKhach += 1;
+                    string updateNha = $"update dbo.DOIBONG set SoDiem = {DiemDoiNha} where MaDoi = '{tranDau.MaDoiNha}'";
+                    string updateKhach = $"update dbo.DOIBONG set SoDiem = {DiemDoiKhach} where MaDoi = '{tranDau.MaDoiKhach}'";
                     DatabaseAccess.Excute(updateNha);
                     DatabaseAccess.Excute(updateKhach);
                 }
             }
             else
             {
-                string sql = $"update dbo.TRANDAU c set " +
-                $"set c.SoBanThangDoiNha = {tranDau.SoBanThangDoiNha}," +
-                $"c.SoBanThangDoiKhach = {tranDau.SoBanThangDoiKhach}," +
-                $"c.SoTheVangDoiNha = {tranDau.SoTheVangDoiNha}," +
-                $"c.SotheVangDoiKhach = {tranDau.SotheVangDoiKhach}," +
-                $"c.SoTheDoDoiNha = {tranDau.SoTheDoDoiNha}," +
-                $"c.SoTheDoDoiKhach = {tranDau.SoTheDoDoiKhach}," +
-                $"c.GhiChu = {tranDau.GhiChu})" +
-                $"where c.MaTranDau = N'{tranDau.MaTranDau}'";
+                string sql = $"update dbo.TRANDAU set " +
+                $"SoBanThangDoiNha = {tranDau.SoBanThangDoiNha}, " +
+                $"SoBanThangDoiKhach = {tranDau.SoBanThangDoiKhach}, " +
+                $"SoTheVangDoiNha = {tranDau.SoTheVangDoiNha}, " +
+                $"SotheVangDoiKhach = {tranDau.SotheVangDoiKhach}, " +
+                $"SoTheDoDoiNha = {tranDau.SoTheDoDoiNha}, " +
+                $"SoTheDoDoiKhach = {tranDau.SoTheDoDoiKhach}, " +
+                $"GhiChu = N'{tranDau.GhiChu}' " +
+                $"where MaTranDau = '{tranDau.MaTranDau}'";
                 DatabaseAccess.Excute(sql);
             }
         }
 
         public static void DeleteTranDau(string MaTranDau)
         {
-            string sql = "...";
+            string sql = $"delete from dbo.TRANDAU where MaTranDau = '{MaTranDau}'";
+            // this section will call trigger to delete data in three other table as well;
+            // choose not effect trigger;
+            string sql1 = $"delete from dbo.TRANDAU_BANTHANG where MaTranDau = '{MaTranDau}'";
+            string sql2 = $"delete from dbo.TRANDAU_THE where MaTranDau = '{MaTranDau}'";
+            string sql3 = $"delete from dbo.TRANDAU_CAUTHU where MaTranDau = '{MaTranDau}'";
+            DatabaseAccess.Excute(sql1);
+            DatabaseAccess.Excute(sql2);
+            DatabaseAccess.Excute(sql3);
             DatabaseAccess.Excute(sql);
         }
 

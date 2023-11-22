@@ -177,5 +177,25 @@ namespace GUI
             detailTranDau detailTran = new detailTranDau(MaTranDau);
 			detailTran.Show();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgDanhSach.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Hãy chọn tran dau!");
+            }
+            DataGridViewRow selectedRow = dgDanhSach.SelectedRows[0];
+            string MaTranDau = selectedRow.Cells["MATRANDAU"].Value.ToString();
+			if(MessageBox.Show("Xác Nhận Xóa Trận Đấu", "Xác Nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+			{
+				TranDauService.DeleteTranDau(MaTranDau);
+				Reset();
+			}
+        }
+
+		private void Reset()
+		{
+            dgDanhSach.DataSource = TranDauService.RetrieveAllTranDau();
+        }
     }
 }

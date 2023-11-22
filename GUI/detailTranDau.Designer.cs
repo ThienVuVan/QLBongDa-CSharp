@@ -30,8 +30,10 @@
 		{
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.cbKhach = new System.Windows.Forms.ComboBox();
-            this.cbNha = new System.Windows.Forms.ComboBox();
+            this.txtMaKhach = new System.Windows.Forms.TextBox();
+            this.txtMaNha = new System.Windows.Forms.TextBox();
+            this.lb = new System.Windows.Forms.Label();
+            this.cbGhiChu = new System.Windows.Forms.ComboBox();
             this.txtDoNha = new System.Windows.Forms.TextBox();
             this.txtVangNha = new System.Windows.Forms.TextBox();
             this.txtKhach = new System.Windows.Forms.TextBox();
@@ -61,7 +63,7 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(658, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(660, 0);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
@@ -70,8 +72,10 @@
             // 
             // guna2GroupBox1
             // 
-            this.guna2GroupBox1.Controls.Add(this.cbKhach);
-            this.guna2GroupBox1.Controls.Add(this.cbNha);
+            this.guna2GroupBox1.Controls.Add(this.txtMaKhach);
+            this.guna2GroupBox1.Controls.Add(this.txtMaNha);
+            this.guna2GroupBox1.Controls.Add(this.lb);
+            this.guna2GroupBox1.Controls.Add(this.cbGhiChu);
             this.guna2GroupBox1.Controls.Add(this.txtDoNha);
             this.guna2GroupBox1.Controls.Add(this.txtVangNha);
             this.guna2GroupBox1.Controls.Add(this.txtKhach);
@@ -96,27 +100,44 @@
             this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(688, 292);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(688, 331);
             this.guna2GroupBox1.TabIndex = 2;
             this.guna2GroupBox1.Text = "Sửa trận đấu";
             // 
-            // cbKhach
+            // txtMaKhach
             // 
-            this.cbKhach.FormattingEnabled = true;
-            this.cbKhach.Location = new System.Drawing.Point(506, 121);
-            this.cbKhach.Margin = new System.Windows.Forms.Padding(2);
-            this.cbKhach.Name = "cbKhach";
-            this.cbKhach.Size = new System.Drawing.Size(92, 25);
-            this.cbKhach.TabIndex = 23;
+            this.txtMaKhach.Location = new System.Drawing.Point(521, 121);
+            this.txtMaKhach.Name = "txtMaKhach";
+            this.txtMaKhach.Size = new System.Drawing.Size(100, 24);
+            this.txtMaKhach.TabIndex = 27;
             // 
-            // cbNha
+            // txtMaNha
             // 
-            this.cbNha.FormattingEnabled = true;
-            this.cbNha.Location = new System.Drawing.Point(150, 125);
-            this.cbNha.Margin = new System.Windows.Forms.Padding(2);
-            this.cbNha.Name = "cbNha";
-            this.cbNha.Size = new System.Drawing.Size(92, 25);
-            this.cbNha.TabIndex = 22;
+            this.txtMaNha.Location = new System.Drawing.Point(166, 129);
+            this.txtMaNha.Name = "txtMaNha";
+            this.txtMaNha.Size = new System.Drawing.Size(100, 24);
+            this.txtMaNha.TabIndex = 26;
+            // 
+            // lb
+            // 
+            this.lb.AutoSize = true;
+            this.lb.Location = new System.Drawing.Point(244, 291);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(58, 17);
+            this.lb.TabIndex = 25;
+            this.lb.Text = "Ghi Chú";
+            // 
+            // cbGhiChu
+            // 
+            this.cbGhiChu.FormattingEnabled = true;
+            this.cbGhiChu.Items.AddRange(new object[] {
+            "On time",
+            "Finished",
+            "Not yet"});
+            this.cbGhiChu.Location = new System.Drawing.Point(310, 288);
+            this.cbGhiChu.Name = "cbGhiChu";
+            this.cbGhiChu.Size = new System.Drawing.Size(121, 25);
+            this.cbGhiChu.TabIndex = 24;
             // 
             // txtDoNha
             // 
@@ -295,7 +316,7 @@
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(396, 328);
+            this.btnLuu.Location = new System.Drawing.Point(396, 367);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(69, 28);
@@ -307,7 +328,7 @@
             // btnLamLai
             // 
             this.btnLamLai.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamLai.Location = new System.Drawing.Point(491, 328);
+            this.btnLamLai.Location = new System.Drawing.Point(496, 367);
             this.btnLamLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnLamLai.Name = "btnLamLai";
             this.btnLamLai.Size = new System.Drawing.Size(88, 25);
@@ -321,7 +342,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(688, 395);
+            this.ClientSize = new System.Drawing.Size(688, 438);
             this.Controls.Add(this.btnLamLai);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.guna2GroupBox1);
@@ -341,8 +362,6 @@
 		#endregion
 		private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-		private System.Windows.Forms.ComboBox cbKhach;
-		private System.Windows.Forms.ComboBox cbNha;
 		private System.Windows.Forms.TextBox txtDoNha;
 		private System.Windows.Forms.TextBox txtVangNha;
 		private System.Windows.Forms.TextBox txtKhach;
@@ -363,5 +382,9 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnLuu;
 		private System.Windows.Forms.Button btnLamLai;
-	}
+        private System.Windows.Forms.TextBox txtMaNha;
+        private System.Windows.Forms.Label lb;
+        private System.Windows.Forms.ComboBox cbGhiChu;
+        private System.Windows.Forms.TextBox txtMaKhach;
+    }
 }

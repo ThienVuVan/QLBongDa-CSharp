@@ -14,7 +14,8 @@ namespace GUI
 {
     public partial class teamDetail : Form
     {
-        string MaDoi;
+        private string MaDoi;
+        private DoiBong doiBong;
         public teamDetail(string MaDoiBong)
         {
             this.MaDoi = MaDoiBong;
@@ -23,7 +24,7 @@ namespace GUI
 
         private void teamDetail_Load(object sender, EventArgs e)
         {
-            DoiBong doiBong = DoiBongService.GetDoiBongById(MaDoi);
+            doiBong = DoiBongService.GetDoiBongById(MaDoi);
             txtTenDoi.Text = doiBong.TenDoi;
             txtMaTinh.Text = doiBong.MaTinh;
             txtHLV.Text = doiBong.HLV;
@@ -36,7 +37,6 @@ namespace GUI
         private void btnFinish_Click(object sender, EventArgs e)
         {
 
-            // lấy các giá trị từ text box, bind vào DoiBong, gọi đến service update.
         }
     }
 }
