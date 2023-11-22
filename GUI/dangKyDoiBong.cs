@@ -48,6 +48,7 @@ namespace GUI
 			txtMaTinh.Text = "";
 			txtHLV.Text = "";
 			txtSoCauThu.Text = "";
+			picBox.Image = Image.FromFile("E:\\Year3\\SEMESTER 1\\BTL Csharp\\QLBongDa-CSharp\\GUI\\Resources\\395976310_6668012846643044_8059022898882066628_n.png");
 		}
 
 		private void btnFinish_Click(object sender, EventArgs e)
@@ -56,9 +57,17 @@ namespace GUI
 			{
 				MessageBox.Show("Hãy nhập đủ dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); return;
 			}
+			if (int.TryParse(txtSoCauThu.Text, out int value))
+			{
+				// Kiểm tra xem giá trị có lớn hơn 0 hay không
+				if (value < 0)
+				{
+					MessageBox.Show("Giá trị phải là số nguyên lớn hơn 0.");
+					txtSoCauThu.Clear();
+				}
+			}
 			// Lấy thời gian hiện tại
 			TimeSpan thoiGianHienTai = DateTime.Now.TimeOfDay;
-
 			// Lấy tổng số giây và làm tròn nó về phần nguyên
 			int soGiayNguyen = (int)Math.Round(thoiGianHienTai.TotalSeconds);
 
@@ -101,12 +110,30 @@ namespace GUI
 
 		private void dangKyDoiBong_Load(object sender, EventArgs e)
 		{
-
+			txtSoCauThu.Enabled = false;
 		}
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
 			this.Close();
+		}
+
+		private void txtTenDoi_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+			{
+				// Huỷ bỏ sự kiện KeyPress
+				e.Handled = true;
+			}
+		}
+
+		private void txtHLV_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+			{
+				// Huỷ bỏ sự kiện KeyPress
+				e.Handled = true;
+			}
 		}
 	}
 }
