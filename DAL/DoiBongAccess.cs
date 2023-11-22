@@ -75,15 +75,17 @@ namespace DAL
 
         public static void UpdateDoiBong(DoiBong doiBong)
         {
-            string sql = $"Update DOIBONG set MADOI = '{doiBong.MaDoi}',MASAN = '{doiBong.MaSan}',MATINH = '{doiBong.MaTinh}'," +
-                $"TENDOI = N'{doiBong.TenDoi}',HLV = N'{doiBong.HLV}',LOGO = '{doiBong.LoGo}'";
+            string sql = $"Update DOIBONG set MASAN = '{doiBong.MaSan}',MATINH = '{doiBong.MaTinh}'," +
+                $"TENDOI = N'{doiBong.TenDoi}',HLV = N'{doiBong.HLV}', LOGO = '{doiBong.LoGo}' where MADOI = '{doiBong.MaDoi}'";
             DatabaseAccess.Excute(sql);
         }
-        //TODO
+ 
         public static void DeleteDoiBong(string MaDoi)
         {
-            string sql = "...";
-            DatabaseAccess.Excute(sql);
+            string sql1 = $"delete from dbo.CAUTHU where MaDoi = '{MaDoi}'";
+            string sql2 = $"delete from dbo.DOIBONG where MaDoi = '{MaDoi}'";
+            DatabaseAccess.Excute(sql1);
+            DatabaseAccess.Excute(sql2);
         }
         public static DataTable GetAllTeam()
         {

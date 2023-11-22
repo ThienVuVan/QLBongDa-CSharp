@@ -59,20 +59,19 @@ namespace GUI
 			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
 			gridCauThu.Columns["ANH"].HeaderText = "Anh";
 
-            DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
-            imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+   //         DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
+   //         imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
 		
 
-            foreach (DataGridViewRow row in gridCauThu.Rows)
-			{
-				if (row.Cells["ANH"].Value != null)
-				{
-					string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
-					Image image = Image.FromFile(path);
-                    row.Cells["ANHCAUTHU"].Value = image;
-                }
-			}
-
+   //         foreach (DataGridViewRow row in gridCauThu.Rows)
+			//{
+			//	if (row.Cells["ANH"].Value != null)
+			//	{
+			//		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
+			//		Image image = Image.FromFile(path);
+   //                 row.Cells["ANHCAUTHU"].Value = image;
+   //             }
+			//}
 		}
 
 		private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -88,6 +87,7 @@ namespace GUI
                 gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
             }
         }
+        
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
 			if (gridCauThu.SelectedRows.Count > 0)
@@ -160,7 +160,6 @@ namespace GUI
 					MessageBox.Show("Không có danh sách hàng để xuất ra file");
 				}
 			}
-		}
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -169,5 +168,43 @@ namespace GUI
 			detail.ShowDialog();
         }
     }
+
+		private void btnReset_Click(object sender, EventArgs e)
+		{
+			txtTen.Text = "";
+			txtSoBanThang.Text = "";
+			txtTenDoiBong.Text = "";
+			DataTable dt = CauThuService.RetrieveAllCauThu();
+			int numberCauThu = dt.Rows.Count;
+			lbSoLuong.Text = numberCauThu.ToString();
+			gridCauThu.DataSource = dt;
+			gridCauThu.Columns["MACAUTHU"].HeaderText = "Mã cầu thủ";
+			gridCauThu.Columns["MADOI"].HeaderText = "Mã đội bóng";
+			gridCauThu.Columns["MAQUOCTICH"].HeaderText = "Mã quốc tịch";
+			gridCauThu.Columns["TEN"].HeaderText = "Họ và tên";
+			gridCauThu.Columns["VITRICHOI"].HeaderText = "Vị trí";
+			gridCauThu.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
+			gridCauThu.Columns["SOAO"].HeaderText = "Số áo";
+			gridCauThu.Columns["SOBANTHANG"].HeaderText = "Số bàn thắng";
+			gridCauThu.Columns["SOTHEVANG"].HeaderText = "Thẻ vàng";
+			gridCauThu.Columns["SOTHEDO"].HeaderText = "Thẻ đỏ";
+			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
+			gridCauThu.Columns["ANH"].HeaderText = "Anh";
+
+			//DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
+			//imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+
+
+			//foreach (DataGridViewRow row in gridCauThu.Rows)
+			//{
+			//	if (row.Cells["ANH"].Value != null)
+			//	{
+			//		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
+			//		Image image = Image.FromFile(path);
+			//		row.Cells["ANHCAUTHU"].Value = image;
+			//	}
+			//}
+		}
+	}
 }
 
