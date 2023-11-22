@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\document\Ki 5\Guna\Guna\Guna\Guna\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\..\Guna\Guna\Guna\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
@@ -384,6 +384,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\360_F_288682192_Mi7iUPqCtj8XJ0UDgeRw2IVgRW5rmG2z.jpg" />
+    <Content Include="Resources\395976310_6668012846643044_8059022898882066628_n.png" />
     <Content Include="Resources\IMGCauThu\BDFC_11_BuiViHao_VN0001113-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\BDFC_14_NguyenHaiHuy_VN001624-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\BDFC_16_NguyenTranVietCuong_VN0001116-150x150.jpg" />

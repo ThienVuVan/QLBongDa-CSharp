@@ -140,6 +140,7 @@
 			this.txtHLV.Name = "txtHLV";
 			this.txtHLV.Size = new System.Drawing.Size(174, 23);
 			this.txtHLV.TabIndex = 3;
+			this.txtHLV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHLV_KeyPress);
 			// 
 			// txtMaTinh
 			// 
@@ -154,6 +155,7 @@
 			this.txtTenDoi.Name = "txtTenDoi";
 			this.txtTenDoi.Size = new System.Drawing.Size(174, 23);
 			this.txtTenDoi.TabIndex = 3;
+			this.txtTenDoi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenDoi_KeyPress);
 			// 
 			// label4
 			// 

@@ -95,6 +95,7 @@ namespace GUI
             }
 
         }
+
         private bool Validate()
         {
             if (txtName.Text.Trim() == "" || txtSoAo.Text.Trim() == "" || cbMaDoi.Text.Trim() == "" || cbQuocTich.Text.Trim() == "" || cbViTri.Text.Trim() == "")
