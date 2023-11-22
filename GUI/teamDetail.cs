@@ -36,7 +36,20 @@ namespace GUI
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
+            DoiBong update = new DoiBong();
 
+            update.MaDoi = MaDoi;
+            update.TenDoi = txtTenDoi.Text;
+            update.MaTinh = txtMaTinh.Text;
+            update.HLV = txtHLV.Text;
+            update.SoLuongCauThu = int.Parse(txtSoCauThu.Text);
+            update.SoBanThang = doiBong.SoBanThang;
+            update.MaSan = doiBong.MaSan;
+            update.SoBanThua = doiBong.SoBanThua;
+            update.LoGo = doiBong.LoGo;
+            update.SoDiem = doiBong.SoDiem;
+
+            DoiBongService.UpdateDoiBong(update);
         }
     }
 }
