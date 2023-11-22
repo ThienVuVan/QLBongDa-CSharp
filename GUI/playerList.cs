@@ -54,18 +54,19 @@ namespace GUI
 			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
 			gridCauThu.Columns["ANH"].HeaderText = "Anh";
 
-            //DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
-            //imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
-	
-            foreach (DataGridViewRow row in gridCauThu.Rows)
-			{
-				if (row.Cells["ANH"].Value != null)
-				{
-					string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
-					Image image = Image.FromFile(path);
-                    row.Cells["ANHCAUTHU"].Value = image;
-                }
-			}
+   //         DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
+   //         imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+		
+
+   //         foreach (DataGridViewRow row in gridCauThu.Rows)
+			//{
+			//	if (row.Cells["ANH"].Value != null)
+			//	{
+			//		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
+			//		Image image = Image.FromFile(path);
+   //                 row.Cells["ANHCAUTHU"].Value = image;
+   //             }
+			//}
 		}
 
 		private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
