@@ -27,7 +27,7 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent()
-		{
+    {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(playerList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,6 +49,7 @@
             this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
             this.btnTop3 = new System.Windows.Forms.Button();
             this.dlgSave = new System.Windows.Forms.SaveFileDialog();
+            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.ANHCAUTHU = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCauThu)).BeginInit();
@@ -344,6 +345,24 @@
             this.btnTop3.UseVisualStyleBackColor = true;
             this.btnTop3.Click += new System.EventHandler(this.btnTop3_Click);
             // 
+            // btnReset
+            // 
+            this.btnReset.BorderRadius = 10;
+            this.btnReset.BorderThickness = 1;
+            this.btnReset.CheckedState.Parent = this.btnReset;
+            this.btnReset.CustomImages.Parent = this.btnReset;
+            this.btnReset.FillColor = System.Drawing.Color.White;
+            this.btnReset.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.Black;
+            this.btnReset.HoverState.Parent = this.btnReset;
+            this.btnReset.Location = new System.Drawing.Point(1200, 31);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.ShadowDecoration.Parent = this.btnReset;
+            this.btnReset.Size = new System.Drawing.Size(93, 33);
+            this.btnReset.TabIndex = 9;
+            this.btnReset.Text = "Làm mới";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // ANHCAUTHU
             // 
             this.ANHCAUTHU.HeaderText = "Image";
@@ -378,7 +397,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridCauThu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
 		}
 
 		#endregion
@@ -397,8 +415,9 @@
 		private System.Windows.Forms.Label label5;
 		private Guna.UI2.WinForms.Guna2TextBox txtSoBanThang;
 		private Guna.UI2.WinForms.Guna2Button btnFilter;
+		private Guna.UI2.WinForms.Guna2Button btnReset;
 		private System.Windows.Forms.Button btnTop3;
 		private System.Windows.Forms.SaveFileDialog dlgSave;
-        private System.Windows.Forms.DataGridViewImageColumn ANHCAUTHU;
-    }
+    private System.Windows.Forms.DataGridViewImageColumn ANHCAUTHU;
+  }
 }
