@@ -114,6 +114,7 @@
 			this.txtLuotDau.Name = "txtLuotDau";
 			this.txtLuotDau.Size = new System.Drawing.Size(100, 28);
 			this.txtLuotDau.TabIndex = 2;
+			this.txtLuotDau.TextChanged += new System.EventHandler(this.txtLuotDau_TextChanged);
 			// 
 			// txtVongDau
 			// 
@@ -121,6 +122,7 @@
 			this.txtVongDau.Name = "txtVongDau";
 			this.txtVongDau.Size = new System.Drawing.Size(100, 28);
 			this.txtVongDau.TabIndex = 2;
+			this.txtVongDau.TextChanged += new System.EventHandler(this.txtVongDau_TextChanged);
 			// 
 			// cbNha
 			// 
@@ -129,6 +131,7 @@
 			this.cbNha.Name = "cbNha";
 			this.cbNha.Size = new System.Drawing.Size(316, 29);
 			this.cbNha.TabIndex = 1;
+			this.cbNha.SelectedIndexChanged += new System.EventHandler(this.cbNha_SelectedIndexChanged);
 			// 
 			// btnHuy
 			// 
@@ -148,6 +151,7 @@
 			this.cbKhach.Name = "cbKhach";
 			this.cbKhach.Size = new System.Drawing.Size(323, 29);
 			this.cbKhach.TabIndex = 1;
+			this.cbKhach.SelectedIndexChanged += new System.EventHandler(this.cbKhach_SelectedIndexChanged);
 			// 
 			// label4
 			// 

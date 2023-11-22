@@ -70,11 +70,11 @@ namespace GUI
             }
             
         }
-        private bool Validate()
-        {
-            if()
-            return false;
+        //private bool Validate()
+        //{
+        //    //if()
+        //    //return false;
                
-        }
+        //}
     }
 }

@@ -93,5 +93,23 @@ namespace GUI
 			txtTenDangNhap.Text = string.Empty;
 			txtMatKhau.Text = string.Empty;
 		}
+
+		private void txtTenDangNhap_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == (char)Keys.Enter)
+			{
+				// Thực hiện hành động khi nhấn Enter ở đây
+				btnDangNhap.PerformClick(); // Gọi sự kiện click của nút đăng nhập
+			}
+		}
+
+		private void txtMatKhau_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == (char)Keys.Enter)
+			{
+				// Thực hiện hành động khi nhấn Enter ở đây
+				btnDangNhap.PerformClick(); // Gọi sự kiện click của nút đăng nhập
+			}
+		}
 	}
 }
