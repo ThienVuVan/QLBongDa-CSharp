@@ -82,7 +82,6 @@ namespace DAL
             list = (List<string>)DatabaseAccess.ExecuteScalar(sql);
             return list;
         }
-    }
 		public static DataTable GetMemBerOfListTeam(List<string> maDoi)
 		{
 			if (maDoi == null || maDoi.Count == 0)

@@ -64,8 +64,8 @@ namespace GUI
 				tranDau.MaTranDau = chuoiThoiGian + txtVongDau.Text.ToString() + txtLuotDau.Text.ToString();
 				tranDau.MaDoiNha = cbNha.SelectedItem.ToString();
 				tranDau.MaDoiKhach = cbKhach.SelectedItem.ToString();
-				tranDau.LuotDau = int.Parse(txtLuotDau.Text);
-				tranDau.VongDau = int.Parse(txtVongDau.Text);
+				tranDau.LuotDau = txtLuotDau.Text;
+				tranDau.VongDau = txtVongDau.Text;
 				tranDau.GhiChu = cbStatus.SelectedIndex.ToString();
 				tranDau.SoBanThangDoiNha = 0;
 				tranDau.SoBanThangDoiKhach = 0;

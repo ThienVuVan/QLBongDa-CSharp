@@ -323,6 +323,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(76, 33);
             this.guna2Button2.TabIndex = 9;
             this.guna2Button2.Text = "Lọc";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2GroupBox1
             // 

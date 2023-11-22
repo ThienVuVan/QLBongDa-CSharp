@@ -22,7 +22,7 @@ namespace GUI
 
         private void Test_Load(object sender, EventArgs e)
         {
-
+			OpenForm<HomePage>();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
