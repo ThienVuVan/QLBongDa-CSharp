@@ -92,6 +92,22 @@ namespace DAL
             string sql = "select * from DOIBONG";
             return DatabaseAccess.ReadTable(sql);
         }
+		public static DataTable Filter(string TenDoi, Nullable<int> Diem)
+		{
+			string MaDoi;
+			if (TenDoi == null) MaDoi = "none";
+			else
+			{
+				string sql1 = $"select MaDoi from dbo.DOIBONG where TenDoi = N'{TenDoi}'";
+				MaDoi = (string)DatabaseAccess.ExecuteScalar(sql1);
+
+			}
+			if (Diem == null) Diem = -1;
+			string sql = $"select * from dbo.DOIBONG b where " +
+				$"('{MaDoi}' = 'none' or b.MADOI = '{MaDoi}') and " +
+				$"({Diem} = -1 or b.SODIEM = {Diem})";
+			return DatabaseAccess.ReadTable(sql);
+		}
 
 	}
 }

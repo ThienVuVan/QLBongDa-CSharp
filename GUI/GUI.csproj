@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\..\Guna\Guna\Guna\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
@@ -227,7 +227,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomePage.Designer.cs">
-	    <DependentUpon>HomePage.cs</DependentUpon>
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="detailTranDau.cs">
       <SubType>Form</SubType>
@@ -304,7 +304,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="HomePage.resx">
-	<DependentUpon>HomePage.cs</DependentUpon>
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="detailTranDau.resx">
       <DependentUpon>detailTranDau.cs</DependentUpon>
@@ -464,11 +464,10 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\IMGCauThu\" />
     <Folder Include="Resources\IMGLogo\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
