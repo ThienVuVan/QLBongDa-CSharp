@@ -55,61 +55,57 @@ namespace GUI
         }
 		
 
-        private void txtName_TextChanged(object sender, EventArgs e)
-		{
-		
-		}
 
 		private void btnThem_Click(object sender, EventArgs e)
 		{
-			if(txtName.Text == "" || txtSoAo.Text == "" || cbMaDoi.Text == "" || cbQuocTich.Text == "" || cbViTri.Text == "")
+			if(!Validate())
 			{
 				MessageBox.Show("Hãy nhập đủ dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); return;
 			}
-			// Lấy thời gian hiện tại
-			TimeSpan thoiGianHienTai = DateTime.Now.TimeOfDay;
-
-			// Lấy tổng số giây và làm tròn nó về phần nguyên
-			int soGiayNguyen = (int)Math.Round(thoiGianHienTai.TotalSeconds);
-
-			// Chuyển đổi thành chuỗi
-			string chuoiThoiGian = soGiayNguyen.ToString();
-
-
-
-			CauThu cauThu =  new CauThu();
-
-
-			cauThu.Ten = txtName.Text;
-			cauThu.MaCauThu = chuoiThoiGian;
-			cauThu.MaQuocTinh = cbQuocTich.SelectedItem.ToString();
-			cauThu.MaDoi = cbMaDoi.SelectedItem.ToString();
-			cauThu.NgaySinh = dtpNgaySinh.Value;
-			cauThu.ViTriChoi = cbViTri.SelectedItem.ToString();
-			cauThu.Anh = Path.GetFileName(openImg.FileName);
-			cauThu.SoBanThang = 0;
-			cauThu.SoLanRaSan = 0;
-			cauThu.SoTheDo = 0;
-			cauThu.SoTheVang = 0;
-
-
-      string duongDanThuMuc = Path.Combine("F:\\Desktop\\BTL_Winform\\QLBongDa-CSharp\\GUI\\Resources\\IMGCauThu");
-      // Đường dẫn đầy đủ cho việc lưu ảnh vào thư mục
-      string duongDanLuu = Path.Combine(duongDanThuMuc,Path.GetFileName(openImg.FileName));
-      // Copy tệp tin ảnh vào thư mục
-			if (File.Exists(duongDanLuu))
-			{
-				MessageBox.Show("Anh da ton tai");
-                CauThuService.SaveCauThu(cauThu);
-                return;
-			}
 			else
 			{
-                File.Copy(openImg.FileName.Trim(), duongDanLuu);
-                CauThuService.SaveCauThu(cauThu);
+                TimeSpan thoiGianHienTai = DateTime.Now.TimeOfDay;
+
+                // Lấy tổng số giây và làm tròn nó về phần nguyên
+                int soGiayNguyen = (int)Math.Round(thoiGianHienTai.TotalSeconds);
+
+                // Chuyển đổi thành chuỗi
+                string chuoiThoiGian = soGiayNguyen.ToString();
+                CauThu cauThu = new CauThu();
+
+                cauThu.Ten = txtName.Text;
+                cauThu.MaCauThu = chuoiThoiGian;
+                cauThu.MaQuocTinh = cbQuocTich.SelectedItem.ToString();
+                cauThu.MaDoi = cbMaDoi.SelectedItem.ToString();
+                cauThu.NgaySinh = dtpNgaySinh.Value;
+                cauThu.ViTriChoi = cbViTri.SelectedItem.ToString();
+                cauThu.Anh = Path.GetFileName(openImg.FileName);
+                cauThu.SoBanThang = 0;
+                cauThu.SoLanRaSan = 0;
+                cauThu.SoTheDo = 0;
+                cauThu.SoTheVang = 0;
+
+
+                string duongDanThuMuc = Path.Combine("F:\\Desktop\\BTL_Winform\\QLBongDa-CSharp\\GUI\\Resources\\IMGCauThu");
+                // Đường dẫn đầy đủ cho việc lưu ảnh vào thư mục
+                string duongDanLuu = Path.Combine(duongDanThuMuc, Path.GetFileName(openImg.FileName));
+                // Copy tệp tin ảnh vào thư mục
+                if (File.Exists(duongDanLuu))
+                {
+                    MessageBox.Show("Anh da ton tai");
+                    CauThuService.SaveCauThu(cauThu);
+                    return;
+                }
+                else
+                {
+                    File.Copy(openImg.FileName.Trim(), duongDanLuu);
+                    CauThuService.SaveCauThu(cauThu);
+                }
+
             }
-			
-			
+            // Lấy thời gian hiện tại
+
+
 
         }
 
@@ -142,6 +138,22 @@ namespace GUI
         private void cbMaDoi_SelectedIndexChanged(object sender, EventArgs e)
         {
 			dgvTeammate.DataSource = CauThuService.GetMemBerOfTeam(cbMaDoi.SelectedItem.ToString());
+        }
+		private bool Validate()
+		{
+			if(txtName.Text.Trim() == "" || txtSoAo.Text.Trim() == "" || cbMaDoi.Text == "" || cbQuocTich.Text == "" || cbViTri.Text == "")
+			{
+				return false;
+			}
+			return true;
+		}
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+			if(!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)){
+				MessageBox.Show("Chỉ được nhập vào chữ cái a - z");
+				e.Handled = true;
+			}
         }
     }
 }

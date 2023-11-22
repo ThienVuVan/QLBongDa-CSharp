@@ -13,9 +13,9 @@ namespace DAL
         public static void SaveTranDau(TranDau tranDau)
         {
             string sql = $"insert into dbo.TRANDAU values('{tranDau.MaTranDau}','{tranDau.MaDoiNha}'," +
-                $"'{tranDau.MaDoiKhach}', {tranDau.LuotDau}, {tranDau.VongDau}, {tranDau.SoBanThangDoiNha}," +
-                $"{tranDau.SoBanThangDoiKhach}, {tranDau.SoTheVangDoiNha}, {tranDau.SotheVangDoiKhach}," +
-                $"{tranDau.SoTheDoDoiNha}, {tranDau.SoTheDoDoiKhach}, '{tranDau.GhiChu}')";
+                $"'{tranDau.MaDoiKhach}', N'{tranDau.LuotDau}', N'{tranDau.VongDau}', {tranDau.SoBanThangDoiNha}," +
+                $"{tranDau.SoBanThangDoiKhach}, {tranDau.SoTheVangDoiNha},{tranDau.SoTheDoDoiNha}, {tranDau.SotheVangDoiKhach}," +
+                $"{tranDau.SoTheDoDoiKhach}, N'{tranDau.GhiChu}')";
 
             DatabaseAccess.Excute(sql);
         }

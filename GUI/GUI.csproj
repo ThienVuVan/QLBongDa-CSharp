@@ -223,6 +223,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CauThuDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CauThuDetail.Designer.cs">
+      <DependentUpon>CauThuDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,9 @@
       <DependentUpon>playerList.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CauThuDetail.resx">
+      <DependentUpon>CauThuDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
