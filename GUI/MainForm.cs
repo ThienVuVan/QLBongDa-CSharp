@@ -103,6 +103,7 @@ namespace GUI
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			OpenForm<HomePage>();
 		}
 
 		// để hiển thị form bên trong panel của MainForm dùng OpenForm

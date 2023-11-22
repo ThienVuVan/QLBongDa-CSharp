@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Net;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -61,8 +63,38 @@ namespace DAL
 
         public static void UpdateCauThu(CauThu cauThu)
         {
-            string sql = $"update CAUTHU set ";
+            string sql = $"update CAUTHU set MADOI = '{cauThu.MaDoi}',MAQUOCTICH = '{cauThu.MaQuocTinh}',TEN = N'{cauThu.Ten}',VITRICHOI = N'{cauThu.ViTriChoi}',NGAYSINH = '{cauThu.NgaySinh}',SOAO = {cauThu.SoAo},ANH = '{cauThu.Anh}' where MACAUTHU = '{cauThu.MaCauThu}'";
             DatabaseAccess.Excute(sql);
+        }
+        public static CauThu GetCauThu(string maCauThu)
+        {
+            string sql = $"select * from CAUTHU where MACAUTHU = '{maCauThu}'";
+            DataTable dt = DatabaseAccess.ReadTable(sql);
+            if(dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+               CauThu cauThu = ConvertDataRowToCauThu(row);
+                return cauThu;
+            }
+            return null;
+        }
+        private static CauThu ConvertDataRowToCauThu(DataRow row)
+        {
+            CauThu cauThu = new CauThu(
+                row["MACAUTHU"].ToString(),
+                row["MADOI"].ToString(),
+                row["MAQUOCTICH"].ToString(),
+                row["TEN"].ToString(),
+                row["VITRICHOI"].ToString(),
+                (DateTime)(row["NGAYSINH"] != DBNull.Value ? Convert.ToDateTime(row["NGAYSINH"]) : (DateTime?)null),
+                int.Parse(row["SOAO"].ToString()),
+                int.Parse(row["SOBANTHANG"].ToString()),
+                int.Parse(row["SOTHEVANG"].ToString()),
+                int.Parse(row["SOTHEDO"].ToString()),
+                int.Parse(row["SOLANRASAN"].ToString()),
+                row["ANH"].ToString()
+            );
+            return cauThu;
         }
 
         public static void DeleteCauThu(string MaCauThu)
@@ -79,11 +111,15 @@ namespace DAL
         {
             List<string> list = new List<string>();
             string sql = "select TEN from dbo.CAUTHU";
-            list = (List<string>)DatabaseAccess.ExecuteScalar(sql);
+            DataTable dt = DatabaseAccess.ReadTable(sql);
+            foreach (DataRow row in dt.Rows)
+            {
+                string tenValue = row["TEN"].ToString();
+                list.Add(tenValue);
+            }
             return list;
         }
-
-		public static DataTable GetMemBerOfListTeam(List<string> maDoi)
+        public static DataTable GetMemBerOfListTeam(List<string> maDoi)
 		{
 			if (maDoi == null || maDoi.Count == 0)
 			{
