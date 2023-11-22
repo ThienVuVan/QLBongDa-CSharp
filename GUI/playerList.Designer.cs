@@ -335,7 +335,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridCauThu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
 		}
 
 		#endregion

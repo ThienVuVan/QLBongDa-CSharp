@@ -14,7 +14,8 @@ namespace GUI
 {
     public partial class teamDetail : Form
     {
-        string MaDoi;
+        private string MaDoi;
+        private DoiBong doiBong;
         public teamDetail(string MaDoiBong)
         {
             this.MaDoi = MaDoiBong;
@@ -23,7 +24,7 @@ namespace GUI
 
         private void teamDetail_Load(object sender, EventArgs e)
         {
-            DoiBong doiBong = DoiBongService.GetDoiBongById(MaDoi);
+            doiBong = DoiBongService.GetDoiBongById(MaDoi);
             txtTenDoi.Text = doiBong.TenDoi;
             txtMaTinh.Text = doiBong.MaTinh;
             txtHLV.Text = doiBong.HLV;
@@ -31,6 +32,24 @@ namespace GUI
 
             DataTable listCauThu = CauThuService.GetMemBerOfTeam(MaDoi);
             guna2DataGridView1.DataSource = listCauThu;
+        }
+
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+            DoiBong update = new DoiBong();
+
+            update.MaDoi = MaDoi;
+            update.TenDoi = txtTenDoi.Text;
+            update.MaTinh = txtMaTinh.Text;
+            update.HLV = txtHLV.Text;
+            update.SoLuongCauThu = int.Parse(txtSoCauThu.Text);
+            update.SoBanThang = doiBong.SoBanThang;
+            update.MaSan = doiBong.MaSan;
+            update.SoBanThua = doiBong.SoBanThua;
+            update.LoGo = doiBong.LoGo;
+            update.SoDiem = doiBong.SoDiem;
+
+            DoiBongService.UpdateDoiBong(update);
         }
     }
 }
