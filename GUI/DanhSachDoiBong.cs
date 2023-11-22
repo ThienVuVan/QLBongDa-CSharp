@@ -141,5 +141,10 @@ namespace GUI
             teamDetail detail = new teamDetail(MaDoi);
             detail.Show();
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

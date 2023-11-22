@@ -56,19 +56,16 @@ namespace GUI
 
             //DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
             //imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
-		
-   //         foreach (DataGridViewRow row in gridCauThu.Rows)
-			//{
-			//	if (row.Cells["ANH"].Value != null)
-			//	{
-			//		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
-			//		Image image = Image.FromFile(path);
-   //                 row.Cells["ANHCAUTHU"].Value = image;
-   //             }
-			//}
-
-
-
+	
+            foreach (DataGridViewRow row in gridCauThu.Rows)
+			{
+				if (row.Cells["ANH"].Value != null)
+				{
+					string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
+					Image image = Image.FromFile(path);
+                    row.Cells["ANHCAUTHU"].Value = image;
+                }
+			}
 		}
 
 		private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -83,8 +80,8 @@ namespace GUI
                 CauThuService.DeleteCauThu(MaCauThu);
                 gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
             }
-        
-    }
+        }
+
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
 			if (gridCauThu.SelectedRows.Count > 0)

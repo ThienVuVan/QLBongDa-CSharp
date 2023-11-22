@@ -75,8 +75,8 @@ namespace DAL
 
         public static void UpdateDoiBong(DoiBong doiBong)
         {
-            string sql = $"Update DOIBONG set MADOI = '{doiBong.MaDoi}',MASAN = '{doiBong.MaSan}',MATINH = '{doiBong.MaTinh}'," +
-                $"TENDOI = N'{doiBong.TenDoi}',HLV = N'{doiBong.HLV}',LOGO = '{doiBong.LoGo}'";
+            string sql = $"Update DOIBONG set MASAN = '{doiBong.MaSan}',MATINH = '{doiBong.MaTinh}'," +
+                $"TENDOI = N'{doiBong.TenDoi}',HLV = N'{doiBong.HLV}',LOGO = '{doiBong.LoGo}' where MADOI = '{doiBong.MaDoi}'";
             DatabaseAccess.Excute(sql);
         }
         //TODO
