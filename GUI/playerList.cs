@@ -25,7 +25,7 @@ namespace GUI
 		private void btnFilter_Click(object sender, EventArgs e)
 		{
 
-			gridCauThu.DataSource = CauThuService.Filter(txtTen.Text, txtTenDoiBong.Text,txtSoBanThang.Text == "" ? 0 : int.Parse(txtSoBanThang.Text));
+			gridCauThu.DataSource = CauThuService.Filter(cbTenCauThu.SelectedItem ==  null ? "": cbTenCauThu.SelectedItem.ToString(), cbTenDoiBong.SelectedItem == null ? "" : cbTenDoiBong.SelectedItem.ToString(),txtSoBanThang.Text == "" ? 0 : int.Parse(txtSoBanThang.Text));
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
@@ -37,7 +37,12 @@ namespace GUI
 
 		private void playerList_Load(object sender, EventArgs e)
 		{
-			DataTable dt = CauThuService.RetrieveAllCauThu();
+			cbTenCauThu.DataSource = CauThuService.GetAllName();
+			cbTenCauThu.SelectedIndex = -1;
+			
+			cbTenDoiBong.DataSource = DoiBongService.RetrieveAllNameDoiBong();
+            cbTenDoiBong.SelectedIndex = -1;
+            DataTable dt = CauThuService.RetrieveAllCauThu();
 			int numberCauThu = dt.Rows.Count;
 			lbSoLuong.Text = numberCauThu.ToString();
 			gridCauThu.DataSource = dt;
@@ -75,9 +80,9 @@ namespace GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-			if(MessageBox.Show("Bạn có muốn xóa cầu thủ này không?","Thông Báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
-			{
-                string MaCauThu = gridCauThu.SelectedRows[0].Cells[0].Value.ToString();
+            if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string MaCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
                 CauThuService.DeleteCauThu(MaCauThu);
                 gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
             }
@@ -87,7 +92,7 @@ namespace GUI
 		{
 			if (gridCauThu.SelectedRows.Count > 0)
 			{
-				
+
 				DataTable dsIn = CauThuService.FindThreeMaxGoal();
 
 				if (dsIn.Rows.Count > 0)
@@ -157,42 +162,60 @@ namespace GUI
 			}
 		}
 
-		private void btnReset_Click(object sender, EventArgs e)
-		{
-			txtTen.Text = "";
-			txtSoBanThang.Text = "";
-			txtTenDoiBong.Text = "";
-			DataTable dt = CauThuService.RetrieveAllCauThu();
-			int numberCauThu = dt.Rows.Count;
-			lbSoLuong.Text = numberCauThu.ToString();
-			gridCauThu.DataSource = dt;
-			gridCauThu.Columns["MACAUTHU"].HeaderText = "Mã cầu thủ";
-			gridCauThu.Columns["MADOI"].HeaderText = "Mã đội bóng";
-			gridCauThu.Columns["MAQUOCTICH"].HeaderText = "Mã quốc tịch";
-			gridCauThu.Columns["TEN"].HeaderText = "Họ và tên";
-			gridCauThu.Columns["VITRICHOI"].HeaderText = "Vị trí";
-			gridCauThu.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
-			gridCauThu.Columns["SOAO"].HeaderText = "Số áo";
-			gridCauThu.Columns["SOBANTHANG"].HeaderText = "Số bàn thắng";
-			gridCauThu.Columns["SOTHEVANG"].HeaderText = "Thẻ vàng";
-			gridCauThu.Columns["SOTHEDO"].HeaderText = "Thẻ đỏ";
-			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
-			gridCauThu.Columns["ANH"].HeaderText = "Anh";
-
-			//DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
-			//imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+			string maCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
+			CauThuDetail detail = new CauThuDetail(maCauThu);
+			detail.ShowDialog();
+        }
 
 
-			//foreach (DataGridViewRow row in gridCauThu.Rows)
-			//{
-			//	if (row.Cells["ANH"].Value != null)
-			//	{
-			//		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
-			//		Image image = Image.FromFile(path);
-			//		row.Cells["ANHCAUTHU"].Value = image;
-			//	}
-			//}
-		}
-	}
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string MaCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
+                CauThuService.DeleteCauThu(MaCauThu);
+                gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cbTenCauThu.Text = "";
+            txtSoBanThang.Text = "";
+            cbTenDoiBong.Text = "";
+            DataTable dt = CauThuService.RetrieveAllCauThu();
+            int numberCauThu = dt.Rows.Count;
+            lbSoLuong.Text = numberCauThu.ToString();
+            gridCauThu.DataSource = dt;
+            //gridCauThu.Columns["MACAUTHU"].HeaderText = "Mã cầu thủ";
+            //gridCauThu.Columns["MADOI"].HeaderText = "Mã đội bóng";
+            //gridCauThu.Columns["MAQUOCTICH"].HeaderText = "Mã quốc tịch";
+            //gridCauThu.Columns["TEN"].HeaderText = "Họ và tên";
+            //gridCauThu.Columns["VITRICHOI"].HeaderText = "Vị trí";
+            //gridCauThu.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
+            //gridCauThu.Columns["SOAO"].HeaderText = "Số áo";
+            //gridCauThu.Columns["SOBANTHANG"].HeaderText = "Số bàn thắng";
+            //gridCauThu.Columns["SOTHEVANG"].HeaderText = "Thẻ vàng";
+            //gridCauThu.Columns["SOTHEDO"].HeaderText = "Thẻ đỏ";
+            //gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
+            //gridCauThu.Columns["ANH"].HeaderText = "Anh";
+
+            //DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
+            //imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+
+
+            //foreach (DataGridViewRow row in gridCauThu.Rows)
+            //{
+            //	if (row.Cells["ANH"].Value != null)
+            //	{
+            //		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
+            //		Image image = Image.FromFile(path);
+            //		row.Cells["ANHCAUTHU"].Value = image;
+            //	}
+            //}
+        }
+    }
 }
 

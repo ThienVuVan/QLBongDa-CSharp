@@ -42,5 +42,9 @@ namespace BLL
         {
             return DoiBongAccess.GetAllTeam();
         }
+		public static DataTable Filter(string TenDoi, Nullable<int> Diem)
+		{
+			return DoiBongAccess.Filter(TenDoi, Diem);
+		}
 	}
 }
