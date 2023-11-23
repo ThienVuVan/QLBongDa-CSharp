@@ -100,6 +100,12 @@ namespace DAL
         public static void DeleteCauThu(string MaCauThu)
         {
             string sql = $"delete from dbo.CAUTHU where MaCauThu = '{MaCauThu}'";
+            string sql1 = $"delete from dbo.TRANDAU_BANTHANG where MaCauThu = '{MaCauThu}'";
+            string sql2 = $"delete from dbo.TRANDAU_THE where MaCauThu = '{MaCauThu}'";
+            string sql3 = $"delete from dbo.TRANDAU_CAUTHU where MaCauThu = '{MaCauThu}'";
+            DatabaseAccess.Excute(sql1);
+            DatabaseAccess.Excute(sql2);
+            DatabaseAccess.Excute(sql3);
             DatabaseAccess.Excute(sql);
         }
         public static DataTable GetMemBerOfTeam(string maDoi)

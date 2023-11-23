@@ -88,6 +88,15 @@ namespace GUI
 		{
 		}
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string MaCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
+                CauThuService.DeleteCauThu(MaCauThu);
+                gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
+            }
+        }
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
 			if (gridCauThu.SelectedRows.Count > 0)
@@ -211,20 +220,20 @@ namespace GUI
 			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
 			gridCauThu.Columns["ANH"].HeaderText = "Anh";
 
-			//DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
-			//imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            //DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
+            //imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
 
-			//foreach (DataGridViewRow row in gridCauThu.Rows)
-			//{
-			//	if (row.Cells["ANH"].Value != null)
-			//	{
-			//		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
-			//		Image image = Image.FromFile(path);
-			//		row.Cells["ANHCAUTHU"].Value = image;
-			//	}
-			//}
-		}
-	}
+            //foreach (DataGridViewRow row in gridCauThu.Rows)
+            //{
+            //	if (row.Cells["ANH"].Value != null)
+            //	{
+            //		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
+            //		Image image = Image.FromFile(path);
+            //		row.Cells["ANHCAUTHU"].Value = image;
+            //	}
+            //}
+        }
+    }
 }
 
