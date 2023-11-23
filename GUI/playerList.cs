@@ -34,9 +34,8 @@ namespace GUI
 			{
 				MessageBox.Show("không tìm thấy cầu thủ nào !");
 			}
-            
-
-        }
+			gridCauThu.DataSource = CauThuService.Filter(cbTenCauThu.SelectedItem == null ? "" : cbTenCauThu.SelectedItem.ToString(), cbTenDoiBong.SelectedItem == null ? "" : cbTenDoiBong.SelectedItem.ToString(), txtSoBanThang.Text == "" ? 0 : int.Parse(txtSoBanThang.Text));
+		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
@@ -49,10 +48,10 @@ namespace GUI
 		{
 			cbTenCauThu.DataSource = CauThuService.GetAllName();
 			cbTenCauThu.SelectedIndex = -1;
-			
+
 			cbTenDoiBong.DataSource = DoiBongService.RetrieveAllNameDoiBong();
-            cbTenDoiBong.SelectedIndex = -1;
-            DataTable dt = CauThuService.RetrieveAllCauThu();
+			cbTenDoiBong.SelectedIndex = -1;
+			DataTable dt = CauThuService.RetrieveAllCauThu();
 			int numberCauThu = dt.Rows.Count;
 			lbSoLuong.Text = numberCauThu.ToString();
 			gridCauThu.DataSource = dt;
@@ -69,25 +68,25 @@ namespace GUI
 			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
 			gridCauThu.Columns["ANH"].HeaderText = "Anh";
 
-   //         DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
-   //         imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
-		
+			//         DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
+			//         imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
 
-   //         foreach (DataGridViewRow row in gridCauThu.Rows)
+
+			//         foreach (DataGridViewRow row in gridCauThu.Rows)
 			//{
 			//	if (row.Cells["ANH"].Value != null)
 			//	{
 			//		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
 			//		Image image = Image.FromFile(path);
-   //                 row.Cells["ANHCAUTHU"].Value = image;
-   //             }
+			//                 row.Cells["ANHCAUTHU"].Value = image;
+			//             }
 			//}
 		}
 
 		private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 		}
-
+    
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
 			if (gridCauThu.SelectedRows.Count > 0)
@@ -162,12 +161,12 @@ namespace GUI
 			}
 		}
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
+		private void btnEdit_Click(object sender, EventArgs e)
+		{
 			string maCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
 			CauThuDetail detail = new CauThuDetail(maCauThu);
-            detail.ShowDialog();
-        }
+			detail.ShowDialog();
+		}
 
         private void txtSoBanThang_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -177,7 +176,6 @@ namespace GUI
 				e.Handled = true;
 			}
         }
-
 
 
         private void btnDelete_Click(object sender, EventArgs e)

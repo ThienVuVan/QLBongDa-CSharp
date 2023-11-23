@@ -215,5 +215,23 @@ namespace GUI
             dgDanhSach.Columns["SOTHEDODOIKHACH"].HeaderText = "Thẻ đỏ đội khách";
             dgDanhSach.Columns["GHICHU"].HeaderText = "Ghi chú";
         }
-    }
+
+		private void cbDoiNha_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txtSoBan_TextChanged(object sender, EventArgs e)
+		{
+			if (int.TryParse(txtSoBan.Text, out int soBan))
+			{
+			}
+			else
+			{
+				MessageBox.Show("Vui lòng nhập số nguyên.");
+				
+				txtSoBan.Text = ""; // Xóa giá trị không hợp lệ
+			}
+		}
+	}
 }
