@@ -61,7 +61,7 @@ namespace GUI
 
 
 				TranDau tranDau = new TranDau();
-				tranDau.MaTranDau = chuoiThoiGian + txtVongDau.Text.ToString() + txtLuotDau.Text.ToString();
+				tranDau.MaTranDau = chuoiThoiGian;
 				tranDau.MaDoiNha = cbNha.SelectedItem.ToString();
 				tranDau.MaDoiKhach = cbKhach.SelectedItem.ToString();
 				tranDau.LuotDau = txtLuotDau.Text;
@@ -96,12 +96,6 @@ namespace GUI
 				dgvDangKy.Columns["SOTHEDODOINHA"].HeaderText = "Thẻ đỏ đội nhà";
 				dgvDangKy.Columns["SOTHEDODOIKHACH"].HeaderText = "Thẻ đỏ đội khách";
 				dgvDangKy.Columns["GHICHU"].HeaderText = "Status";
-			}
-
-			if(btnSua.Enabled == true)
-			{
-
-				//TranDauService.UpdateTranDau(tranDau)
 			}
 			
 		}

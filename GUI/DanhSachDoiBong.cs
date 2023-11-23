@@ -29,6 +29,12 @@ namespace GUI
 
 		private void DanhSachDoiBong_Load(object sender, EventArgs e)
 		{
+			List<string> doinha = DoiBongService.RetrieveAllNameDoiBong();
+			foreach (string doi in doinha)
+			{
+				cbTenDoiBong.Items.Add(doi);
+			}
+
 			dgvDoiBong.DataSource = DoiBongService.GetAllDoiBong();
 			dgvDoiBong.Columns["MADOI"].HeaderText = "Mã đội";
 			dgvDoiBong.Columns["MASAN"].HeaderText = "Mã sân";
@@ -141,11 +147,51 @@ namespace GUI
             teamDetail detail = new teamDetail(MaDoi);
             detail.Show();
         }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
+		private void txtDiem_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+			{
+				MessageBox.Show("Kí tự nhập vào phải là số");
+				e.Handled = true;
+			}
+		}
+		private void guna2Button2_Click(object sender, EventArgs e)
         {
+			if(txtDiem.Text != "")
+			{
+                if (!int.TryParse(txtDiem.Text, out int number))
+                {
+                    MessageBox.Show("Vui lòng nhập một số nguyên.");
+                    return;
+                }
+                if (number <= 0)
+                {
+                    MessageBox.Show("Vui lòng nhập một số nguyên lớn hơn không.");
+                    return;
+                }
+            }
 
-        }
+			int? soDiem = null;
+			string tenDoi = cbTenDoiBong.SelectedItem?.ToString();
+
+			if (!string.IsNullOrWhiteSpace(txtDiem.Text) && int.TryParse(txtDiem.Text, out int diem))
+			{
+				soDiem = diem;
+			}
+
+			DataTable filteredData = DoiBongService.Filter(tenDoi, soDiem);
+
+			if (filteredData.Rows.Count == 0)
+			{
+				dgvDoiBong.DataSource = null;
+				MessageBox.Show("Không tìm thấy dữ liệu phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
+
+			dgvDoiBong.DataSource = filteredData;
+
+
+		}
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -169,7 +215,13 @@ namespace GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+			dgvDoiBong.DataSource = DoiBongService.GetAllDoiBong();
+			txtTIm.Text = "";
+			txtDiem.Text = "";
+			cbTenDoiBong.SelectedIndex = -1;
 
-        }
-    }
+		}
+
+		
+	}
 }

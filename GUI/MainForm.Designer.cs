@@ -58,10 +58,10 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(3, 295);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(2, 191);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 70);
+            this.panel3.Size = new System.Drawing.Size(200, 46);
             this.panel3.TabIndex = 2;
             // 
             // button2
@@ -71,11 +71,11 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-14, -11);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(-9, -7);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(320, 88);
+            this.button2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(213, 57);
             this.button2.TabIndex = 1;
             this.button2.Text = "          Trận đấu";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -85,10 +85,10 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.button4);
-            this.panel5.Location = new System.Drawing.Point(3, 443);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(2, 287);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 70);
+            this.panel5.Size = new System.Drawing.Size(200, 46);
             this.panel5.TabIndex = 4;
             // 
             // button4
@@ -98,11 +98,11 @@
             this.button4.ForeColor = System.Drawing.Color.Transparent;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-14, -11);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(-9, -7);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(320, 88);
+            this.button4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(213, 57);
             this.button4.TabIndex = 1;
             this.button4.Text = "          Cầu thủ";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,10 +112,10 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.button5);
-            this.panel6.Location = new System.Drawing.Point(3, 369);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Location = new System.Drawing.Point(2, 239);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(300, 70);
+            this.panel6.Size = new System.Drawing.Size(200, 46);
             this.panel6.TabIndex = 5;
             // 
             // button5
@@ -125,11 +125,11 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(-14, -11);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(-9, -7);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(320, 88);
+            this.button5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(213, 57);
             this.button5.TabIndex = 1;
             this.button5.Text = "          Đội bóng";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,10 +139,10 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(3, 147);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(2, 95);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 70);
+            this.panel2.Size = new System.Drawing.Size(200, 46);
             this.panel2.TabIndex = 1;
             // 
             // button1
@@ -152,11 +152,11 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-14, -11);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(-9, -7);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(320, 88);
+            this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(213, 57);
             this.button1.TabIndex = 1;
             this.button1.Text = "          Trang chủ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,19 +166,19 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 141);
+            this.panel1.Size = new System.Drawing.Size(200, 92);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 50);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 51);
+            this.pictureBox1.Size = new System.Drawing.Size(31, 33);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -195,20 +195,20 @@
             this.slidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.slidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.slidebar.Location = new System.Drawing.Point(0, 0);
-            this.slidebar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.slidebar.MaximumSize = new System.Drawing.Size(262, 0);
-            this.slidebar.MinimumSize = new System.Drawing.Size(84, 0);
+            this.slidebar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.slidebar.MaximumSize = new System.Drawing.Size(175, 0);
+            this.slidebar.MinimumSize = new System.Drawing.Size(56, 0);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(262, 815);
+            this.slidebar.Size = new System.Drawing.Size(175, 487);
             this.slidebar.TabIndex = 0;
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.button8);
-            this.panel10.Location = new System.Drawing.Point(3, 221);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel10.Location = new System.Drawing.Point(2, 143);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(300, 70);
+            this.panel10.Size = new System.Drawing.Size(200, 46);
             this.panel10.TabIndex = 2;
             // 
             // button8
@@ -218,11 +218,11 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(-14, -11);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button8.Location = new System.Drawing.Point(-9, -7);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(320, 88);
+            this.button8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button8.Size = new System.Drawing.Size(213, 57);
             this.button8.TabIndex = 1;
             this.button8.Text = "          Giải đấu";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,20 +231,20 @@
             // panelform
             // 
             this.panelform.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelform.Location = new System.Drawing.Point(262, 0);
-            this.panelform.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelform.Location = new System.Drawing.Point(175, 0);
+            this.panelform.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelform.Name = "panelform";
-            this.panelform.Size = new System.Drawing.Size(1290, 815);
+            this.panelform.Size = new System.Drawing.Size(738, 487);
             this.panelform.TabIndex = 1;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1552, 815);
+            this.ClientSize = new System.Drawing.Size(913, 487);
             this.Controls.Add(this.panelform);
             this.Controls.Add(this.slidebar);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Test_Load);
