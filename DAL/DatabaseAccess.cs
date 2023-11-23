@@ -13,7 +13,11 @@ namespace DAL
     public class DatabaseAccess
     {
         public static SqlConnection conn;
+<<<<<<< Updated upstream
         public static string str = "Data Source=LAPTOP-RGISSHG6\\SQLEXPRESS;Initial Catalog=QLBongDa;Integrated Security=True";
+=======
+        public static string str = "Data Source=HOANG_NGUYEN\\HOANG_NGUYEN;Initial Catalog=QuanLyGiaiBong;Integrated Security=True";
+>>>>>>> Stashed changes
         public static SqlConnection Connect()
         {
             SqlConnection conn = new SqlConnection(str);

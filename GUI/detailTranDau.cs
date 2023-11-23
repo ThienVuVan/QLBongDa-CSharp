@@ -79,5 +79,60 @@ namespace GUI
                 }
             }
         }
-    }
+
+		private void txtLuotDau_TextChanged(object sender, EventArgs e)
+		{
+				txtLuotDau.ReadOnly = true;
+		}
+
+		private void txtVongDau_TextChanged(object sender, EventArgs e)
+		{
+            txtVongDau.ReadOnly = true;
+		}
+
+		private void txtMaNha_TextChanged(object sender, EventArgs e)
+		{
+            txtMaNha.ReadOnly = true;
+		}
+
+		private void txtBanThangNha_TextChanged(object sender, EventArgs e)
+		{
+            txtBanThangNha.ReadOnly = true; 
+		}
+
+		private void txtVangNha_TextChanged(object sender, EventArgs e)
+		{
+            txtVangNha.ReadOnly = true;
+		}
+
+		private void txtDoNha_TextChanged(object sender, EventArgs e)
+		{
+            txtDoNha.ReadOnly = true;
+		}
+
+		private void txtMaKhach_TextChanged(object sender, EventArgs e)
+		{
+            txtMaKhach.ReadOnly = true;
+		}
+
+		private void txtBanThangKhach_TextChanged(object sender, EventArgs e)
+		{
+            txtBanThangKhach.ReadOnly = true;
+		}
+
+		private void txtVangKhach_TextChanged(object sender, EventArgs e)
+		{
+            txtVangKhach.ReadOnly = true;
+		}
+
+		private void txtKhach_TextChanged(object sender, EventArgs e)
+		{
+            txtKhach.ReadOnly = true;
+		}
+
+		private void cbGhiChu_SelectedIndexChanged(object sender, EventArgs e)
+		{
+            cbGhiChu.Enabled = false;
+		}
+	}
 }

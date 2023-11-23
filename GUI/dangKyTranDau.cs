@@ -170,5 +170,10 @@ namespace GUI
 			btnThemMoi.Enabled = false;
 			btnXoaTranDau.Enabled=false;
 		}
+
+		private void txtVongDau_TextChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

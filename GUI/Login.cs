@@ -32,6 +32,44 @@ namespace GUI
 
 		private void btnDangNhap_Click(object sender, EventArgs e)
 		{
+			
+			if (string.IsNullOrWhiteSpace(txtMatKhau.Text))
+			{
+				MessageBox.Show("Vui lòng nhập mật khẩu.");
+				return;
+			}
+
+			string pattern = @"^(?=.*[A-Za-z])(?=.*\d).{6,}$"; // Ít nhất 6 ký tự, bao gồm cả số và chữ
+			if (System.Text.RegularExpressions.Regex.IsMatch(txtMatKhau.Text, pattern))
+			{
+			}
+			else
+			{
+				MessageBox.Show("Mật khẩu không hợp lệ. Phải có ít nhất 6 ký tự và bao gồm cả số và chữ.");
+
+				txtMatKhau.Text = "";
+				return;
+			}
+
+			if (string.IsNullOrWhiteSpace(txtTenDangNhap.Text))
+			{
+				return;
+			}
+
+			string patternn = @"^[a-zA-Z0-9_]{5,}$";
+			if (System.Text.RegularExpressions.Regex.IsMatch(txtTenDangNhap.Text, patternn))
+			{
+			}
+			else
+			{
+				MessageBox.Show("Tên đăng nhập không hợp lệ. Phải có ít nhất 5 kí tự và không chứa kí tự đặc biệt.");
+
+				txtTenDangNhap.Text = ""; // Xóa giá trị không hợp lệ
+				return;
+			}
+
+
+
 			//Hien thi form loading
 			loading = new Loading();
 			loading.Show();
@@ -43,6 +81,8 @@ namespace GUI
 
 			//thuc hien dang nhap
 			loginWorker.RunWorkerAsync(user);
+
+			
 
 		}
 		private void LoginWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -80,18 +120,42 @@ namespace GUI
 				// Nếu đăng nhập không thành công, hiển thị MessageBox
 				MessageBox.Show("Đăng nhập không thành công. Vui lòng kiểm tra lại tên đăng nhập và mật khẩu.");
 			}
+
+
 		}
 
 		private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
 		{
-
+			
 		}
 
 		private void btnHuy_Click(object sender, EventArgs e)
 		{
-			// Xóa dữ liệu trong TextBox tên đăng nhập và mật khẩu
 			txtTenDangNhap.Text = string.Empty;
 			txtMatKhau.Text = string.Empty;
+		}
+
+		private void txtTenDangNhap_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == (char)Keys.Enter)
+			{
+
+				btnDangNhap.PerformClick(); 
+			}
+		}
+
+		private void txtMatKhau_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == (char)Keys.Enter)
+			{
+
+				btnDangNhap.PerformClick(); 
+			}
+		}
+
+		private void txtMatKhau_TextChanged(object sender, EventArgs e)
+		{
+			
 		}
 	}
 }
