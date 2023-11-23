@@ -88,15 +88,6 @@ namespace GUI
 		{
 		}
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                string MaCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
-                CauThuService.DeleteCauThu(MaCauThu);
-                gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
-            }
-        }
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
 			if (gridCauThu.SelectedRows.Count > 0)
@@ -187,18 +178,9 @@ namespace GUI
 			}
         }
 
-        private void btnDelete_Click_1(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                string MaCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
-                CauThuService.DeleteCauThu(MaCauThu);
-                gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
-            }
-        }
 
 
-        private void btnDelete_Click_1(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
