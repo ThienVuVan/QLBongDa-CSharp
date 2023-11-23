@@ -92,7 +92,7 @@ namespace GUI
 		{
 			if (gridCauThu.SelectedRows.Count > 0)
 			{
-				
+
 				DataTable dsIn = CauThuService.FindThreeMaxGoal();
 
 				if (dsIn.Rows.Count > 0)
@@ -160,6 +160,7 @@ namespace GUI
 					MessageBox.Show("Không có danh sách hàng để xuất ra file");
 				}
 			}
+		}
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -186,13 +187,13 @@ namespace GUI
                 gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
             }
         }
-    }
+    
 
 		private void btnReset_Click(object sender, EventArgs e)
 		{
-			txtTen.Text = "";
+			cbTenCauThu.Text = "";
 			txtSoBanThang.Text = "";
-			txtTenDoiBong.Text = "";
+			cbTenDoiBong.Text = "";
 			DataTable dt = CauThuService.RetrieveAllCauThu();
 			int numberCauThu = dt.Rows.Count;
 			lbSoLuong.Text = numberCauThu.ToString();

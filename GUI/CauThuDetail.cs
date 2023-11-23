@@ -60,9 +60,10 @@ namespace GUI
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("Bạn có muốn chỉnh sửa thông tin của cầu thủ không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            if (Validate())
             {
-                if (Validate())
+                if (MessageBox.Show("Bạn có muốn chỉnh sửa thông tin của cầu thủ không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     CauThu updatedCauThu = new CauThu
                     {
@@ -92,6 +93,10 @@ namespace GUI
                     }
 
                 }
+            }
+            else
+            {
+                MessageBox.Show("Dữ liệu chưa đủ");
             }
 
         }
