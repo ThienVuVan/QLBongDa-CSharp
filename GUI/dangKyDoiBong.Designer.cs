@@ -148,6 +148,7 @@
 			this.txtMaTinh.Name = "txtMaTinh";
 			this.txtMaTinh.Size = new System.Drawing.Size(174, 23);
 			this.txtMaTinh.TabIndex = 3;
+			this.txtMaTinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaTinh_KeyPress);
 			// 
 			// txtTenDoi
 			// 

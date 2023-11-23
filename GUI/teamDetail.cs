@@ -50,6 +50,34 @@ namespace GUI
             update.SoDiem = doiBong.SoDiem;
 
             DoiBongService.UpdateDoiBong(update);
+            MessageBox.Show("Chỉnh sửa dữ liệu thành công", "Thông báo", MessageBoxButtons.OK);
         }
-    }
+
+		private void txtTenDoi_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (char.IsDigit(e.KeyChar))
+			{
+				// Huỷ bỏ sự kiện KeyPress
+				e.Handled = true;
+			}
+		}
+
+		private void txtHLV_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (char.IsDigit(e.KeyChar))
+			{
+				// Huỷ bỏ sự kiện KeyPress
+				e.Handled = true;
+			}
+		}
+
+		private void txtMaTinh_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (char.IsDigit(e.KeyChar))
+			{
+				// Huỷ bỏ sự kiện KeyPress
+				e.Handled = true;
+			}
+		}
+	}
 }
