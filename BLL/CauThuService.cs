@@ -54,6 +54,19 @@ namespace BLL
         {
             CauThuAccess.UpdateCauThu(cauThu);
         }
-	}
+        public static DataTable SortCauThuByGoal()
+        {
+            return CauThuAccess.SortCauThuByGoal();
+        }
+        public static CauThu CauThuHayNhat()
+        {
+            return CauThuAccess.CauThuHayNhat();
+        }
+
+        public static List<string> GetAllIdByMaDoi(string MaDoi)
+        {
+            return CauThuAccess.GetAllIdByMaDoi(MaDoi);
+        }
+    }
 
 }

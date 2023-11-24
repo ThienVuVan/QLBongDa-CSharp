@@ -157,18 +157,19 @@ namespace GUI
 		}
 		private void guna2Button2_Click(object sender, EventArgs e)
         {
-
-			if (!int.TryParse(txtDiem.Text, out int number))
+			if(txtDiem.Text != "")
 			{
-				MessageBox.Show("Vui lòng nhập một số nguyên.");
-				return;
-			}
-
-			if (number <= 0)
-			{
-				MessageBox.Show("Vui lòng nhập một số nguyên lớn hơn không.");
-				return;
-			}
+                if (!int.TryParse(txtDiem.Text, out int number))
+                {
+                    MessageBox.Show("Vui lòng nhập một số nguyên.");
+                    return;
+                }
+                if (number <= 0)
+                {
+                    MessageBox.Show("Vui lòng nhập một số nguyên lớn hơn không.");
+                    return;
+                }
+            }
 
 			int? soDiem = null;
 			string tenDoi = cbTenDoiBong.SelectedItem?.ToString();
