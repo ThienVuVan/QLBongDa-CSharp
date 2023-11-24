@@ -241,6 +241,18 @@
     <Compile Include="detailTranDau.Designer.cs">
       <DependentUpon>detailTranDau.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rank.Designer.cs">
+      <DependentUpon>Rank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RankDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RankDetail.Designer.cs">
+      <DependentUpon>RankDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="teamDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +335,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="detailTranDau.resx">
       <DependentUpon>detailTranDau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rank.resx">
+      <DependentUpon>Rank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RankDetail.resx">
+      <DependentUpon>RankDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="teamDetail.resx">
       <DependentUpon>teamDetail.cs</DependentUpon>

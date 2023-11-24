@@ -149,7 +149,7 @@
 			this.guna2Panel1.Location = new System.Drawing.Point(9, 29);
 			this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.guna2Panel1.Name = "guna2Panel1";
-			this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;==
+			this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
 			this.guna2Panel1.Size = new System.Drawing.Size(1094, 65);
 			this.guna2Panel1.TabIndex = 6;
 			// 
