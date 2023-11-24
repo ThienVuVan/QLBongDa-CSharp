@@ -113,7 +113,7 @@ namespace DAL
 		}
         public static DataTable SortDoiByScore()
         {
-            string sql = $"select * from DOIBONG order by DIEM desc";
+            string sql = $"select * from DOIBONG order by SODIEM desc";
             return DatabaseAccess.ReadTable(sql);
         }
         public static DoiBong DoiBongHayNhat()

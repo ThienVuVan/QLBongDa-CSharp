@@ -77,9 +77,9 @@
             this.grbDoi.Controls.Add(this.lbTendoi);
             this.grbDoi.Controls.Add(this.picLogo);
             this.grbDoi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbDoi.Location = new System.Drawing.Point(48, 124);
+            this.grbDoi.Location = new System.Drawing.Point(47, 124);
             this.grbDoi.Name = "grbDoi";
-            this.grbDoi.Size = new System.Drawing.Size(201, 276);
+            this.grbDoi.Size = new System.Drawing.Size(222, 299);
             this.grbDoi.TabIndex = 5;
             this.grbDoi.TabStop = false;
             this.grbDoi.Text = "Đội bóng xuất sắc nhất";
@@ -87,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 227);
+            this.label3.Location = new System.Drawing.Point(6, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 19);
             this.label3.TabIndex = 3;
@@ -96,7 +96,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 186);
+            this.label2.Location = new System.Drawing.Point(6, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 19);
             this.label2.TabIndex = 2;
@@ -106,7 +106,7 @@
             // 
             this.lbDiem.AutoSize = true;
             this.lbDiem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDiem.Location = new System.Drawing.Point(114, 227);
+            this.lbDiem.Location = new System.Drawing.Point(88, 255);
             this.lbDiem.Name = "lbDiem";
             this.lbDiem.Size = new System.Drawing.Size(54, 19);
             this.lbDiem.TabIndex = 1;
@@ -116,7 +116,7 @@
             // 
             this.lbTendoi.AutoSize = true;
             this.lbTendoi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTendoi.Location = new System.Drawing.Point(114, 186);
+            this.lbTendoi.Location = new System.Drawing.Point(6, 215);
             this.lbTendoi.Name = "lbTendoi";
             this.lbTendoi.Size = new System.Drawing.Size(54, 19);
             this.lbTendoi.TabIndex = 1;
@@ -124,9 +124,10 @@
             // 
             // picLogo
             // 
-            this.picLogo.Location = new System.Drawing.Point(27, 35);
+            this.picLogo.Location = new System.Drawing.Point(40, 35);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(141, 122);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             // 
@@ -139,9 +140,9 @@
             this.grbCT.Controls.Add(this.picCT);
             this.grbCT.Controls.Add(this.lbTenCT);
             this.grbCT.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbCT.Location = new System.Drawing.Point(288, 124);
+            this.grbCT.Location = new System.Drawing.Point(304, 124);
             this.grbCT.Name = "grbCT";
-            this.grbCT.Size = new System.Drawing.Size(201, 276);
+            this.grbCT.Size = new System.Drawing.Size(222, 299);
             this.grbCT.TabIndex = 5;
             this.grbCT.TabStop = false;
             this.grbCT.Text = "Cầu thủ xuất sắc nhất";
@@ -149,7 +150,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 227);
+            this.label5.Location = new System.Drawing.Point(6, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 19);
             this.label5.TabIndex = 3;
@@ -158,7 +159,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 186);
+            this.label4.Location = new System.Drawing.Point(6, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 19);
             this.label4.TabIndex = 2;
@@ -168,7 +169,7 @@
             // 
             this.lbSobtCT.AutoSize = true;
             this.lbSobtCT.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSobtCT.Location = new System.Drawing.Point(135, 227);
+            this.lbSobtCT.Location = new System.Drawing.Point(135, 255);
             this.lbSobtCT.Name = "lbSobtCT";
             this.lbSobtCT.Size = new System.Drawing.Size(54, 19);
             this.lbSobtCT.TabIndex = 1;
@@ -176,7 +177,7 @@
             // 
             // picCT
             // 
-            this.picCT.Location = new System.Drawing.Point(32, 35);
+            this.picCT.Location = new System.Drawing.Point(42, 35);
             this.picCT.Name = "picCT";
             this.picCT.Size = new System.Drawing.Size(147, 122);
             this.picCT.TabIndex = 0;
@@ -186,7 +187,7 @@
             // 
             this.lbTenCT.AutoSize = true;
             this.lbTenCT.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenCT.Location = new System.Drawing.Point(135, 186);
+            this.lbTenCT.Location = new System.Drawing.Point(6, 215);
             this.lbTenCT.Name = "lbTenCT";
             this.lbTenCT.Size = new System.Drawing.Size(54, 19);
             this.lbTenCT.TabIndex = 1;
@@ -200,9 +201,9 @@
             this.grbTran.Controls.Add(this.lbTongBT);
             this.grbTran.Controls.Add(this.lbMaTran);
             this.grbTran.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbTran.Location = new System.Drawing.Point(520, 124);
+            this.grbTran.Location = new System.Drawing.Point(552, 124);
             this.grbTran.Name = "grbTran";
-            this.grbTran.Size = new System.Drawing.Size(201, 276);
+            this.grbTran.Size = new System.Drawing.Size(222, 299);
             this.grbTran.TabIndex = 5;
             this.grbTran.TabStop = false;
             this.grbTran.Text = "Trận đấu";
@@ -249,34 +250,37 @@
             // 
             this.btnDoi.BackColor = System.Drawing.Color.PowderBlue;
             this.btnDoi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoi.Location = new System.Drawing.Point(75, 75);
+            this.btnDoi.Location = new System.Drawing.Point(87, 75);
             this.btnDoi.Name = "btnDoi";
             this.btnDoi.Size = new System.Drawing.Size(141, 34);
             this.btnDoi.TabIndex = 6;
             this.btnDoi.Text = "BXH Đội bóng";
             this.btnDoi.UseVisualStyleBackColor = false;
+            this.btnDoi.Click += new System.EventHandler(this.btnDoi_Click);
             // 
             // btnCauthu
             // 
             this.btnCauthu.BackColor = System.Drawing.Color.PowderBlue;
             this.btnCauthu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCauthu.Location = new System.Drawing.Point(331, 75);
+            this.btnCauthu.Location = new System.Drawing.Point(355, 75);
             this.btnCauthu.Name = "btnCauthu";
             this.btnCauthu.Size = new System.Drawing.Size(109, 34);
             this.btnCauthu.TabIndex = 6;
             this.btnCauthu.Text = "BXH Cầu thủ";
             this.btnCauthu.UseVisualStyleBackColor = false;
+            this.btnCauthu.Click += new System.EventHandler(this.btnCauthu_Click);
             // 
             // btnTran
             // 
             this.btnTran.BackColor = System.Drawing.Color.PowderBlue;
             this.btnTran.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTran.Location = new System.Drawing.Point(552, 75);
+            this.btnTran.Location = new System.Drawing.Point(591, 75);
             this.btnTran.Name = "btnTran";
             this.btnTran.Size = new System.Drawing.Size(137, 34);
             this.btnTran.TabIndex = 6;
             this.btnTran.Text = "BXH Trận đấu";
             this.btnTran.UseVisualStyleBackColor = false;
+            this.btnTran.Click += new System.EventHandler(this.btnTran_Click);
             // 
             // Rank
             // 
@@ -294,6 +298,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Rank";
             this.Text = "Rank";
+            this.Load += new System.EventHandler(this.Rank_Load);
             this.grbDoi.ResumeLayout(false);
             this.grbDoi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
