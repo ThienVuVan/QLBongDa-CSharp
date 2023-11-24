@@ -73,6 +73,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _371357042_389339863420825_1783020590677549802_n {
+            get {
+                object obj = ResourceManager.GetObject("371357042_389339863420825_1783020590677549802_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap V_League_1_new_logo_svg {
             get {
                 object obj = ResourceManager.GetObject("V.League_1_new_logo.svg", resourceCulture);
