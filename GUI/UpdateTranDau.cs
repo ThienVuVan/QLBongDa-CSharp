@@ -34,7 +34,7 @@ namespace GUI
             txtVongDau.Text = tranDau.VongDau.ToString();
             txtMaNha.Text = tranDau.MaDoiNha.ToString();
             txtMaKhach.Text = tranDau.MaDoiKhach.ToString();
-            cbGhiChu.Text = tranDau.GhiChu;
+            //cbGhiChu.Text = tranDau.GhiChu;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace GUI
 			// cần validate
 			// nếu ấn nứt lưu là phải chọn GhiChu của trận đấu
 
-			if (cbGhiChu.Text == "2")
+			if (cbGhiChu.Text == "")
 			{
 				MessageBox.Show("Vui lòng cập nhật trạng thái trận đấu vào mục Ghi chú!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
