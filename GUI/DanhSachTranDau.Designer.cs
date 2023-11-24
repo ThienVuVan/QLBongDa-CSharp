@@ -41,10 +41,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnReset = new System.Windows.Forms.Button();
             this.btnFind = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.cbDoiNha = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             this.guna2GroupBox1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(9, 128);
-            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(821, 349);
@@ -96,14 +96,14 @@
             this.dgDanhSach.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgDanhSach.EnableHeadersVisualStyles = false;
             this.dgDanhSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgDanhSach.Location = new System.Drawing.Point(0, 32);
-            this.dgDanhSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgDanhSach.Location = new System.Drawing.Point(0, 41);
+            this.dgDanhSach.Margin = new System.Windows.Forms.Padding(2);
             this.dgDanhSach.Name = "dgDanhSach";
             this.dgDanhSach.RowHeadersVisible = false;
             this.dgDanhSach.RowHeadersWidth = 51;
             this.dgDanhSach.RowTemplate.Height = 24;
             this.dgDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgDanhSach.Size = new System.Drawing.Size(747, 315);
+            this.dgDanhSach.Size = new System.Drawing.Size(819, 306);
             this.dgDanhSach.TabIndex = 0;
             this.dgDanhSach.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgDanhSach.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -127,7 +127,6 @@
             this.dgDanhSach.ThemeStyle.RowsStyle.Height = 24;
             this.dgDanhSach.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgDanhSach.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgDanhSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDanhSach_CellContentClick);
             // 
             // btnFilter
             // 
@@ -141,7 +140,7 @@
             this.btnFilter.HoverState.Parent = this.btnFilter;
             this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
             this.btnFilter.Location = new System.Drawing.Point(674, 88);
-            this.btnFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(2);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.ShadowDecoration.Parent = this.btnFilter;
             this.btnFilter.Size = new System.Drawing.Size(52, 26);
@@ -163,7 +162,7 @@
             this.txtTheDo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTheDo.HoverState.Parent = this.txtTheDo;
             this.txtTheDo.Location = new System.Drawing.Point(604, 88);
-            this.txtTheDo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTheDo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTheDo.Name = "txtTheDo";
             this.txtTheDo.PasswordChar = '\0';
             this.txtTheDo.PlaceholderText = "";
@@ -171,6 +170,7 @@
             this.txtTheDo.ShadowDecoration.Parent = this.txtTheDo;
             this.txtTheDo.Size = new System.Drawing.Size(53, 26);
             this.txtTheDo.TabIndex = 12;
+            this.txtTheDo.TextChanged += new System.EventHandler(this.txtTheDo_TextChanged);
             // 
             // label3
             // 
@@ -197,7 +197,7 @@
             this.txtSoBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoBan.HoverState.Parent = this.txtSoBan;
             this.txtSoBan.Location = new System.Drawing.Point(434, 88);
-            this.txtSoBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoBan.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoBan.Name = "txtSoBan";
             this.txtSoBan.PasswordChar = '\0';
             this.txtSoBan.PlaceholderText = "";
@@ -205,6 +205,7 @@
             this.txtSoBan.ShadowDecoration.Parent = this.txtSoBan;
             this.txtSoBan.Size = new System.Drawing.Size(79, 26);
             this.txtSoBan.TabIndex = 13;
+            this.txtSoBan.TextChanged += new System.EventHandler(this.txtSoBan_TextChanged_1);
             // 
             // label5
             // 
@@ -234,22 +235,11 @@
             this.guna2Panel1.Controls.Add(this.btnUpdate);
             this.guna2Panel1.Controls.Add(this.btnAdd);
             this.guna2Panel1.Location = new System.Drawing.Point(1, 24);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(830, 54);
             this.guna2Panel1.TabIndex = 7;
-            // 
-            // btnReset
-            // 
-            this.btnReset.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(740, 86);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(82, 29);
-            this.btnReset.TabIndex = 9;
-            this.btnReset.Text = "Làm Mới";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click_1);
             // 
             // btnFind
             // 
@@ -262,7 +252,7 @@
             this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
             this.btnFind.ImageSize = new System.Drawing.Size(30, 30);
             this.btnFind.Location = new System.Drawing.Point(867, 18);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(2);
             this.btnFind.Name = "btnFind";
             this.btnFind.ShadowDecoration.Parent = this.btnFind;
             this.btnFind.Size = new System.Drawing.Size(24, 28);
@@ -282,7 +272,7 @@
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
             this.btnUpdate.Location = new System.Drawing.Point(186, 5);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
             this.btnUpdate.Size = new System.Drawing.Size(142, 42);
@@ -304,13 +294,24 @@
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
             this.btnAdd.Location = new System.Drawing.Point(20, 5);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(142, 42);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Đăng ký trận đấu";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(740, 86);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(82, 29);
+            this.btnReset.TabIndex = 9;
+            this.btnReset.Text = "Làm Mới";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click_1);
             // 
             // cbDoiNha
             // 
@@ -326,7 +327,7 @@
             this.cbDoiNha.ItemHeight = 30;
             this.cbDoiNha.ItemsAppearance.Parent = this.cbDoiNha;
             this.cbDoiNha.Location = new System.Drawing.Point(105, 84);
-            this.cbDoiNha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDoiNha.Margin = new System.Windows.Forms.Padding(2);
             this.cbDoiNha.Name = "cbDoiNha";
             this.cbDoiNha.ShadowDecoration.Parent = this.cbDoiNha;
             this.cbDoiNha.Size = new System.Drawing.Size(225, 36);
@@ -336,7 +337,7 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(632, 481);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 28);
             this.btnDelete.TabIndex = 16;
@@ -348,11 +349,11 @@
             // 
             this.btnCapNhat.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.Location = new System.Drawing.Point(717, 481);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(80, 28);
+            this.btnCapNhat.Size = new System.Drawing.Size(105, 28);
             this.btnCapNhat.TabIndex = 16;
-            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.Text = "Xem Chi Tiết";
             this.btnCapNhat.UseVisualStyleBackColor = true;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
@@ -360,7 +361,7 @@
             // 
             this.btnXuatFile.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuatFile.Location = new System.Drawing.Point(548, 481);
-            this.btnXuatFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXuatFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnXuatFile.Name = "btnXuatFile";
             this.btnXuatFile.Size = new System.Drawing.Size(80, 28);
             this.btnXuatFile.TabIndex = 17;
@@ -387,7 +388,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DanhSachTranDau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách trận đấu";

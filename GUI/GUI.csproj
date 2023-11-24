@@ -412,12 +412,22 @@
   <ItemGroup>
     <None Include="Resources\360_F_288682192_Mi7iUPqCtj8XJ0UDgeRw2IVgRW5rmG2z.jpg" />
     <Content Include="Resources\395976310_6668012846643044_8059022898882066628_n.png" />
+    <Content Include="Resources\Image Giai Bong\Logo\binh-duong-2021.png" />
+    <Content Include="Resources\Image Giai Bong\Logo\cong-an-ha-noi-fc.png" />
+    <Content Include="Resources\Image Giai Bong\Logo\HAGL.jpg" />
+    <Content Include="Resources\Image Giai Bong\Logo\haiphongfc-300x291.jpg" />
+    <Content Include="Resources\Image Giai Bong\Logo\HNFC-6-sao-300x300.png" />
+    <Content Include="Resources\Image Giai Bong\Logo\Logo-CLB-Dong-A-Thanh-Hoa_chuan-300x249.png" />
+    <Content Include="Resources\Image Giai Bong\Logo\V.League_1_new_logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Resources\IMGCauThu\BDFC_11_BuiViHao_VN0001113-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\BDFC_14_NguyenHaiHuy_VN001624-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\BDFC_16_NguyenTranVietCuong_VN0001116-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\BDFC_18_HaTrungHau_VN001625-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\BDFC_21_TranDinhKhuong_VN0001117-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\BDFC_22_NguyenTienLinh_VN001627-150x150.jpg" />
+    <Content Include="Resources\IMGCauThu\BDFC_28_NguyenVanDo_VN001632-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\BDFC_3_QueNgocHai_VN001612-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\BDFC_4_AlmeidaSantosJanclesio_BR001613-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\BDFC_7_RyanHa_FR001618-150x150.jpg" />
@@ -440,32 +450,29 @@
     <Content Include="Resources\IMGCauThu\HAGL_21_NguyenVanTrieu_VN0001163-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HAGL_24_NguyenDucViet_VN001697-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HAGL_25_TranTrungKien_VN0000782-150x150.jpg" />
-    <Content Include="Resources\IMGCauThu\HAGL_27_PhanDinhVuHai_VN001698-150x150.jpg" />
-    <Content Include="Resources\IMGCauThu\HAGL_28_NguyenKienQuyet_VN0000279-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HAGL_5_NguyenHuuAnhTai_VN001689-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HAGL_6_TranThanhson_VN001691-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HAGL_8_ChauNgocQuang_VN001695-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HAGL_9_DinhThanhBinh_VN0001155-150x150.jpg" />
+    <Content Include="Resources\IMGCauThu\HBFC_99_VuHongQuan_VN0002263-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HNFC_10_NguyenVanQuyet_VN0000485-150x150.jpg" />
-    <Content Include="Resources\IMGCauThu\HNFC_11_JevtovicMilan_RS001655-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HNFC_14_NguyenHaiLong_VN0000488-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HNFC_19_NguyenVanTruong_VN0001086-150x150.jpg" />
-    <Content Include="Resources\IMGCauThu\HNFC_1_BuiTanTruong_VN001642-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HNFC_21_VuDinhHai_VN0000710-1-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HNFC_26_DaoVanNam_VN0000220-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HNFC_27_VuTienLong_VN001660-150x150.jpg" />
-    <Content Include="Resources\IMGCauThu\HNFC_5_NguyenVanHoang_VN0001182-150x150.jpg" />
+    <Content Include="Resources\IMGCauThu\HNFC_4_wilson_Bradon_Jame-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HNFC_7_PhamXuanManh_VN001651-150x150.jpg" />
+    <Content Include="Resources\IMGCauThu\HNFC_88_DoHungDung_VN0000507-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HNFC_8_DauVanToan_VN0000483-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HNFC_9_PhamTuanHai_VN0000484-150x150.jpg" />
-    <Content Include="Resources\IMGCauThu\HNFC_VN0000703_DODUYMANH_28-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HPFC_11_HoMinhdi_VN0000740-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HPFC_2_NguyenAnhHung_VN0001249-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HPFC_4_BenjaminPatrickVanMeurs_AU001671-150x150.png" />
-    <Content Include="Resources\IMGCauThu\HPFC_5_DangVanToi_VN0000491-150x150 %281%29.png" />
     <Content Include="Resources\IMGCauThu\HPFC_5_DangVanToi_VN0000491-150x150.png" />
     <Content Include="Resources\IMGCauThu\HPFC_7_MpandeJosephMbolimbo_UG001676-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HPFC_8_Martinlo_VN0001251-150x150.png" />
+    <Content Include="Resources\IMGCauThu\HPFC_97_TrieuVietHung_VN0000287-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HPFC_VN0002241_NguyenVanDat_15-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HPFC_VN0002242_LeManhDung_19-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\HPFC_VN0002248_LuongXuanTruong_8-150x150.jpg" />
@@ -480,15 +487,6 @@
     <Content Include="Resources\IMGCauThu\THFC_VN0000635_TrinhVanLoi_15-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\THFC_VN0002244_NguyenSyNam_6-150x150.jpg" />
     <Content Include="Resources\IMGCauThu\THFC_VN0002251_LamTiPhong_17-150x150.jpg" />
-    <Content Include="Resources\Image Giai Bong\Logo\binh-duong-2021.png" />
-    <Content Include="Resources\Image Giai Bong\Logo\cong-an-ha-noi-fc.png" />
-    <Content Include="Resources\Image Giai Bong\Logo\HAGL.jpg" />
-    <Content Include="Resources\Image Giai Bong\Logo\haiphongfc-300x291.jpg" />
-    <Content Include="Resources\Image Giai Bong\Logo\HNFC-6-sao-300x300.png" />
-    <Content Include="Resources\Image Giai Bong\Logo\Logo-CLB-Dong-A-Thanh-Hoa_chuan-300x249.png" />
-    <Content Include="Resources\Image Giai Bong\Logo\V.League_1_new_logo.svg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\ImgMainForm\icons8-home-30.png" />
     <Content Include="Resources\ImgMainForm\icons8-person-30.png" />
     <Content Include="Resources\ImgMainForm\icons8-personuser-30.png" />
