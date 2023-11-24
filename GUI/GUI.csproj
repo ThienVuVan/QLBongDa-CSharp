@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\document\Ki 5\Guna\Guna\Guna\Guna\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
@@ -309,6 +309,12 @@
       <DependentUpon>playerList.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateTranDau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTranDau.Designer.cs">
+      <DependentUpon>UpdateTranDau.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CauThuDetail.resx">
       <DependentUpon>CauThuDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTranDau.resx">
+      <DependentUpon>UpdateTranDau.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

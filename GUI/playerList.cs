@@ -34,9 +34,8 @@ namespace GUI
 			{
 				MessageBox.Show("không tìm thấy cầu thủ nào !");
 			}
-            
-
-        }
+			gridCauThu.DataSource = CauThuService.Filter(cbTenCauThu.SelectedItem == null ? "" : cbTenCauThu.SelectedItem.ToString(), cbTenDoiBong.SelectedItem == null ? "" : cbTenDoiBong.SelectedItem.ToString(), txtSoBanThang.Text == "" ? 0 : int.Parse(txtSoBanThang.Text));
+		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
@@ -49,10 +48,10 @@ namespace GUI
 		{
 			cbTenCauThu.DataSource = CauThuService.GetAllName();
 			cbTenCauThu.SelectedIndex = -1;
-			
+
 			cbTenDoiBong.DataSource = DoiBongService.RetrieveAllNameDoiBong();
-            cbTenDoiBong.SelectedIndex = -1;
-            DataTable dt = CauThuService.RetrieveAllCauThu();
+			cbTenDoiBong.SelectedIndex = -1;
+			DataTable dt = CauThuService.RetrieveAllCauThu();
 			int numberCauThu = dt.Rows.Count;
 			lbSoLuong.Text = numberCauThu.ToString();
 			gridCauThu.DataSource = dt;
@@ -70,6 +69,7 @@ namespace GUI
 			gridCauThu.Columns["ANH"].HeaderText = "Anh";
 
 			LoadImagesToDataGridViewColumn();
+
 		}
         public void LoadImagesToDataGridViewColumn()
         {
@@ -90,16 +90,7 @@ namespace GUI
         private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 		}
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                string MaCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
-                CauThuService.DeleteCauThu(MaCauThu);
-                gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
-            }
-        }
+    
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
 			if (gridCauThu.SelectedRows.Count > 0)
@@ -174,12 +165,12 @@ namespace GUI
 			}
 		}
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
+		private void btnEdit_Click(object sender, EventArgs e)
+		{
 			string maCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
 			CauThuDetail detail = new CauThuDetail(maCauThu);
-            detail.ShowDialog();
-        }
+			detail.ShowDialog();
+		}
 
         private void txtSoBanThang_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -190,7 +181,7 @@ namespace GUI
 			}
         }
 
-        private void btnDelete_Click_1(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -199,29 +190,28 @@ namespace GUI
                 gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
             }
         }
-    
 
-		private void btnReset_Click(object sender, EventArgs e)
-		{
-			cbTenCauThu.Text = "";
-			txtSoBanThang.Text = "";
-			cbTenDoiBong.Text = "";
-			DataTable dt = CauThuService.RetrieveAllCauThu();
-			int numberCauThu = dt.Rows.Count;
-			lbSoLuong.Text = numberCauThu.ToString();
-			gridCauThu.DataSource = dt;
-			gridCauThu.Columns["MACAUTHU"].HeaderText = "Mã cầu thủ";
-			gridCauThu.Columns["MADOI"].HeaderText = "Mã đội bóng";
-			gridCauThu.Columns["MAQUOCTICH"].HeaderText = "Mã quốc tịch";
-			gridCauThu.Columns["TEN"].HeaderText = "Họ và tên";
-			gridCauThu.Columns["VITRICHOI"].HeaderText = "Vị trí";
-			gridCauThu.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
-			gridCauThu.Columns["SOAO"].HeaderText = "Số áo";
-			gridCauThu.Columns["SOBANTHANG"].HeaderText = "Số bàn thắng";
-			gridCauThu.Columns["SOTHEVANG"].HeaderText = "Thẻ vàng";
-			gridCauThu.Columns["SOTHEDO"].HeaderText = "Thẻ đỏ";
-			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
-			gridCauThu.Columns["ANH"].HeaderText = "Anh";
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cbTenCauThu.Text = "";
+            txtSoBanThang.Text = "";
+            cbTenDoiBong.Text = "";
+            DataTable dt = CauThuService.RetrieveAllCauThu();
+            int numberCauThu = dt.Rows.Count;
+            lbSoLuong.Text = numberCauThu.ToString();
+            gridCauThu.DataSource = dt;
+            //gridCauThu.Columns["MACAUTHU"].HeaderText = "Mã cầu thủ";
+            //gridCauThu.Columns["MADOI"].HeaderText = "Mã đội bóng";
+            //gridCauThu.Columns["MAQUOCTICH"].HeaderText = "Mã quốc tịch";
+            //gridCauThu.Columns["TEN"].HeaderText = "Họ và tên";
+            //gridCauThu.Columns["VITRICHOI"].HeaderText = "Vị trí";
+            //gridCauThu.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
+            //gridCauThu.Columns["SOAO"].HeaderText = "Số áo";
+            //gridCauThu.Columns["SOBANTHANG"].HeaderText = "Số bàn thắng";
+            //gridCauThu.Columns["SOTHEVANG"].HeaderText = "Thẻ vàng";
+            //gridCauThu.Columns["SOTHEDO"].HeaderText = "Thẻ đỏ";
+            //gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
+            //gridCauThu.Columns["ANH"].HeaderText = "Anh";
 
             //DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
             //imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;

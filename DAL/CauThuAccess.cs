@@ -126,6 +126,19 @@ namespace DAL
             }
             return list;
         }
+
+        public static List<string> GetAllIdByMaDoi(string MaDoi)
+        {
+            List<string> list = new List<string>();
+            string sql = $"select MaCauThu from dbo.CAUTHU where MaDoi = '{MaDoi}'";
+            DataTable dt = DatabaseAccess.ReadTable(sql);
+            foreach (DataRow row in dt.Rows)
+            {
+                string tenValue = row["MACAUTHU"].ToString();
+                list.Add(tenValue);
+            }
+            return list;
+        }
         public static DataTable GetMemBerOfListTeam(List<string> maDoi)
 		{
 			if (maDoi == null || maDoi.Count == 0)

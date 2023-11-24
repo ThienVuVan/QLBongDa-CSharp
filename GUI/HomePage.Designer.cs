@@ -174,6 +174,7 @@
 			this.Controls.Add(this.flowLayoutPanel1);
 			this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "HomePage";
 			this.Text = "HomePage";
 			this.flowLayoutPanel1.ResumeLayout(false);

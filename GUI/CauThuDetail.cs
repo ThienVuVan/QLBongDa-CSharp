@@ -91,7 +91,10 @@ namespace GUI
                     {
                         MessageBox.Show("Update không thành công");
                     }
-
+                }
+                else
+                {
+                    MessageBox.Show("Dữ liệu chưa đúng!");
                 }
             }
             else
