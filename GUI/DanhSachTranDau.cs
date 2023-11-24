@@ -39,7 +39,7 @@ namespace GUI
 				cbDoiNha.Items.Add(doi);
 			}
 
-            dgDanhSach.DataSource = TranDauService.RetrieveAllTranDau();
+			dgDanhSach.DataSource = TranDauService.RetrieveAllTranDau();
 			dgDanhSach.Columns["MATRANDAU"].HeaderText = "Mã trận đấu";
 			dgDanhSach.Columns["MADOINHA"].HeaderText = "Mã đội nhà";
 			dgDanhSach.Columns["MADOIKHACH"].HeaderText = "Mã đội khách";
@@ -134,63 +134,63 @@ namespace GUI
 
 		private void btnFilter_Click(object sender, EventArgs e)
 		{
-            int? soBanThang = null;
-            int? soTheDo = null;
-            string tenDoiNha = cbDoiNha.SelectedItem?.ToString(); // Kiểm tra giá trị null
+			int? soBanThang = null;
+			int? soTheDo = null;
+			string tenDoiNha = cbDoiNha.SelectedItem?.ToString(); // Kiểm tra giá trị null
 
-            // Kiểm tra và chuyển đổi dữ liệu từ TextBox sang kiểu int?
-            if (!string.IsNullOrWhiteSpace(txtSoBan.Text) && int.TryParse(txtSoBan.Text, out int banThang))
-            {
-                soBanThang = banThang;
-            }
+			// Kiểm tra và chuyển đổi dữ liệu từ TextBox sang kiểu int?
+			if (!string.IsNullOrWhiteSpace(txtSoBan.Text) && int.TryParse(txtSoBan.Text, out int banThang))
+			{
+				soBanThang = banThang;
+			}
 
-            if (!string.IsNullOrWhiteSpace(txtTheDo.Text) && int.TryParse(txtTheDo.Text, out int theDo))
-            {
-                soTheDo = theDo;
-            }
+			if (!string.IsNullOrWhiteSpace(txtTheDo.Text) && int.TryParse(txtTheDo.Text, out int theDo))
+			{
+				soTheDo = theDo;
+			}
 
-            DataTable filteredData = TranDauService.Filter(null, tenDoiNha, soBanThang, soTheDo);
+			DataTable filteredData = TranDauService.Filter(null, tenDoiNha, soBanThang, soTheDo);
 
-            if (filteredData.Rows.Count == 0)
-            {
-                dgDanhSach.DataSource = null;
-                MessageBox.Show("Không tìm thấy dữ liệu phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+			if (filteredData.Rows.Count == 0)
+			{
+				dgDanhSach.DataSource = null;
+				MessageBox.Show("Không tìm thấy dữ liệu phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
 
-            dgDanhSach.DataSource = filteredData;
-        }
-        
+			dgDanhSach.DataSource = filteredData;
+		}
+
 		private void btnUpdate_Click(object sender, EventArgs e)
 		{
 
 		}
-        private void btnCapNhat_Click(object sender, EventArgs e)
-        {
-            if (dgDanhSach.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Hãy chọn tran dau!");
-            }
-            DataGridViewRow selectedRow = dgDanhSach.SelectedRows[0];
-            string MaTranDau = selectedRow.Cells["MATRANDAU"].Value.ToString();
-            detailTranDau detailTran = new detailTranDau(MaTranDau);
+		private void btnCapNhat_Click(object sender, EventArgs e)
+		{
+			if (dgDanhSach.SelectedRows.Count == 0)
+			{
+				MessageBox.Show("Hãy chọn tran dau!");
+			}
+			DataGridViewRow selectedRow = dgDanhSach.SelectedRows[0];
+			string MaTranDau = selectedRow.Cells["MATRANDAU"].Value.ToString();
+			detailTranDau detailTran = new detailTranDau(MaTranDau);
 			detailTran.Show();
-        }
+		}
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (dgDanhSach.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Hãy chọn tran dau!");
-            }
-            DataGridViewRow selectedRow = dgDanhSach.SelectedRows[0];
-            string MaTranDau = selectedRow.Cells["MATRANDAU"].Value.ToString();
-			if(MessageBox.Show("Xác Nhận Xóa Trận Đấu", "Xác Nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+		private void btnDelete_Click(object sender, EventArgs e)
+		{
+			if (dgDanhSach.SelectedRows.Count == 0)
+			{
+				MessageBox.Show("Hãy chọn tran dau!");
+			}
+			DataGridViewRow selectedRow = dgDanhSach.SelectedRows[0];
+			string MaTranDau = selectedRow.Cells["MATRANDAU"].Value.ToString();
+			if (MessageBox.Show("Xác Nhận Xóa Trận Đấu", "Xác Nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
 			{
 				TranDauService.DeleteTranDau(MaTranDau);
 				Reset();
 			}
-        }
+		}
 
 		private void Reset()
 		{
@@ -229,7 +229,7 @@ namespace GUI
 			else
 			{
 				MessageBox.Show("Vui lòng nhập số nguyên.");
-				
+
 				txtSoBan.Text = ""; // Xóa giá trị không hợp lệ
 			}
 		}

@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachDoiBong));
 			this.dgvDoiBong = new Guna.UI2.WinForms.Guna2DataGridView();
 			this.button1 = new System.Windows.Forms.Button();
@@ -59,30 +59,30 @@
 			// 
 			// dgvDoiBong
 			// 
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-			this.dgvDoiBong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+			this.dgvDoiBong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
 			this.dgvDoiBong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvDoiBong.BackgroundColor = System.Drawing.Color.White;
 			this.dgvDoiBong.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvDoiBong.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.dgvDoiBong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvDoiBong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvDoiBong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
 			this.dgvDoiBong.ColumnHeadersHeight = 52;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvDoiBong.DefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle9.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvDoiBong.DefaultCellStyle = dataGridViewCellStyle9;
 			this.dgvDoiBong.EnableHeadersVisualStyles = false;
 			this.dgvDoiBong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.dgvDoiBong.Location = new System.Drawing.Point(0, 39);
@@ -142,7 +142,6 @@
 			// 
 			// guna2Panel1
 			// 
-			this.guna2Panel1.Controls.Add(this.btnReset);
 			this.guna2Panel1.Controls.Add(this.btnFind);
 			this.guna2Panel1.Controls.Add(this.btnAdd);
 			this.guna2Panel1.Controls.Add(this.txtTIm);
@@ -151,13 +150,13 @@
 			this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.guna2Panel1.Name = "guna2Panel1";
 			this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-			this.guna2Panel1.Size = new System.Drawing.Size(1000, 65);
+			this.guna2Panel1.Size = new System.Drawing.Size(1094, 65);
 			this.guna2Panel1.TabIndex = 6;
 			// 
 			// btnReset
 			// 
 			this.btnReset.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnReset.Location = new System.Drawing.Point(851, 15);
+			this.btnReset.Location = new System.Drawing.Point(958, 4);
 			this.btnReset.Margin = new System.Windows.Forms.Padding(4);
 			this.btnReset.Name = "btnReset";
 			this.btnReset.Size = new System.Drawing.Size(133, 41);
@@ -240,6 +239,7 @@
 			// 
 			// guna2Panel2
 			// 
+			this.guna2Panel2.Controls.Add(this.btnReset);
 			this.guna2Panel2.Controls.Add(this.cbTenDoiBong);
 			this.guna2Panel2.Controls.Add(this.txtDiem);
 			this.guna2Panel2.Controls.Add(this.label2);
@@ -249,7 +249,7 @@
 			this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.guna2Panel2.Name = "guna2Panel2";
 			this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-			this.guna2Panel2.Size = new System.Drawing.Size(1000, 53);
+			this.guna2Panel2.Size = new System.Drawing.Size(1095, 53);
 			this.guna2Panel2.TabIndex = 7;
 			// 
 			// cbTenDoiBong
@@ -328,7 +328,7 @@
 			this.guna2Button2.HoverState.Parent = this.guna2Button2;
 			this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
 			this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
-			this.guna2Button2.Location = new System.Drawing.Point(851, 4);
+			this.guna2Button2.Location = new System.Drawing.Point(836, 4);
 			this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.guna2Button2.Name = "guna2Button2";
 			this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
@@ -346,7 +346,7 @@
 			this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.guna2GroupBox1.Name = "guna2GroupBox1";
 			this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-			this.guna2GroupBox1.Size = new System.Drawing.Size(1000, 394);
+			this.guna2GroupBox1.Size = new System.Drawing.Size(1095, 394);
 			this.guna2GroupBox1.TabIndex = 8;
 			this.guna2GroupBox1.Text = "Danh sách đội bóng ";
 			// 
@@ -378,7 +378,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1027, 652);
+			this.ClientSize = new System.Drawing.Size(1119, 635);
 			this.Controls.Add(this.btnViewDetail);
 			this.Controls.Add(this.btnXuatFile);
 			this.Controls.Add(this.guna2GroupBox1);
@@ -387,8 +387,10 @@
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "DanhSachDoiBong";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "DanhSachDoiBong";
 			this.Load += new System.EventHandler(this.DanhSachDoiBong_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvDoiBong)).EndInit();
