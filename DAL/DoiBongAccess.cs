@@ -3,7 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
+using System.Net;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -108,6 +111,22 @@ namespace DAL
 				$"({Diem} = -1 or b.SODIEM = {Diem})";
 			return DatabaseAccess.ReadTable(sql);
 		}
-
+        public static DataTable SortDoiByScore()
+        {
+            string sql = $"select * from DOIBONG order by DIEM desc";
+            return DatabaseAccess.ReadTable(sql);
+        }
+        public static DoiBong DoiBongHayNhat()
+        {
+            string sql = "select top(1) * from DOIBONG order by SODIEM desc";
+            DataTable res = DatabaseAccess.ReadTable(sql);
+            if(res.Rows.Count > 0)
+            {
+                DataRow row = res.Rows[0];
+                DoiBong doiBong = ConvertDataRowToDoiBong(row);
+                return doiBong;
+            }
+            return null;
+        }
 	}
 }
