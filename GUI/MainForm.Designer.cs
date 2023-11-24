@@ -199,7 +199,7 @@
             this.slidebar.MaximumSize = new System.Drawing.Size(175, 0);
             this.slidebar.MinimumSize = new System.Drawing.Size(56, 0);
             this.slidebar.Name = "slidebar";
-            this.slidebar.Size = new System.Drawing.Size(175, 487);
+            this.slidebar.Size = new System.Drawing.Size(175, 516);
             this.slidebar.TabIndex = 0;
             // 
             // panel10
@@ -224,9 +224,10 @@
             this.button8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(213, 57);
             this.button8.TabIndex = 1;
-            this.button8.Text = "          Giải đấu";
+            this.button8.Text = "          Xếp Hạng";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panelform
             // 
@@ -234,17 +235,19 @@
             this.panelform.Location = new System.Drawing.Point(175, 0);
             this.panelform.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelform.Name = "panelform";
-            this.panelform.Size = new System.Drawing.Size(738, 487);
+            this.panelform.Size = new System.Drawing.Size(839, 516);
             this.panelform.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 487);
+            this.ClientSize = new System.Drawing.Size(1014, 516);
             this.Controls.Add(this.panelform);
             this.Controls.Add(this.slidebar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Test_Load);

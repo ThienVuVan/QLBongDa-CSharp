@@ -301,6 +301,18 @@
       <DependentUpon>Excel3.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Rank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rank.Designer.cs">
+      <DependentUpon>Rank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RankDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RankDetail.Designer.cs">
+      <DependentUpon>RankDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="teamDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,6 +384,12 @@
     <EmbeddedResource Include="ReportForm\BaoCao1.resx">
       <DependentUpon>BaoCao1.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="UpdateTranDau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTranDau.Designer.cs">
+      <DependentUpon>UpdateTranDau.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CauThuDetail.resx">
       <DependentUpon>CauThuDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -399,6 +417,12 @@
     <EmbeddedResource Include="ReportForm\Report3.rdlc" />
     <EmbeddedResource Include="ReportForm\Report2.rdlc" />
     <EmbeddedResource Include="ReportForm\Report1.rdlc" />
+    <EmbeddedResource Include="Rank.resx">
+      <DependentUpon>Rank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RankDetail.resx">
+      <DependentUpon>RankDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="teamDetail.resx">
       <DependentUpon>teamDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -445,6 +469,9 @@
     <None Include="Lttq_QuanLyGiaiBongDataSet.xss">
       <DependentUpon>Lttq_QuanLyGiaiBongDataSet.xsd</DependentUpon>
     </None>
+    <EmbeddedResource Include="UpdateTranDau.resx">
+      <DependentUpon>UpdateTranDau.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

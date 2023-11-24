@@ -39,45 +39,59 @@ namespace GUI
 
         }
 
-        private void btnLamLai_Click(object sender, EventArgs e)
-        {
-            TranDau tranDau = TranDauService.GetTranDauById(MaTranDau);
-            txtLuotDau.Text = tranDau.LuotDau.ToString();
-            txtVongDau.Text = tranDau.VongDau.ToString();
-            txtBanThangNha.Text = tranDau.SoBanThangDoiNha.ToString();
-            txtBanThangKhach.Text = tranDau.SoBanThangDoiKhach.ToString();
-            txtDoNha.Text = tranDau.SoTheDoDoiNha.ToString();
-            txtKhach.Text = tranDau.SoTheDoDoiKhach.ToString();
-            txtVangNha.Text = tranDau.SoTheVangDoiNha.ToString();
-            txtVangKhach.Text = tranDau.SotheVangDoiKhach.ToString();
-            txtMaNha.Text = tranDau.MaDoiNha.ToString();
-            txtMaKhach.Text = tranDau.MaDoiKhach.ToString();
-            cbGhiChu.Text = tranDau.GhiChu;
-        }
+		private void txtLuotDau_TextChanged(object sender, EventArgs e)
+		{
+            txtLuotDau.ReadOnly = true;
+		}
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            TranDau update = new TranDau();
-            update.MaTranDau = tranDau.MaTranDau;
-            update.LuotDau = txtLuotDau.Text.Trim();
-            update.VongDau = txtVongDau.Text.Trim();
-            update.MaDoiNha = tranDau.MaDoiNha;
-            update.MaDoiKhach = tranDau.MaDoiKhach;
-            update.SoBanThangDoiNha = int.Parse(txtBanThangNha.Text.Trim());
-            update.SoBanThangDoiKhach = int.Parse(txtBanThangKhach.Text.Trim());
-            update.SoTheVangDoiNha = int.Parse(txtVangNha.Text.Trim());
-            update.SotheVangDoiKhach = int.Parse(txtVangKhach.Text.Trim());
-            update.SoTheDoDoiNha = int.Parse(txtDoNha.Text.Trim());
-            update.SoTheDoDoiKhach = int.Parse(txtKhach.Text.Trim());
-            update.GhiChu = cbGhiChu.SelectedItem.ToString();
-            if(update.GhiChu == "Finished")
-            {
-                if(MessageBox.Show("Xác nhận kết thúc trận đấu","xác nhận",MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {
-                    TranDauService.UpdateTranDau(update);
-                    MessageBox.Show("update Success");
-                }
-            }
-        }
-    }
+		private void txtVongDau_TextChanged(object sender, EventArgs e)
+		{
+            txtVongDau.ReadOnly = true;
+		}
+
+		private void txtMaNha_TextChanged(object sender, EventArgs e)
+		{
+            txtMaNha.ReadOnly = true;
+		}
+
+		private void txtMaKhach_TextChanged(object sender, EventArgs e)
+		{
+            txtMaKhach.ReadOnly = true;
+		}
+
+		private void txtBanThangNha_TextChanged(object sender, EventArgs e)
+		{
+			txtBanThangNha.ReadOnly = true;
+		}
+
+		private void txtBanThangKhach_TextChanged(object sender, EventArgs e)
+		{
+			txtBanThangKhach.ReadOnly = true;
+		}
+
+		private void txtVangNha_TextChanged(object sender, EventArgs e)
+		{
+			txtVangNha.ReadOnly=true;
+		}
+
+		private void txtVangKhach_TextChanged(object sender, EventArgs e)
+		{
+			txtVangKhach.ReadOnly=true;
+		}
+
+		private void txtDoNha_TextChanged(object sender, EventArgs e)
+		{
+			txtDoNha.ReadOnly=true;
+		}
+
+		private void txtKhach_TextChanged(object sender, EventArgs e)
+		{
+			txtKhach.ReadOnly=true;
+		}
+
+		private void cbGhiChu_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			
+		}
+	}
 }

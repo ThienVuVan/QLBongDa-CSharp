@@ -24,9 +24,10 @@ namespace BLL
             return TranDauAccess.Filter(MaTranDau, TenDoiNha, SoBanThangDoiNha, SoTheDoDoiNha);
         }
 
-        public static void UpdateTranDau(TranDau tranDau)
+        public static void UpdateTranDau(TranDau tranDau, string MaCtNha, string MaCtKhach, bool ThangNha,
+           bool VangNha, bool DoNha, bool ThangKhach, bool VangKhach, bool DoKhach)
         {
-            TranDauAccess.UpdateTranDau(tranDau);
+            TranDauAccess.UpdateTranDau(tranDau, MaCtNha, MaCtKhach, ThangNha, VangNha, DoNha, ThangKhach, VangKhach, DoKhach);
         }
 
         public static TranDau GetTranDauById(string MaTranDau)
@@ -37,6 +38,14 @@ namespace BLL
         public static void DeleteTranDau(string MaTranDau)
         {
             TranDauAccess.DeleteTranDau(MaTranDau);
+        }
+        public static DataTable SortTranDauBySoBanThang()
+        {
+            return TranDauAccess.SortByTrauDauHayNhat();
+        }
+        public static TranDau TranDauHayNhat()
+        {
+            return TranDauAccess.TranDauHayNhat();
         }
     }
 }
