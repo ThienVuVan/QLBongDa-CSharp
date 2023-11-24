@@ -49,58 +49,74 @@ namespace DAL
             return DatabaseAccess.ReadTable(sql);
         }
 
-        public static void UpdateTranDau(TranDau tranDau)
+
+        public static void UpdateTranDau(TranDau tranDau, string MaCtNha, string MaCtKhach, bool ThangNha,
+           bool VangNha, bool DoNha, bool ThangKhach, bool VangKhach, bool DoKhach)
         {
+            if (ThangNha)
+            {
+                string sql = $"insert into dbo.TRANDAU_BANTHANG (MACAUTHU, MATRANDAU) values('{MaCtNha}','{tranDau.MaTranDau}')";
+                DatabaseAccess.Excute(sql);
+            }
+            if (VangNha)
+            {
+                string sql = $"insert into dbo.TRANDAU_THE (MACAUTHU, MATRANDAU, LOAITHE) values('{MaCtNha}','{tranDau.MaTranDau}', 'Vang')";
+                DatabaseAccess.Excute(sql);
+            }
+            if (DoNha)
+            {
+                string sql = $"insert into dbo.TRANDAU_BANTHANG (MACAUTHU, MATRANDAU, LOAITHE) values('{MaCtNha}','{tranDau.MaTranDau}', 'Do')";
+                DatabaseAccess.Excute(sql);
+            }
+            if (ThangKhach)
+            {
+                string sql = $"insert into dbo.TRANDAU_BANTHANG (MACAUTHU, MATRANDAU) values('{MaCtKhach}','{tranDau.MaTranDau}')";
+                DatabaseAccess.Excute(sql);
+            }
+            if (VangKhach)
+            {
+                string sql = $"insert into dbo.TRANDAU_BANTHANG (MACAUTHU, MATRANDAU, LOAITHE) values('{MaCtKhach}','{tranDau.MaTranDau}', 'Vang')";
+                DatabaseAccess.Excute(sql);
+            }
+            if (DoKhach)
+            {
+                string sql = $"insert into dbo.TRANDAU_BANTHANG (MACAUTHU, MATRANDAU, LOAITHE) values('{MaCtKhach}','{tranDau.MaTranDau}', 'Do')";
+                DatabaseAccess.Excute(sql);
+            }
             if (tranDau.GhiChu == "Finished")
             {
-                string sql = $"update dbo.TRANDAU set " +
-                $"SoBanThangDoiNha = {tranDau.SoBanThangDoiNha}, " +
-                $"SoBanThangDoiKhach = {tranDau.SoBanThangDoiKhach}, " +
-                $"SoTheVangDoiNha = {tranDau.SoTheVangDoiNha}, " +
-                $"SotheVangDoiKhach = {tranDau.SotheVangDoiKhach}, " +
-                $"SoTheDoDoiNha = {tranDau.SoTheDoDoiNha}, " +
-                $"SoTheDoDoiKhach = {tranDau.SoTheDoDoiKhach}, " +
-                $"GhiChu = N'{tranDau.GhiChu}' " +
-                $"where MaTranDau = '{tranDau.MaTranDau}'";
-                DatabaseAccess.Excute(sql);
-
+                TranDau tranDau1 = TranDauAccess.GetTranDauById(tranDau.MaTranDau);
                 int DiemDoiNha = (int)DatabaseAccess.ExecuteScalar($"select SoDiem from dbo.DOIBONG where MaDoi = '{tranDau.MaDoiNha}'");
                 int DiemDoiKhach = (int)DatabaseAccess.ExecuteScalar($"select SODIEM from dbo.DOIBONG where MaDoi = '{tranDau.MaDoiKhach}'");
-                
-                if (tranDau.SoBanThangDoiNha > tranDau.SoBanThangDoiKhach)
+
+                if (tranDau1.SoBanThangDoiNha > tranDau1.SoBanThangDoiKhach)
                 {
                     DiemDoiNha += 3;
-                    string updateNha = $"update dbo.DOIBONG set SoDiem = {DiemDoiNha} where MaDoi = '{tranDau.MaDoiNha}'";
+                    string updateNha = $"update dbo.DOIBONG set SoDiem = {DiemDoiNha} where MaDoi = '{tranDau1.MaDoiNha}'";
                     DatabaseAccess.Excute(updateNha);
 
                 }
-                else if (tranDau.SoBanThangDoiNha < tranDau.SoBanThangDoiKhach)
+                else if (tranDau1.SoBanThangDoiNha < tranDau1.SoBanThangDoiKhach)
                 {
                     DiemDoiKhach += 3;
-                    string updateKhach = $"update dbo.DOIBONG set SoDiem = {DiemDoiKhach} where MaDoi = '{tranDau.MaDoiKhach}'";
+                    string updateKhach = $"update dbo.DOIBONG set SoDiem = {DiemDoiKhach} where MaDoi = '{tranDau1.MaDoiKhach}'";
                     DatabaseAccess.Excute(updateKhach);
                 }
                 else
                 {
                     DiemDoiNha += 1;
                     DiemDoiKhach += 1;
-                    string updateNha = $"update dbo.DOIBONG set SoDiem = {DiemDoiNha} where MaDoi = '{tranDau.MaDoiNha}'";
-                    string updateKhach = $"update dbo.DOIBONG set SoDiem = {DiemDoiKhach} where MaDoi = '{tranDau.MaDoiKhach}'";
+                    string updateNha = $"update dbo.DOIBONG set SoDiem = {DiemDoiNha} where MaDoi = '{tranDau1.MaDoiNha}'";
+                    string updateKhach = $"update dbo.DOIBONG set SoDiem = {DiemDoiKhach} where MaDoi = '{tranDau1.MaDoiKhach}'";
                     DatabaseAccess.Excute(updateNha);
                     DatabaseAccess.Excute(updateKhach);
                 }
+                string sql = $"update dbo.TranDau set GhiChu = N'{tranDau.GhiChu}'";
+                DatabaseAccess.Excute(sql);
             }
             else
             {
-                string sql = $"update dbo.TRANDAU set " +
-                $"SoBanThangDoiNha = {tranDau.SoBanThangDoiNha}, " +
-                $"SoBanThangDoiKhach = {tranDau.SoBanThangDoiKhach}, " +
-                $"SoTheVangDoiNha = {tranDau.SoTheVangDoiNha}, " +
-                $"SotheVangDoiKhach = {tranDau.SotheVangDoiKhach}, " +
-                $"SoTheDoDoiNha = {tranDau.SoTheDoDoiNha}, " +
-                $"SoTheDoDoiKhach = {tranDau.SoTheDoDoiKhach}, " +
-                $"GhiChu = N'{tranDau.GhiChu}' " +
-                $"where MaTranDau = '{tranDau.MaTranDau}'";
+                string sql = $"update dbo.TranDau set GhiChu = N'{tranDau.GhiChu}'";
                 DatabaseAccess.Excute(sql);
             }
         }

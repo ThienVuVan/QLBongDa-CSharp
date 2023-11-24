@@ -233,5 +233,17 @@ namespace GUI
 				txtSoBan.Text = ""; // Xóa giá trị không hợp lệ
 			}
 		}
-	}
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            if (dgDanhSach.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Hãy chọn tran dau!");
+            }
+            DataGridViewRow selectedRow = dgDanhSach.SelectedRows[0];
+            string MaTranDau = selectedRow.Cells["MATRANDAU"].Value.ToString();
+            UpdateTranDau updateTran = new UpdateTranDau(MaTranDau);
+            updateTran.Show();
+        }
+    }
 }

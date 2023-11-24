@@ -52,8 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnLamLai = new System.Windows.Forms.Button();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +61,7 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(660, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(662, 0);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
@@ -313,38 +311,12 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Lượt đấu:";
             // 
-            // btnLuu
-            // 
-            this.btnLuu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(396, 367);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(69, 28);
-            this.btnLuu.TabIndex = 3;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnLamLai
-            // 
-            this.btnLamLai.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamLai.Location = new System.Drawing.Point(496, 367);
-            this.btnLamLai.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLamLai.Name = "btnLamLai";
-            this.btnLamLai.Size = new System.Drawing.Size(88, 25);
-            this.btnLamLai.TabIndex = 4;
-            this.btnLamLai.Text = "Làm mới";
-            this.btnLamLai.UseVisualStyleBackColor = true;
-            this.btnLamLai.Click += new System.EventHandler(this.btnLamLai_Click);
-            // 
             // detailTranDau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(688, 438);
-            this.Controls.Add(this.btnLamLai);
-            this.Controls.Add(this.btnLuu);
+            this.ClientSize = new System.Drawing.Size(688, 421);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -380,8 +352,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button btnLuu;
-		private System.Windows.Forms.Button btnLamLai;
         private System.Windows.Forms.TextBox txtMaNha;
         private System.Windows.Forms.Label lb;
         private System.Windows.Forms.ComboBox cbGhiChu;
