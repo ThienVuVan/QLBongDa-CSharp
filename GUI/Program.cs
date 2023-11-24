@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.ReportForm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DanhSachTranDau());
+            Application.Run(new MainForm());
         }
     }
 }

@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
     {
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachTranDau));
 			this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
 			this.dgDanhSach = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -70,30 +70,30 @@
 			// 
 			// dgDanhSach
 			// 
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-			this.dgDanhSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+			this.dgDanhSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgDanhSach.BackgroundColor = System.Drawing.Color.White;
 			this.dgDanhSach.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgDanhSach.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.dgDanhSach.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgDanhSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgDanhSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgDanhSach.ColumnHeadersHeight = 55;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgDanhSach.DefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgDanhSach.DefaultCellStyle = dataGridViewCellStyle3;
 			this.dgDanhSach.EnableHeadersVisualStyles = false;
 			this.dgDanhSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.dgDanhSach.Location = new System.Drawing.Point(0, 39);
@@ -163,7 +163,7 @@
 			this.txtTheDo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
 			this.txtTheDo.HoverState.Parent = this.txtTheDo;
 			this.txtTheDo.Location = new System.Drawing.Point(836, 108);
-			this.txtTheDo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.txtTheDo.Margin = new System.Windows.Forms.Padding(5);
 			this.txtTheDo.Name = "txtTheDo";
 			this.txtTheDo.PasswordChar = '\0';
 			this.txtTheDo.PlaceholderText = "";
@@ -196,7 +196,7 @@
 			this.txtSoBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
 			this.txtSoBan.HoverState.Parent = this.txtSoBan;
 			this.txtSoBan.Location = new System.Drawing.Point(592, 108);
-			this.txtSoBan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.txtSoBan.Margin = new System.Windows.Forms.Padding(5);
 			this.txtSoBan.Name = "txtSoBan";
 			this.txtSoBan.PasswordChar = '\0';
 			this.txtSoBan.PlaceholderText = "";
@@ -243,7 +243,7 @@
 			// 
 			this.btnReset.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnReset.Location = new System.Drawing.Point(864, 17);
-			this.btnReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnReset.Margin = new System.Windows.Forms.Padding(4);
 			this.btnReset.Name = "btnReset";
 			this.btnReset.Size = new System.Drawing.Size(129, 41);
 			this.btnReset.TabIndex = 9;
@@ -364,7 +364,7 @@
 			this.btnXuatFile.Name = "btnXuatFile";
 			this.btnXuatFile.Size = new System.Drawing.Size(107, 34);
 			this.btnXuatFile.TabIndex = 17;
-			this.btnXuatFile.Text = "Xuất File";
+			this.btnXuatFile.Text = "Thống kê";
 			this.btnXuatFile.UseVisualStyleBackColor = true;
 			this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
 			// 
