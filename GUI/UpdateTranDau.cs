@@ -39,10 +39,34 @@ namespace GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            // cần validate
-            // nếu ấn nứt lưu là phải chọn GhiChu của trận đấu
-            // nếu chọn radiobutton thì phải chọn Mã Cầu thủ.
-            if (MessageBox.Show("Xác nhận Cập Nhật", "xác nhận", MessageBoxButtons.OKCancel) != DialogResult.OK)
+			// cần validate
+			// nếu ấn nứt lưu là phải chọn GhiChu của trận đấu
+
+			if (cbGhiChu.Text == "2")
+			{
+				MessageBox.Show("Vui lòng cập nhật trạng thái trận đấu vào mục Ghi chú!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			// nếu chọn radiobutton thì phải chọn Mã Cầu thủ.
+            //Doi nha
+			if ((rThangNha.Checked || rVangNha.Checked || rDoNha.Checked))
+			{
+				if (string.IsNullOrEmpty(cbMaCTNha.SelectedItem?.ToString()))
+				{
+					MessageBox.Show("Vui lòng chọn Mã Cầu thủ cho đội nhà.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+			}
+            //Doi khach
+			if ((rThangKhach.Checked || rDoKhach.Checked || rVangKhach.Checked))
+			{
+				if (string.IsNullOrEmpty(cbMaCTKhach.SelectedItem?.ToString()))
+				{
+					MessageBox.Show("Vui lòng chọn Mã Cầu thủ cho đội khách.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+			}
+			if (MessageBox.Show("Xác nhận Cập Nhật", "xác nhận", MessageBoxButtons.OKCancel) != DialogResult.OK)
             {
                 return;
             }
@@ -61,6 +85,39 @@ namespace GUI
             VangKhach = rVangKhach.Checked;
             DoKhach = rDoKhach.Checked;
             TranDauService.UpdateTranDau(update, MaCtNha, MaCtKhach, ThangNha, VangNha, DoNha, ThangKhach, VangKhach, DoKhach);
-        }
-    }
+
+			MessageBox.Show("Cập nhật thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+		}
+
+		private void cbGhiChu_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void rThangNha_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txtLuotDau_TextChanged(object sender, EventArgs e)
+		{
+            txtLuotDau.ReadOnly = true;
+		}
+
+		private void txtVongDau_TextChanged(object sender, EventArgs e)
+		{
+            txtVongDau.ReadOnly = true;
+		}
+
+		private void txtMaNha_TextChanged(object sender, EventArgs e)
+		{
+            txtMaNha.ReadOnly = true;
+		}
+
+		private void txtMaKhach_TextChanged(object sender, EventArgs e)
+		{
+            txtMaKhach.ReadOnly = true;
+		}
+	}
 }

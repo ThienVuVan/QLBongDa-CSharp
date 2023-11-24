@@ -64,7 +64,7 @@
 			this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
 			this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
 			this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-			this.guna2ControlBox1.Location = new System.Drawing.Point(881, 0);
+			this.guna2ControlBox1.Location = new System.Drawing.Point(882, 0);
 			this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.guna2ControlBox1.Name = "guna2ControlBox1";
 			this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
@@ -108,18 +108,20 @@
 			// txtMaKhach
 			// 
 			this.txtMaKhach.Location = new System.Drawing.Point(695, 149);
-			this.txtMaKhach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtMaKhach.Margin = new System.Windows.Forms.Padding(4);
 			this.txtMaKhach.Name = "txtMaKhach";
 			this.txtMaKhach.Size = new System.Drawing.Size(132, 28);
 			this.txtMaKhach.TabIndex = 27;
+			this.txtMaKhach.TextChanged += new System.EventHandler(this.txtMaKhach_TextChanged);
 			// 
 			// txtMaNha
 			// 
 			this.txtMaNha.Location = new System.Drawing.Point(221, 159);
-			this.txtMaNha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtMaNha.Margin = new System.Windows.Forms.Padding(4);
 			this.txtMaNha.Name = "txtMaNha";
 			this.txtMaNha.Size = new System.Drawing.Size(132, 28);
 			this.txtMaNha.TabIndex = 26;
+			this.txtMaNha.TextChanged += new System.EventHandler(this.txtMaNha_TextChanged);
 			// 
 			// lb
 			// 
@@ -139,10 +141,11 @@
             "Finished",
             "Not yet"});
 			this.cbGhiChu.Location = new System.Drawing.Point(413, 354);
-			this.cbGhiChu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cbGhiChu.Margin = new System.Windows.Forms.Padding(4);
 			this.cbGhiChu.Name = "cbGhiChu";
 			this.cbGhiChu.Size = new System.Drawing.Size(160, 29);
 			this.cbGhiChu.TabIndex = 24;
+			this.cbGhiChu.SelectedIndexChanged += new System.EventHandler(this.cbGhiChu_SelectedIndexChanged);
 			// 
 			// txtDoNha
 			// 
@@ -151,6 +154,7 @@
 			this.txtDoNha.Name = "txtDoNha";
 			this.txtDoNha.Size = new System.Drawing.Size(100, 28);
 			this.txtDoNha.TabIndex = 20;
+			this.txtDoNha.TextChanged += new System.EventHandler(this.txtDoNha_TextChanged);
 			// 
 			// txtVangNha
 			// 
@@ -159,6 +163,7 @@
 			this.txtVangNha.Name = "txtVangNha";
 			this.txtVangNha.Size = new System.Drawing.Size(100, 28);
 			this.txtVangNha.TabIndex = 19;
+			this.txtVangNha.TextChanged += new System.EventHandler(this.txtVangNha_TextChanged);
 			// 
 			// txtKhach
 			// 
@@ -167,6 +172,7 @@
 			this.txtKhach.Name = "txtKhach";
 			this.txtKhach.Size = new System.Drawing.Size(100, 28);
 			this.txtKhach.TabIndex = 18;
+			this.txtKhach.TextChanged += new System.EventHandler(this.txtKhach_TextChanged);
 			// 
 			// txtVangKhach
 			// 
@@ -175,6 +181,7 @@
 			this.txtVangKhach.Name = "txtVangKhach";
 			this.txtVangKhach.Size = new System.Drawing.Size(100, 28);
 			this.txtVangKhach.TabIndex = 17;
+			this.txtVangKhach.TextChanged += new System.EventHandler(this.txtVangKhach_TextChanged);
 			// 
 			// txtBanThangKhach
 			// 
@@ -183,6 +190,7 @@
 			this.txtBanThangKhach.Name = "txtBanThangKhach";
 			this.txtBanThangKhach.Size = new System.Drawing.Size(100, 28);
 			this.txtBanThangKhach.TabIndex = 16;
+			this.txtBanThangKhach.TextChanged += new System.EventHandler(this.txtBanThangKhach_TextChanged);
 			// 
 			// txtBanThangNha
 			// 
@@ -191,6 +199,7 @@
 			this.txtBanThangNha.Name = "txtBanThangNha";
 			this.txtBanThangNha.Size = new System.Drawing.Size(100, 28);
 			this.txtBanThangNha.TabIndex = 15;
+			this.txtBanThangNha.TextChanged += new System.EventHandler(this.txtBanThangNha_TextChanged);
 			// 
 			// txtVongDau
 			// 
@@ -199,6 +208,7 @@
 			this.txtVongDau.Name = "txtVongDau";
 			this.txtVongDau.Size = new System.Drawing.Size(100, 28);
 			this.txtVongDau.TabIndex = 21;
+			this.txtVongDau.TextChanged += new System.EventHandler(this.txtVongDau_TextChanged);
 			// 
 			// txtLuotDau
 			// 
@@ -207,6 +217,7 @@
 			this.txtLuotDau.Name = "txtLuotDau";
 			this.txtLuotDau.Size = new System.Drawing.Size(100, 28);
 			this.txtLuotDau.TabIndex = 14;
+			this.txtLuotDau.TextChanged += new System.EventHandler(this.txtLuotDau_TextChanged);
 			// 
 			// label10
 			// 
