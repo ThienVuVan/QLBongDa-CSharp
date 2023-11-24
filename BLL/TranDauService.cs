@@ -47,4 +47,5 @@ namespace BLL
         {
             return TranDauAccess.TranDauHayNhat();
         }
+    }
 }

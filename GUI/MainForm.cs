@@ -115,10 +115,16 @@ namespace GUI
 			this.Refresh();
 		}
 
-		// để hiển thị form bên trong panel của MainForm dùng OpenForm
-		// Hiển thị nổi Form.Show()
+        private void button8_Click(object sender, EventArgs e)
+        {
+            OpenForm<Rank>();
+            this.Refresh();
+        }
+
+        // để hiển thị form bên trong panel của MainForm dùng OpenForm
+        // Hiển thị nổi Form.Show()
 
 
 
-	}
+    }
 }
