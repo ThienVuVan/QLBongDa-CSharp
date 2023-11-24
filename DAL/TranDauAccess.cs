@@ -6,6 +6,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DTO;
+using Microsoft.SqlServer.Server;
+
 namespace DAL
 {
     public class TranDauAccess
@@ -150,5 +152,25 @@ namespace DAL
                 );
             return tranDau;
         }
+        //sap xep theo so ban thang doi nha trong 1 tran dau
+        public static DataTable SortByTrauDauHayNhat()
+        {
+            string sql = "select * from TRANDAU order by SOBANTHANGDOINHA + SOBANTHANGDOIKHACH desc";
+            return DatabaseAccess.ReadTable(sql);
+        }
+        public static TranDau TranDauHayNhat()
+        {
+            string sql = "select top(1) * from TRANDAU order by SOBANTHANGDOINHA + SOBANTHANGDOIKHACH desc"; 
+            DataTable res = DatabaseAccess.ReadTable(sql);
+            if (res.Rows.Count > 0)
+            {
+                DataRow row = res.Rows[0];
+                TranDau doiBong = ConvertDataRowToTranDau(row);
+                return doiBong;
+            }
+
+            return null;
+        }
+        
     }
 }

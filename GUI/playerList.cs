@@ -45,7 +45,7 @@ namespace GUI
 
 		}
 
-		private void playerList_Load(object sender, EventArgs e)
+		public void playerList_Load(object sender, EventArgs e)
 		{
 			cbTenCauThu.DataSource = CauThuService.GetAllName();
 			cbTenCauThu.SelectedIndex = -1;
@@ -69,22 +69,25 @@ namespace GUI
 			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
 			gridCauThu.Columns["ANH"].HeaderText = "Anh";
 
-   //         DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
-   //         imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
-		
-
-   //         foreach (DataGridViewRow row in gridCauThu.Rows)
-			//{
-			//	if (row.Cells["ANH"].Value != null)
-			//	{
-			//		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
-			//		Image image = Image.FromFile(path);
-   //                 row.Cells["ANHCAUTHU"].Value = image;
-   //             }
-			//}
+			LoadImagesToDataGridViewColumn();
 		}
+        public void LoadImagesToDataGridViewColumn()
+        {
+            DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
+            imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
 
-		private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            foreach (DataGridViewRow row in gridCauThu.Rows)
+            {
+                if (row.Cells["ANH"].Value != null)
+                {
+                    string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
+                    Image image = Image.FromFile(path);
+                    row.Cells["ANHCAUTHU"].Value = image;
+                }
+            }
+        }
+
+        private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 		}
 

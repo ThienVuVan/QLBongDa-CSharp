@@ -11,8 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DTO;
-using GUI.Properties;
-using Guna.UI2.WinForms.Suite;
 
 namespace GUI
 {

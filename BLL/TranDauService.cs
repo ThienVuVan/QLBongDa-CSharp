@@ -38,5 +38,12 @@ namespace BLL
         {
             TranDauAccess.DeleteTranDau(MaTranDau);
         }
-    }
+        public static DataTable SortTranDauBySoBanThang()
+        {
+            return TranDauAccess.SortByTrauDauHayNhat();
+        }
+        public static TranDau TranDauHayNhat()
+        {
+            return TranDauAccess.TranDauHayNhat();
+        }
 }

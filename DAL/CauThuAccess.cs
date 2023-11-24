@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Net;
@@ -140,5 +141,22 @@ namespace DAL
 
 			return DatabaseAccess.ReadTable(sql);
 		}
+        public static DataTable SortCauThuByGoal()
+        {
+            string sql = $"select * from CAUTHU order by SOBANTHANG desc";
+            return DatabaseAccess.ReadTable(sql);
+        }
+        public static CauThu CauThuHayNhat()
+        {
+            string sql = "select top(1) * from CAUTHU order by SOBANTHANG desc";
+            DataTable res = DatabaseAccess.ReadTable(sql);
+            if (res.Rows.Count > 0)
+            {
+                DataRow row = res.Rows[0];
+                CauThu cauThu = ConvertDataRowToCauThu(row);
+                return cauThu;
+            }
+            return null;
+        }
 	}
 }
