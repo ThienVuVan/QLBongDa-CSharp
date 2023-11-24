@@ -54,6 +54,11 @@ namespace BLL
         {
             CauThuAccess.UpdateCauThu(cauThu);
         }
-	}
+
+        public static List<string> GetAllIdByMaDoi(string MaDoi)
+        {
+            return CauThuAccess.GetAllIdByMaDoi(MaDoi);
+        }
+    }
 
 }

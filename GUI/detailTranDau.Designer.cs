@@ -376,8 +376,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button btnLuu;
-		private System.Windows.Forms.Button btnLamLai;
         private System.Windows.Forms.TextBox txtMaNha;
         private System.Windows.Forms.Label lb;
         private System.Windows.Forms.ComboBox cbGhiChu;

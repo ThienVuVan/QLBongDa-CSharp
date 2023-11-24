@@ -417,5 +417,6 @@
 		private System.Windows.Forms.Button btnXuatFile;
 		private System.Windows.Forms.SaveFileDialog dlgSave;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }
