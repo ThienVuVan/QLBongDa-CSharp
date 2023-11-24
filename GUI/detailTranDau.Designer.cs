@@ -318,7 +318,6 @@
 			this.btnLuu.TabIndex = 3;
 			this.btnLuu.Text = "Lưu";
 			this.btnLuu.UseVisualStyleBackColor = true;
-			this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
 			// 
 			// btnLamLai
 			// 
@@ -330,7 +329,6 @@
 			this.btnLamLai.TabIndex = 4;
 			this.btnLamLai.Text = "Làm mới";
 			this.btnLamLai.UseVisualStyleBackColor = true;
-			this.btnLamLai.Click += new System.EventHandler(this.btnLamLai_Click);
 			// 
 			// detailTranDau
 			// 
@@ -380,5 +378,7 @@
         private System.Windows.Forms.Label lb;
         private System.Windows.Forms.ComboBox cbGhiChu;
         private System.Windows.Forms.TextBox txtMaKhach;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnLamLai;
     }
 }
