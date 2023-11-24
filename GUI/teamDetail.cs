@@ -29,6 +29,7 @@ namespace GUI
             txtMaTinh.Text = doiBong.MaTinh;
             txtHLV.Text = doiBong.HLV;
             txtSoCauThu.Text = doiBong.SoLuongCauThu.ToString();
+            txtSoCauThu.Enabled = false;
 
             DataTable listCauThu = CauThuService.GetMemBerOfTeam(MaDoi);
             guna2DataGridView1.DataSource = listCauThu;
@@ -36,6 +37,11 @@ namespace GUI
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
+            if(txtTenDoi.Text == ""||txtMaTinh.Text == ""||txtHLV.Text == "")
+            {
+                MessageBox.Show("Hãy nhập đủ dữ liệu","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             DoiBong update = new DoiBong();
 
             update.MaDoi = MaDoi;
