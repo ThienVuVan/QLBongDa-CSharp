@@ -53,7 +53,7 @@ namespace GUI
 
 		private void btnFinish_Click(object sender, EventArgs e)
 		{
-			if (txtTenDoi.Text == "" || txtMaTinh.Text == "" || txtHLV.Text == "" || txtSoCauThu.Text == "")
+			if (txtTenDoi.Text == "" || txtMaTinh.Text == "" || txtHLV.Text == "")
 			{
 				MessageBox.Show("Hãy nhập đủ dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); return;
 			}
@@ -80,13 +80,13 @@ namespace GUI
 			doiBong.MaTinh = txtMaTinh.Text;
 			doiBong.MaDoi = chuoiThoiGian;
 			doiBong.HLV = txtHLV.Text;
-			doiBong.SoLuongCauThu = int.Parse(txtSoCauThu.Text);
+			doiBong.SoLuongCauThu = 0;
 			doiBong.LoGo = openImg.FileName.Trim().Split('\\').Last();
 			doiBong.SoBanThang = 0;
 			doiBong.SoBanThua = 0;
 			doiBong.SoDiem = 0;
-			doiBong.MaSan = "not updated";
-
+			doiBong.MaSan = "S01";
+			DoiBongService.SaveDoiBong(doiBong);
 			try
 			{
 				// Đường dẫn thư mục mà bạn muốn lưu ảnh vào
@@ -120,7 +120,7 @@ namespace GUI
 
 		private void txtTenDoi_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+			if (char.IsDigit(e.KeyChar))
 			{
 				// Huỷ bỏ sự kiện KeyPress
 				e.Handled = true;
@@ -129,7 +129,16 @@ namespace GUI
 
 		private void txtHLV_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+			if (char.IsDigit(e.KeyChar))
+			{
+				// Huỷ bỏ sự kiện KeyPress
+				e.Handled = true;
+			}
+		}
+
+		private void txtMaTinh_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (char.IsDigit(e.KeyChar))
 			{
 				// Huỷ bỏ sự kiện KeyPress
 				e.Handled = true;

@@ -127,7 +127,8 @@ namespace GUI
 		{
 			if (e.KeyChar == (char)Keys.Enter)
 			{
-				btnDangNhap.PerformClick(); 
+				// Thực hiện hành động khi nhấn Enter ở đây
+				btnDangNhap.PerformClick(); // Gọi sự kiện click của nút đăng nhập
 			}
 		}
 
@@ -135,7 +136,8 @@ namespace GUI
 		{
 			if (e.KeyChar == (char)Keys.Enter)
 			{
-				btnDangNhap.PerformClick();
+				// Thực hiện hành động khi nhấn Enter ở đây
+				btnDangNhap.PerformClick(); // Gọi sự kiện click của nút đăng nhập
 			}
 		}
 	}

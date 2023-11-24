@@ -227,6 +227,7 @@
 			// 
 			// guna2Panel1
 			// 
+			this.guna2Panel1.Controls.Add(this.btnReset);
 			this.guna2Panel1.Controls.Add(this.btnFind);
 			this.guna2Panel1.Controls.Add(this.btnUpdate);
 			this.guna2Panel1.Controls.Add(this.btnAdd);
