@@ -24,8 +24,17 @@ namespace GUI
 
 		private void btnFilter_Click(object sender, EventArgs e)
 		{
-
-			gridCauThu.DataSource = CauThuService.Filter(cbTenCauThu.SelectedItem ==  null ? "": cbTenCauThu.SelectedItem.ToString(), cbTenDoiBong.SelectedItem == null ? "" : cbTenDoiBong.SelectedItem.ToString(),txtSoBanThang.Text == "" ? 0 : int.Parse(txtSoBanThang.Text));
+			DataTable dt = CauThuService.Filter(cbTenCauThu.SelectedItem == null ? "" : cbTenCauThu.SelectedItem.ToString(), cbTenDoiBong.SelectedItem == null ? "" : cbTenDoiBong.SelectedItem.ToString(), txtSoBanThang.Text == "" ? 0 : int.Parse(txtSoBanThang.Text));
+			
+            if (dt.Rows.Count > 0)
+			{
+                gridCauThu.DataSource = dt;
+			}
+			else
+			{
+				MessageBox.Show("không tìm thấy cầu thủ nào !");
+			}
+			gridCauThu.DataSource = CauThuService.Filter(cbTenCauThu.SelectedItem == null ? "" : cbTenCauThu.SelectedItem.ToString(), cbTenDoiBong.SelectedItem == null ? "" : cbTenDoiBong.SelectedItem.ToString(), txtSoBanThang.Text == "" ? 0 : int.Parse(txtSoBanThang.Text));
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
@@ -35,14 +44,14 @@ namespace GUI
 
 		}
 
-		private void playerList_Load(object sender, EventArgs e)
+		public void playerList_Load(object sender, EventArgs e)
 		{
 			cbTenCauThu.DataSource = CauThuService.GetAllName();
 			cbTenCauThu.SelectedIndex = -1;
-			
+
 			cbTenDoiBong.DataSource = DoiBongService.RetrieveAllNameDoiBong();
-            cbTenDoiBong.SelectedIndex = -1;
-            DataTable dt = CauThuService.RetrieveAllCauThu();
+			cbTenDoiBong.SelectedIndex = -1;
+			DataTable dt = CauThuService.RetrieveAllCauThu();
 			int numberCauThu = dt.Rows.Count;
 			lbSoLuong.Text = numberCauThu.ToString();
 			gridCauThu.DataSource = dt;
@@ -59,35 +68,29 @@ namespace GUI
 			gridCauThu.Columns["SOLANRASAN"].HeaderText = "Ra sân";
 			gridCauThu.Columns["ANH"].HeaderText = "Anh";
 
-   //         DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
-   //         imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
-		
+			LoadImagesToDataGridViewColumn();
 
-   //         foreach (DataGridViewRow row in gridCauThu.Rows)
-			//{
-			//	if (row.Cells["ANH"].Value != null)
-			//	{
-			//		string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
-			//		Image image = Image.FromFile(path);
-   //                 row.Cells["ANHCAUTHU"].Value = image;
-   //             }
-			//}
 		}
-
-		private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
-        private void btnDelete_Click(object sender, EventArgs e)
+        public void LoadImagesToDataGridViewColumn()
         {
-            if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)gridCauThu.Columns["ANHCAUTHU"];
+            imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+            foreach (DataGridViewRow row in gridCauThu.Rows)
             {
-                string MaCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
-                CauThuService.DeleteCauThu(MaCauThu);
-                gridCauThu.Rows.Remove(gridCauThu.SelectedRows[0]);
+                if (row.Cells["ANH"].Value != null)
+                {
+                    string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
+                    Image image = Image.FromFile(path);
+                    row.Cells["ANHCAUTHU"].Value = image;
+                }
             }
         }
 
+        private void gridCauThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+		}
+    
 		private void btnTop3_Click(object sender, EventArgs e)
 		{
 			if (gridCauThu.SelectedRows.Count > 0)
@@ -150,7 +153,7 @@ namespace GUI
 					dlgSave.FilterIndex = 1;
 					dlgSave.AddExtension = true;
 					dlgSave.DefaultExt = ".xls";
-					if (dlgSave.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+					if (dlgSave.ShowDialog() == DialogResult.OK)
 						exBook.SaveAs(dlgSave.FileName.ToString());//Lưu file Excel
 					MessageBox.Show("Xuất file thành công", "Thông báo");
 					exApp.Quit();//Thoát khỏi ứng dụng
@@ -162,15 +165,23 @@ namespace GUI
 			}
 		}
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
+		private void btnEdit_Click(object sender, EventArgs e)
+		{
 			string maCauThu = gridCauThu.SelectedRows[0].Cells["MACAUTHU"].Value.ToString();
 			CauThuDetail detail = new CauThuDetail(maCauThu);
 			detail.ShowDialog();
+		}
+
+        private void txtSoBanThang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+			if (!char.IsDigit(e.KeyChar))
+			{
+				MessageBox.Show("Chỉ được nhập số");
+				e.Handled = true;
+			}
         }
 
-
-        private void btnDelete_Click_1(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa cầu thủ này không?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {

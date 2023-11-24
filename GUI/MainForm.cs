@@ -23,6 +23,7 @@ namespace GUI
         private void Test_Load(object sender, EventArgs e)
         {
 			OpenForm<HomePage>();
+			
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -71,7 +72,11 @@ namespace GUI
 				panelform.Tag = form;
 				form.Show();
 				form.BringToFront();
-			}
+                if (form is playerList)
+                {
+                    ((playerList)form).LoadImagesToDataGridViewColumn();
+                }
+            }
 			else
 			{
 				// Nếu form đã tồn tại, tạo một instance mới của MyForm
@@ -89,21 +94,25 @@ namespace GUI
 		private void button4_Click(object sender, EventArgs e)
 		{
             OpenForm<playerList>();
-		}
+			this.Refresh();
+        }
 
 		private void button5_Click(object sender, EventArgs e)
 		{
 			OpenForm<DanhSachDoiBong>();
+			this.Refresh();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
 			OpenForm<DanhSachTranDau>();
+			this.Refresh();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
 			OpenForm<HomePage>();
+			this.Refresh();
 		}
 
 		// để hiển thị form bên trong panel của MainForm dùng OpenForm

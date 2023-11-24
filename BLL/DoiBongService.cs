@@ -46,5 +46,13 @@ namespace BLL
 		{
 			return DoiBongAccess.Filter(TenDoi, Diem);
 		}
+        public static DataTable SortDoiByScore()
+        {
+            return DoiBongAccess.SortDoiByScore();
+        }
+        public static DoiBong DoiBongHayNhat()
+        {
+            return DoiBongAccess.DoiBongHayNhat();
+        }
 	}
 }

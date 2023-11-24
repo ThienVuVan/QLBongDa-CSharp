@@ -164,5 +164,83 @@ namespace GUI
 			btnThemMoi.Enabled = false;
 			btnXoaTranDau.Enabled=false;
 		}
+
+		private void txtVongDau_TextChanged(object sender, EventArgs e)
+		{
+			if (string.IsNullOrWhiteSpace(txtVongDau.Text))
+			{
+				MessageBox.Show("Vui lòng nhập giá trị.");
+				return;
+			}
+			// Kiểm tra nếu có kí tự đặc biệt
+			if (System.Text.RegularExpressions.Regex.IsMatch(txtVongDau.Text, "[^a-zA-Z0-9]"))
+			{
+				MessageBox.Show("Vui lòng chỉ nhập chữ và số.");
+				txtVongDau.Text = ""; // Xóa kí tự đặc biệt
+			}
+
+			// Kiểm tra giới hạn chiều dài
+			if (txtVongDau.Text.Length > 50)
+			{
+				MessageBox.Show("Vui lòng nhập không quá 50 kí tự.");
+				txtVongDau.Text = txtVongDau.Text.Substring(0, 50); 
+			}
+		}
+
+		private void txtLuotDau_TextChanged(object sender, EventArgs e)
+		{
+			if(string.IsNullOrWhiteSpace(txtLuotDau.Text))
+			{
+				MessageBox.Show("Vui lòng nhập giá trị.");
+				return;
+			}
+			// Kiểm tra nếu có kí tự đặc biệt
+			if (System.Text.RegularExpressions.Regex.IsMatch(txtVongDau.Text, "[^a-zA-Z0-9]"))
+			{
+				MessageBox.Show("Vui lòng chỉ nhập chữ và số.");
+				txtVongDau.Text = ""; // Xóa kí tự đặc biệt
+			}
+
+			// Kiểm tra giới hạn chiều dài
+			if (txtVongDau.Text.Length > 50)
+			{
+				MessageBox.Show("Vui lòng nhập không quá 50 kí tự.");
+				txtVongDau.Text = txtVongDau.Text.Substring(0, 50); // Giới hạn chiều dài
+			}
+		}
+
+		private void cbNha_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (cbNha.SelectedIndex == -1)
+			{
+				MessageBox.Show("Vui lòng chọn một giá trị từ ComboBox.");
+				return;
+			}
+
+			// Kiểm tra xem giá trị được chọn trong cbNha có giống với giá trị được chọn trong cbKhach hay không
+			if (cbNha.SelectedItem.ToString() == cbKhach.SelectedItem.ToString())
+			{
+				MessageBox.Show("Đội nhà và đội khách phải khác nhau.");
+				
+				cbKhach.SelectedIndex = -1; 
+			}
+		}
+
+		private void cbKhach_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (cbKhach.SelectedIndex == -1)
+			{
+				MessageBox.Show("Vui lòng chọn một giá trị từ ComboBox.");
+				return;
+			}
+
+			// Kiểm tra xem giá trị được chọn trong cbKhach có giống với giá trị được chọn trong cbNha hay không
+			if (cbKhach.SelectedItem.ToString() == cbNha.SelectedItem.ToString())
+			{
+				MessageBox.Show("Đội nhà và đội khách phải khác nhau.");
+
+				cbNha.SelectedIndex = -1; // Chọn một giá trị mặc định hoặc không chọn gì cả
+			}
+		}
 	}
 }
