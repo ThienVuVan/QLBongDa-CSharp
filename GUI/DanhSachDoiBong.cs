@@ -216,7 +216,6 @@ namespace GUI
         private void btnReset_Click(object sender, EventArgs e)
         {
 			dgvDoiBong.DataSource = DoiBongService.GetAllDoiBong();
-			txtTIm.Text = "";
 			txtDiem.Text = "";
 			cbTenDoiBong.SelectedIndex = -1;
 
