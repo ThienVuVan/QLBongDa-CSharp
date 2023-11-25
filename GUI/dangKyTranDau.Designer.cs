@@ -45,8 +45,6 @@
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvDangKy = new System.Windows.Forms.DataGridView();
             this.btnThemMoi = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoaTranDau = new System.Windows.Forms.Button();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -56,8 +54,8 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(388, 213);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Location = new System.Drawing.Point(328, 213);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(106, 27);
             this.btnThem.TabIndex = 4;
@@ -70,6 +68,7 @@
             this.guna2GroupBox1.Controls.Add(this.cbStatus);
             this.guna2GroupBox1.Controls.Add(this.txtLuotDau);
             this.guna2GroupBox1.Controls.Add(this.txtVongDau);
+            this.guna2GroupBox1.Controls.Add(this.btnThemMoi);
             this.guna2GroupBox1.Controls.Add(this.cbNha);
             this.guna2GroupBox1.Controls.Add(this.btnHuy);
             this.guna2GroupBox1.Controls.Add(this.btnThem);
@@ -82,7 +81,7 @@
             this.guna2GroupBox1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(10, 25);
-            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(749, 257);
@@ -107,7 +106,7 @@
             "Not yet"});
             this.cbStatus.ItemsAppearance.Parent = this.cbStatus;
             this.cbStatus.Location = new System.Drawing.Point(328, 144);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.ShadowDecoration.Parent = this.cbStatus;
             this.cbStatus.Size = new System.Drawing.Size(106, 36);
@@ -116,7 +115,7 @@
             // txtLuotDau
             // 
             this.txtLuotDau.Location = new System.Drawing.Point(336, 73);
-            this.txtLuotDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLuotDau.Margin = new System.Windows.Forms.Padding(2);
             this.txtLuotDau.Name = "txtLuotDau";
             this.txtLuotDau.Size = new System.Drawing.Size(76, 24);
             this.txtLuotDau.TabIndex = 2;
@@ -125,7 +124,7 @@
             // txtVongDau
             // 
             this.txtVongDau.Location = new System.Drawing.Point(336, 46);
-            this.txtVongDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVongDau.Margin = new System.Windows.Forms.Padding(2);
             this.txtVongDau.Name = "txtVongDau";
             this.txtVongDau.Size = new System.Drawing.Size(76, 24);
             this.txtVongDau.TabIndex = 2;
@@ -135,7 +134,7 @@
             // 
             this.cbNha.FormattingEnabled = true;
             this.cbNha.Location = new System.Drawing.Point(142, 104);
-            this.cbNha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbNha.Margin = new System.Windows.Forms.Padding(2);
             this.cbNha.Name = "cbNha";
             this.cbNha.Size = new System.Drawing.Size(238, 25);
             this.cbNha.TabIndex = 1;
@@ -143,8 +142,8 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(506, 213);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHuy.Location = new System.Drawing.Point(452, 213);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(106, 27);
             this.btnHuy.TabIndex = 4;
@@ -156,7 +155,7 @@
             // 
             this.cbKhach.FormattingEnabled = true;
             this.cbKhach.Location = new System.Drawing.Point(471, 105);
-            this.cbKhach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbKhach.Margin = new System.Windows.Forms.Padding(2);
             this.cbKhach.Name = "cbKhach";
             this.cbKhach.Size = new System.Drawing.Size(243, 25);
             this.cbKhach.TabIndex = 1;
@@ -178,12 +177,12 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(264, 156);
+            this.label5.Location = new System.Drawing.Point(248, 147);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 17);
+            this.label5.Size = new System.Drawing.Size(76, 17);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Ghi chú:";
+            this.label5.Text = "Trạng Thái:";
             // 
             // label3
             // 
@@ -227,10 +226,10 @@
             this.guna2GroupBox2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox2.Location = new System.Drawing.Point(10, 287);
-            this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(748, 176);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(748, 232);
             this.guna2GroupBox2.TabIndex = 7;
             this.guna2GroupBox2.Text = "Kết quả đăng ký trận đấu:";
             // 
@@ -238,49 +237,26 @@
             // 
             this.dgvDangKy.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDangKy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDangKy.Location = new System.Drawing.Point(11, 45);
-            this.dgvDangKy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDangKy.Location = new System.Drawing.Point(1, 41);
+            this.dgvDangKy.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDangKy.Name = "dgvDangKy";
             this.dgvDangKy.RowHeadersWidth = 51;
             this.dgvDangKy.RowTemplate.Height = 24;
-            this.dgvDangKy.Size = new System.Drawing.Size(724, 122);
+            this.dgvDangKy.Size = new System.Drawing.Size(745, 189);
             this.dgvDangKy.TabIndex = 0;
             this.dgvDangKy.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDangKy_CellContentClick);
             // 
             // btnThemMoi
             // 
             this.btnThemMoi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMoi.Location = new System.Drawing.Point(283, 468);
-            this.btnThemMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemMoi.Location = new System.Drawing.Point(197, 213);
+            this.btnThemMoi.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(106, 27);
             this.btnThemMoi.TabIndex = 4;
             this.btnThemMoi.Text = "Thêm trận đấu";
             this.btnThemMoi.UseVisualStyleBackColor = true;
             this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(398, 468);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(106, 27);
-            this.btnSua.TabIndex = 4;
-            this.btnSua.Text = "Sửa trận đấu";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoaTranDau
-            // 
-            this.btnXoaTranDau.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaTranDau.Location = new System.Drawing.Point(515, 468);
-            this.btnXoaTranDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnXoaTranDau.Name = "btnXoaTranDau";
-            this.btnXoaTranDau.Size = new System.Drawing.Size(106, 27);
-            this.btnXoaTranDau.TabIndex = 4;
-            this.btnXoaTranDau.Text = "Xóa trận đấu";
-            this.btnXoaTranDau.UseVisualStyleBackColor = true;
             // 
             // guna2ControlBox1
             // 
@@ -289,7 +265,7 @@
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(735, -3);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
@@ -303,12 +279,9 @@
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);
-            this.Controls.Add(this.btnXoaTranDau);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThemMoi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "dangKyTranDau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký trận đấu";
@@ -337,8 +310,6 @@
 		private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
 		private System.Windows.Forms.DataGridView dgvDangKy;
 		private System.Windows.Forms.Button btnThemMoi;
-		private System.Windows.Forms.Button btnSua;
-		private System.Windows.Forms.Button btnXoaTranDau;
 		private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }

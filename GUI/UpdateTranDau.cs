@@ -75,8 +75,10 @@ namespace GUI
             update.MaDoiNha = tranDau.MaDoiNha;
             update.MaDoiKhach = tranDau.MaDoiKhach;
             update.GhiChu = cbGhiChu.SelectedItem.ToString();
-            string MaCtNha = cbMaCTNha.SelectedItem.ToString();
-            string MaCtKhach = cbMaCTKhach.SelectedItem.ToString();
+            string MaCtNha = "";
+            string MaCtKhach = "";
+            if (cbMaCTNha.Text != "") MaCtNha = cbMaCTNha.SelectedItem.ToString();
+            if(cbMaCTKhach.Text != "") MaCtKhach = cbMaCTKhach.SelectedItem.ToString();
             bool ThangNha, VangNha, DoNha, ThangKhach, VangKhach, DoKhach;
             ThangNha = rThangNha.Checked;
             VangNha = rVangNha.Checked;
@@ -87,16 +89,6 @@ namespace GUI
             TranDauService.UpdateTranDau(update, MaCtNha, MaCtKhach, ThangNha, VangNha, DoNha, ThangKhach, VangKhach, DoKhach);
 
 			MessageBox.Show("Cập nhật thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-		}
-
-		private void cbGhiChu_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void rThangNha_CheckedChanged(object sender, EventArgs e)
-		{
 
 		}
 
@@ -119,5 +111,25 @@ namespace GUI
 		{
             txtMaKhach.ReadOnly = true;
 		}
-	}
+
+        private void btnLamLai_Click(object sender, EventArgs e)
+        {
+            List<string> MaNha = CauThuService.GetAllIdByMaDoi(tranDau.MaDoiNha);
+            List<string> MaKhach = CauThuService.GetAllIdByMaDoi(tranDau.MaDoiKhach);
+            foreach (string MaCT in MaNha) cbMaCTNha.Items.Add(MaCT);
+            foreach (string MaCT in MaKhach) cbMaCTKhach.Items.Add(MaCT);
+            txtLuotDau.Text = tranDau.LuotDau.ToString();
+            txtVongDau.Text = tranDau.VongDau.ToString();
+            txtMaNha.Text = tranDau.MaDoiNha.ToString();
+            txtMaKhach.Text = tranDau.MaDoiKhach.ToString();
+            rThangNha.Checked = false;
+            rVangNha.Checked = false;
+            rDoNha.Checked = false;
+            rThangKhach.Checked = false;
+            rVangKhach.Checked = false;
+            rDoKhach.Checked = false;
+            cbMaCTNha.Text = "";
+            cbMaCTKhach.Text = "";
+        }
+    }
 }

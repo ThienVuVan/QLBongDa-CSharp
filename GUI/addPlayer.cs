@@ -120,16 +120,11 @@ namespace GUI
 
 		private void btnImg_Click(object sender, EventArgs e)
 		{
-			// open file dialog   
-			
-			// image filters  
 			openImg.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
 			if (openImg.ShowDialog() == DialogResult.OK)
 			{
 				// display image in picture box  
 				picBox.Image = new Bitmap(openImg.FileName);
-
-				
 			}
 		}
 

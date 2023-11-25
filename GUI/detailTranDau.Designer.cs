@@ -62,8 +62,8 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(663, 0);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(644, 4);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
@@ -96,12 +96,12 @@
             this.guna2GroupBox1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(1, 32);
-            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(688, 331);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(677, 337);
             this.guna2GroupBox1.TabIndex = 2;
-            this.guna2GroupBox1.Text = "Sửa trận đấu";
+            this.guna2GroupBox1.Text = "Chi Tiết Trận Đấu";
             // 
             // txtMaKhach
             // 
@@ -124,9 +124,9 @@
             this.lb.AutoSize = true;
             this.lb.Location = new System.Drawing.Point(244, 291);
             this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(58, 17);
+            this.lb.Size = new System.Drawing.Size(73, 17);
             this.lb.TabIndex = 25;
-            this.lb.Text = "Ghi Chú";
+            this.lb.Text = "Trạng Thái";
             // 
             // cbGhiChu
             // 
@@ -135,7 +135,7 @@
             "On time",
             "Finished",
             "Not yet"});
-            this.cbGhiChu.Location = new System.Drawing.Point(310, 288);
+            this.cbGhiChu.Location = new System.Drawing.Point(323, 288);
             this.cbGhiChu.Name = "cbGhiChu";
             this.cbGhiChu.Size = new System.Drawing.Size(121, 25);
             this.cbGhiChu.TabIndex = 24;
@@ -144,7 +144,7 @@
             // txtDoNha
             // 
             this.txtDoNha.Location = new System.Drawing.Point(166, 248);
-            this.txtDoNha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDoNha.Margin = new System.Windows.Forms.Padding(2);
             this.txtDoNha.Name = "txtDoNha";
             this.txtDoNha.Size = new System.Drawing.Size(76, 24);
             this.txtDoNha.TabIndex = 20;
@@ -153,7 +153,7 @@
             // txtVangNha
             // 
             this.txtVangNha.Location = new System.Drawing.Point(166, 207);
-            this.txtVangNha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVangNha.Margin = new System.Windows.Forms.Padding(2);
             this.txtVangNha.Name = "txtVangNha";
             this.txtVangNha.Size = new System.Drawing.Size(76, 24);
             this.txtVangNha.TabIndex = 19;
@@ -161,8 +161,8 @@
             // 
             // txtKhach
             // 
-            this.txtKhach.Location = new System.Drawing.Point(521, 248);
-            this.txtKhach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKhach.Location = new System.Drawing.Point(530, 245);
+            this.txtKhach.Margin = new System.Windows.Forms.Padding(2);
             this.txtKhach.Name = "txtKhach";
             this.txtKhach.Size = new System.Drawing.Size(76, 24);
             this.txtKhach.TabIndex = 18;
@@ -170,8 +170,8 @@
             // 
             // txtVangKhach
             // 
-            this.txtVangKhach.Location = new System.Drawing.Point(521, 207);
-            this.txtVangKhach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVangKhach.Location = new System.Drawing.Point(530, 204);
+            this.txtVangKhach.Margin = new System.Windows.Forms.Padding(2);
             this.txtVangKhach.Name = "txtVangKhach";
             this.txtVangKhach.Size = new System.Drawing.Size(76, 24);
             this.txtVangKhach.TabIndex = 17;
@@ -179,8 +179,8 @@
             // 
             // txtBanThangKhach
             // 
-            this.txtBanThangKhach.Location = new System.Drawing.Point(521, 165);
-            this.txtBanThangKhach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBanThangKhach.Location = new System.Drawing.Point(530, 162);
+            this.txtBanThangKhach.Margin = new System.Windows.Forms.Padding(2);
             this.txtBanThangKhach.Name = "txtBanThangKhach";
             this.txtBanThangKhach.Size = new System.Drawing.Size(76, 24);
             this.txtBanThangKhach.TabIndex = 16;
@@ -189,7 +189,7 @@
             // txtBanThangNha
             // 
             this.txtBanThangNha.Location = new System.Drawing.Point(166, 165);
-            this.txtBanThangNha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBanThangNha.Margin = new System.Windows.Forms.Padding(2);
             this.txtBanThangNha.Name = "txtBanThangNha";
             this.txtBanThangNha.Size = new System.Drawing.Size(76, 24);
             this.txtBanThangNha.TabIndex = 15;
@@ -197,8 +197,8 @@
             // 
             // txtVongDau
             // 
-            this.txtVongDau.Location = new System.Drawing.Point(310, 88);
-            this.txtVongDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVongDau.Location = new System.Drawing.Point(317, 90);
+            this.txtVongDau.Margin = new System.Windows.Forms.Padding(2);
             this.txtVongDau.Name = "txtVongDau";
             this.txtVongDau.Size = new System.Drawing.Size(76, 24);
             this.txtVongDau.TabIndex = 21;
@@ -206,8 +206,8 @@
             // 
             // txtLuotDau
             // 
-            this.txtLuotDau.Location = new System.Drawing.Point(310, 43);
-            this.txtLuotDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLuotDau.Location = new System.Drawing.Point(316, 46);
+            this.txtLuotDau.Margin = new System.Windows.Forms.Padding(2);
             this.txtLuotDau.Name = "txtLuotDau";
             this.txtLuotDau.Size = new System.Drawing.Size(76, 24);
             this.txtLuotDau.TabIndex = 14;
@@ -328,12 +328,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(688, 438);
+            this.ClientSize = new System.Drawing.Size(680, 400);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "detailTranDau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "detailTranDau";

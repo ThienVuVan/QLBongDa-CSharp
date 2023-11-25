@@ -38,11 +38,12 @@ namespace GUI
 
 		private void btnThem_Click(object sender, EventArgs e)
 		{
-			if(cbNha.Text == "" || cbKhach.Text == "" || cbStatus.Text == "")
-			{
-				MessageBox.Show("Dữ liệu chưa đầy đủ!");
-				return;
-			}
+            if (cbNha.Text == "" || cbKhach.Text == "" || cbStatus.Text == "")
+            {
+                MessageBox.Show("Dữ liệu chưa đầy đủ!");
+                return;
+            }
+            if (MessageBox.Show("Xác Nhận Đăng Ký Trận Đấu!", "Xác Nhận", MessageBoxButtons.OKCancel) != DialogResult.OK) return;
 			if (btnThemMoi.Enabled == true)
 			{
 				// Lấy thời gian hiện tại
@@ -61,7 +62,7 @@ namespace GUI
 				tranDau.MaDoiKhach = cbKhach.SelectedItem.ToString();
 				tranDau.LuotDau = txtLuotDau.Text;
 				tranDau.VongDau = txtVongDau.Text;
-				tranDau.GhiChu = cbStatus.SelectedIndex.ToString();
+				tranDau.GhiChu = cbStatus.SelectedItem.ToString();
 				tranDau.SoBanThangDoiNha = 0;
 				tranDau.SoBanThangDoiKhach = 0;
 				tranDau.SoTheDoDoiKhach = 0;
@@ -91,6 +92,7 @@ namespace GUI
 				dgvDangKy.Columns["SOTHEDODOINHA"].HeaderText = "Thẻ đỏ đội nhà";
 				dgvDangKy.Columns["SOTHEDODOIKHACH"].HeaderText = "Thẻ đỏ đội khách";
 				dgvDangKy.Columns["GHICHU"].HeaderText = "Status";
+				MessageBox.Show("Đăng Ký Thành Công, Xem Kết Quả Bên Dưới");
 			}
 			
 		}
@@ -104,8 +106,6 @@ namespace GUI
 		private void dgvDangKy_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 			//Hiển thị nút sửa
-			btnSua.Enabled = true;
-			btnXoaTranDau.Enabled = true;
 			btnThem.Enabled = false;
 			try
 			{
@@ -147,8 +147,6 @@ namespace GUI
 		private void btnThemMoi_Click(object sender, EventArgs e)
 		{
 			TrangChiTiet();
-			btnSua.Enabled = false;
-			btnXoaTranDau.Enabled = false;
 			btnThem.Enabled = true;
 			btnHuy.Enabled = true;
 		}
@@ -157,7 +155,6 @@ namespace GUI
 		{
 			hienChiTiet(true);
 			btnThemMoi.Enabled = false;
-			btnXoaTranDau.Enabled=false;
 		}
 
         private void txtVongDau_TextChanged_1(object sender, EventArgs e)

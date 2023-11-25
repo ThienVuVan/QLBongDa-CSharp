@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,13 +31,17 @@ namespace GUI
             txtHLV.Text = doiBong.HLV;
             txtSoCauThu.Text = doiBong.SoLuongCauThu.ToString();
             txtSoCauThu.Enabled = false;
-
+            picBox.Image = Image.FromFile(Path.Combine("../../Resources/IMGCauThu", doiBong.LoGo));
             DataTable listCauThu = CauThuService.GetMemBerOfTeam(MaDoi);
             guna2DataGridView1.DataSource = listCauThu;
         }
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
+            if(MessageBox.Show("Xác Nhận Chỉnh Sửa", "Xác Nhận", MessageBoxButtons.OKCancel) != DialogResult.OK)
+            {
+                return;
+            }
             if(txtTenDoi.Text == ""||txtMaTinh.Text == ""||txtHLV.Text == "")
             {
                 MessageBox.Show("Hãy nhập đủ dữ liệu","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
