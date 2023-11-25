@@ -34,7 +34,7 @@ namespace GUI
 			lbSobtCT.Text = cauThu.SoBanThang.ToString();
 			picLogo.Image = Image.FromFile("../../Resources/Image Giai Bong/Logo/"+doiBong.LoGo);
             picCT.Image = Image.FromFile("../../Resources/IMGCauThu/" + cauThu.Anh);
-
+            picTranDau.Image = Image.FromFile("../../Resources/IMGLogo/download.jpg");
         }
 
         private void btnDoi_Click(object sender, EventArgs e)

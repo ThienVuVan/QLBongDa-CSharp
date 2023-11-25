@@ -129,20 +129,6 @@ namespace GUI
 
 		}
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (dgvDoiBong.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Hãy chọn đội bóng!");
-            }
-            DataGridViewRow selectedRow = dgvDoiBong.SelectedRows[0];
-            string MaDoi = selectedRow.Cells["MADOI"].Value.ToString();
-            if (MessageBox.Show("Nếu xóa đội bóng này, tất cả cầu thủ của đội bóng cũng sẽ bị xóa", "Xác Nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
-				DoiBongService.DeleteDoiBong(MaDoi);
-                Reset();
-            }
-        }
 
         private void Reset()
         {
@@ -157,6 +143,19 @@ namespace GUI
 
 		}
 
-		
-	}
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvDoiBong.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Hãy chọn đội bóng!");
+            }
+            DataGridViewRow selectedRow = dgvDoiBong.SelectedRows[0];
+            string MaDoi = selectedRow.Cells["MADOI"].Value.ToString();
+            if (MessageBox.Show("Nếu xóa đội bóng này, tất cả cầu thủ của đội bóng cũng sẽ bị xóa", "Xác Nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                DoiBongService.DeleteDoiBong(MaDoi);
+                Reset();
+            }
+        }
+    }
 }

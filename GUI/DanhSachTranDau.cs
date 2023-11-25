@@ -127,6 +127,7 @@ namespace GUI
         {
             txtSoBan.Text = "";
             txtTheDo.Text = "";
+			cbDoiNha.Text = "";
             dgDanhSach.DataSource = TranDauService.RetrieveAllTranDau();
             dgDanhSach.Columns["MATRANDAU"].HeaderText = "Mã trận đấu";
             dgDanhSach.Columns["MADOINHA"].HeaderText = "Mã đội nhà";

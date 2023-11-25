@@ -113,12 +113,12 @@ namespace DAL
                     DatabaseAccess.Excute(updateNha);
                     DatabaseAccess.Excute(updateKhach);
                 }
-                string sql = $"update dbo.TranDau set GhiChu = N'{tranDau.GhiChu}'";
+                string sql = $"update dbo.TranDau set GhiChu = N'{tranDau.GhiChu}' where MaTranDau = '{tranDau.MaTranDau}'";
                 DatabaseAccess.Excute(sql);
             }
             else
             {
-                string sql = $"update dbo.TranDau set GhiChu = N'{tranDau.GhiChu}'";
+                string sql = $"update dbo.TranDau set GhiChu = N'{tranDau.GhiChu}' where MaTranDau = '{tranDau.MaTranDau}'";
                 DatabaseAccess.Excute(sql);
             }
         }
