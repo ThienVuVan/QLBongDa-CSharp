@@ -362,7 +362,7 @@
 			this.btnXuatFile.Name = "btnXuatFile";
 			this.btnXuatFile.Size = new System.Drawing.Size(104, 30);
 			this.btnXuatFile.TabIndex = 9;
-			this.btnXuatFile.Text = "Xuất File";
+			this.btnXuatFile.Text = "Thống kê";
 			this.btnXuatFile.UseVisualStyleBackColor = true;
 			this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
 			// 
