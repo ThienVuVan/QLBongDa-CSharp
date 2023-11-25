@@ -81,9 +81,18 @@ namespace GUI
             {
                 if (row.Cells["ANH"].Value != null)
                 {
-                    string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
-                    Image image = Image.FromFile(path);
-                    row.Cells["ANHCAUTHU"].Value = image;
+					try
+					{
+						string path = Path.Combine("../../Resources/IMGCauThu", row.Cells["ANH"].Value.ToString());
+						Image image = Image.FromFile(path);
+						row.Cells["ANHCAUTHU"].Value = image;
+					}
+					catch (Exception ex)
+					{
+						string path = Path.Combine("../../Resources/IMGCauThu/BDFC_11_BuiViHao_VN0001113-150x150.jpg");
+						Image image = Image.FromFile(path);
+						row.Cells["ANHCAUTHU"].Value = image;
+					}
                 }
             }
         }

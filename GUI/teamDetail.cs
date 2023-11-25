@@ -85,5 +85,15 @@ namespace GUI
 				e.Handled = true;
 			}
 		}
-	}
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            doiBong = DoiBongService.GetDoiBongById(MaDoi);
+            txtTenDoi.Text = doiBong.TenDoi;
+            txtMaTinh.Text = doiBong.MaTinh;
+            txtHLV.Text = doiBong.HLV;
+            txtSoCauThu.Text = doiBong.SoLuongCauThu.ToString();
+            txtSoCauThu.Enabled = false;
+        }
+    }
 }

@@ -27,11 +27,6 @@ namespace GUI
 			dangKyTranDau.ShowDialog();
 		}
 
-		private void dgDanhSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-
-		}
-
 		private void DanhSachTranDau_Load(object sender, EventArgs e)
 		{
 			List<string> doinha = DoiBongService.RetrieveAllNameDoiBong();
@@ -96,10 +91,6 @@ namespace GUI
 			dgDanhSach.DataSource = filteredData;
 		}
 
-		private void btnUpdate_Click(object sender, EventArgs e)
-		{
-
-		}
 		private void btnCapNhat_Click(object sender, EventArgs e)
 		{
 			if (dgDanhSach.SelectedRows.Count == 0)
@@ -151,25 +142,7 @@ namespace GUI
             dgDanhSach.Columns["GHICHU"].HeaderText = "Ghi chú";
         }
 
-		private void cbDoiNha_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void txtSoBan_TextChanged(object sender, EventArgs e)
-		{
-			if (int.TryParse(txtSoBan.Text, out int soBan))
-			{
-			}
-			else
-			{
-				MessageBox.Show("Vui lòng nhập số nguyên.");
-
-				txtSoBan.Text = ""; // Xóa giá trị không hợp lệ
-			}
-		}
-
-        private void btnUpdate_Click_1(object sender, EventArgs e)
+        private void btnUpdate_Click_2(object sender, EventArgs e)
         {
             if (dgDanhSach.SelectedRows.Count == 0)
             {
@@ -181,16 +154,26 @@ namespace GUI
             updateTran.Show();
         }
 
-        private void btnUpdate_Click_2(object sender, EventArgs e)
+        private void txtTheDo_TextChanged(object sender, EventArgs e)
         {
-            if (dgDanhSach.SelectedRows.Count == 0)
+            if (int.TryParse(txtSoBan.Text, out int soBan))
             {
-                MessageBox.Show("Hãy chọn tran dau!");
             }
-            DataGridViewRow selectedRow = dgDanhSach.SelectedRows[0];
-            string MaTranDau = selectedRow.Cells["MATRANDAU"].Value.ToString();
-            UpdateTranDau updateTran = new UpdateTranDau(MaTranDau);
-            updateTran.Show();
+            else
+            {
+                MessageBox.Show("Vui lòng nhập số nguyên.");
+            }
+        }
+
+        private void txtSoBan_TextChanged_1(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtSoBan.Text, out int soBan))
+            {
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập số nguyên.");
+            }
         }
     }
 }
