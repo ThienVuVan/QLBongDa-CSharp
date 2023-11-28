@@ -62,39 +62,24 @@ namespace GUI
 		{
 			
 			Form form = panelform.Controls.OfType<MyForm>().FirstOrDefault();
-			if (form == null)
-			{
-				form = new MyForm();
-				form.TopLevel = false;
-				form.FormBorderStyle = FormBorderStyle.None;
-				form.Dock = DockStyle.Fill;
-				panelform.Controls.Add(form);
-				panelform.Tag = form;
-				form.Show();
-				form.BringToFront();
-                if (form is playerList)
-                {
-                    ((playerList)form).LoadImagesToDataGridViewColumn();
-                }
+            form = new MyForm();
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panelform.Controls.Add(form);
+            panelform.Tag = form;
+            form.Show();
+            form.BringToFront();
+            if (form is playerList)
+            {
+                ((playerList)form).LoadImagesToDataGridViewColumn();
             }
-			else
-			{
-				// Nếu form đã tồn tại, tạo một instance mới của MyForm
-				MyForm newForm = new MyForm();
-				newForm.TopLevel = false;
-				newForm.FormBorderStyle = FormBorderStyle.None;
-				newForm.Dock = DockStyle.Fill;
-				panelform.Controls.Add(newForm);
-				panelform.Tag = newForm;
-				newForm.Show();
-				newForm.BringToFront();
-			}
-		}
+        }
 
 		private void button4_Click(object sender, EventArgs e)
 		{
             OpenForm<playerList>();
-			this.Refresh();
+            this.Refresh();
         }
 
 		private void button5_Click(object sender, EventArgs e)
@@ -123,8 +108,5 @@ namespace GUI
 
         // để hiển thị form bên trong panel của MainForm dùng OpenForm
         // Hiển thị nổi Form.Show()
-
-
-
     }
 }

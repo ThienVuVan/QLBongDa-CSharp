@@ -280,5 +280,5 @@
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.Panel formspanel;
 		private System.Windows.Forms.Panel panelform;
-	}
+    }
 }
