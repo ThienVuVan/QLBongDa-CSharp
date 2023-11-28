@@ -140,5 +140,13 @@ namespace GUI
 				btnDangNhap.PerformClick(); // Gọi sự kiện click của nút đăng nhập
 			}
 		}
-	}
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+            // The password character is an asterisk.
+            txtMatKhau.PasswordChar = '*';
+            // The control will allow no more than 14 characters.
+            txtMatKhau.MaxLength = 14;
+        }
+    }
 }

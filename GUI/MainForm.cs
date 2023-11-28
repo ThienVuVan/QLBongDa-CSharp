@@ -62,35 +62,17 @@ namespace GUI
 		{
 			
 			Form form = panelform.Controls.OfType<MyForm>().FirstOrDefault();
-			if (form == null)
-			{
-				form = new MyForm();
-				form.TopLevel = false;
-				form.FormBorderStyle = FormBorderStyle.None;
-				form.Dock = DockStyle.Fill;
-				panelform.Controls.Add(form);
-				panelform.Tag = form;
-				form.Show();
-				form.BringToFront();
-                if (form is playerList)
-                {
-                    ((playerList)form).LoadImagesToDataGridViewColumn();
-                }
-            }
-            else
+            form = new MyForm();
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panelform.Controls.Add(form);
+            panelform.Tag = form;
+            form.Show();
+            form.BringToFront();
+            if (form is playerList)
             {
-                // Nếu form đã tồn tại
-                form.TopLevel = false;
-                form.FormBorderStyle = FormBorderStyle.None;
-                form.Dock = DockStyle.Fill;
-                panelform.Controls.Add(form);
-                panelform.Tag = form;
-                form.Show();
-                form.BringToFront();
-                if (form is playerList)
-                {
-                    ((playerList)form).LoadImagesToDataGridViewColumn();
-                }
+                ((playerList)form).LoadImagesToDataGridViewColumn();
             }
         }
 
